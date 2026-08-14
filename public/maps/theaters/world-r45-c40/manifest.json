@@ -1,0 +1,245 @@
+{
+  "formatVersion": 14,
+  "id": "world-r45-c40",
+  "name": "Balto-Slavic Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=46.155166 +lon_0=25.0 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 25000000,
+      "latitudeE6": 46155166
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 19698570,
+    "eastLongitudeE6": 30301430,
+    "southLatitudeE6": 42599639,
+    "northLatitudeE6": 49608776,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:197a0f4de30f1f58cc9e0e666c3ab848575d8aad6df062d3a8bea13640b6ded4",
+    "featureCount": 560852,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "albania",
+        "url": "https://download.geofabrik.de/europe/albania-260801.osm.pbf",
+        "md5": "d67c88a160fda977fe3f28ba84ef71f7"
+      },
+      {
+        "id": "bosnia-herzegovina",
+        "url": "https://download.geofabrik.de/europe/bosnia-herzegovina-260801.osm.pbf",
+        "md5": "6ad3cfd8aac01e93911c61ab18ab53dd"
+      },
+      {
+        "id": "bulgaria",
+        "url": "https://download.geofabrik.de/europe/bulgaria-260801.osm.pbf",
+        "md5": "f662e95815a1b81692a1c8f2bc87943f"
+      },
+      {
+        "id": "croatia",
+        "url": "https://download.geofabrik.de/europe/croatia-260801.osm.pbf",
+        "md5": "3115f41c014a47aa92b8975df89205fb"
+      },
+      {
+        "id": "hungary",
+        "url": "https://download.geofabrik.de/europe/hungary-260801.osm.pbf",
+        "md5": "d9a4283bb858528547f1370b370df21e"
+      },
+      {
+        "id": "kosovo",
+        "url": "https://download.geofabrik.de/europe/kosovo-260801.osm.pbf",
+        "md5": "1cae77f66048c42136f3944df3cb6999"
+      },
+      {
+        "id": "lubelskie",
+        "url": "https://download.geofabrik.de/europe/poland/lubelskie-260801.osm.pbf",
+        "md5": "f6df4441e6e888b63c1bddf600fa2664"
+      },
+      {
+        "id": "macedonia",
+        "url": "https://download.geofabrik.de/europe/macedonia-260801.osm.pbf",
+        "md5": "30ba0fca3e7df5d84bfdff9cad8b6c0f"
+      },
+      {
+        "id": "malopolskie",
+        "url": "https://download.geofabrik.de/europe/poland/malopolskie-260801.osm.pbf",
+        "md5": "53216542610c2223786563f4de2ad353"
+      },
+      {
+        "id": "moldova",
+        "url": "https://download.geofabrik.de/europe/moldova-260801.osm.pbf",
+        "md5": "8e6b57789f336330cded430df21b58a5"
+      },
+      {
+        "id": "montenegro",
+        "url": "https://download.geofabrik.de/europe/montenegro-260801.osm.pbf",
+        "md5": "cd5f4b91d88aacfe070ce21f5cf91669"
+      },
+      {
+        "id": "olomoucky",
+        "url": "https://download.geofabrik.de/europe/czech-republic/olomoucky-260801.osm.pbf",
+        "md5": "76062fac17f8d523b648c0019e8656f3"
+      },
+      {
+        "id": "opolskie",
+        "url": "https://download.geofabrik.de/europe/poland/opolskie-260801.osm.pbf",
+        "md5": "0a9fb24aa289a02d0f577133bbccf892"
+      },
+      {
+        "id": "podkarpackie",
+        "url": "https://download.geofabrik.de/europe/poland/podkarpackie-260801.osm.pbf",
+        "md5": "db5c9e8b426284c228728d3dd6bdaba1"
+      },
+      {
+        "id": "romania",
+        "url": "https://download.geofabrik.de/europe/romania-260801.osm.pbf",
+        "md5": "f17b9f37ac2abc622c8ff99ca00381f2"
+      },
+      {
+        "id": "serbia",
+        "url": "https://download.geofabrik.de/europe/serbia-260801.osm.pbf",
+        "md5": "819df3db2e51321b87a1f032e72a4003"
+      },
+      {
+        "id": "slaskie",
+        "url": "https://download.geofabrik.de/europe/poland/slaskie-260801.osm.pbf",
+        "md5": "969bbad6a8edeed34d3ff879f8c053c2"
+      },
+      {
+        "id": "slovakia",
+        "url": "https://download.geofabrik.de/europe/slovakia-260801.osm.pbf",
+        "md5": "76d2a76ad8d0cba1c00642f5247cc83b"
+      },
+      {
+        "id": "sud",
+        "url": "https://download.geofabrik.de/europe/italy/sud-260801.osm.pbf",
+        "md5": "2385a64248523591cbe48c86549260ed"
+      },
+      {
+        "id": "swietokrzyskie",
+        "url": "https://download.geofabrik.de/europe/poland/swietokrzyskie-260801.osm.pbf",
+        "md5": "bb943b2429945515711a575793ee3f2a"
+      },
+      {
+        "id": "turkey",
+        "url": "https://download.geofabrik.de/europe/turkey-260801.osm.pbf",
+        "md5": "4846672d59e5d14890adf3bc07e2b701"
+      },
+      {
+        "id": "ukraine",
+        "url": "https://download.geofabrik.de/europe/ukraine-260801.osm.pbf",
+        "md5": "1494b5b3b26954ad5b0302b4afd9cf67"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 14440,
+    "geometryPointCount": 1459894
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

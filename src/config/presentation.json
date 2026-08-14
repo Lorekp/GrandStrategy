@@ -1,0 +1,137 @@
+{
+  "assets": {
+    "atlasManifest": "/maps/relief/manifest.json",
+    "atlasTileRoot": "/maps/relief",
+    "theaterCatalog": "/maps/theaters/catalog.json",
+    "cultureProfiles": "/maps/cultures/profiles.json",
+    "cultureInfluence": "/maps/cultures/manifest.json",
+    "cultureRegions": "/maps/cultures/regions.png",
+    "cultureCoastFade": "/maps/cultures/coast-fade.png",
+    "cultureBorders": "/maps/cultures/borders.json"
+  },
+  "renderer": {
+    "antialias": true
+  },
+  "settings": {
+    "storageKey": "grand-strategy.settings.v2",
+    "defaultInterfaceScale": 1.5,
+    "defaultMapDetail": "balanced",
+    "defaultShowMapSurvey": true,
+    "defaultLanguage": "en",
+    "interfaceScales": [1, 1.25, 1.5, 1.75],
+    "mapDetails": ["economy", "balanced", "detailed"],
+    "languages": ["en", "de"]
+  },
+  "camera": {
+    "maximumRelativeZoom": 32,
+    "fitMarginPixels": 48
+  },
+  "markers": {
+    "minimumCampScreenScale": 1.5,
+    "maximumCampScreenScale": 2.5,
+    "campLabelMinimumRelativeZoom": 1.35,
+    "rememberedIntelligenceAlpha": 0.55
+  },
+  "mapViews": {
+    "textureMaximumDimension": 1536,
+    "overlayAlpha": 0.94,
+    "heightMinimumMeters": -200,
+    "heightMaximumMeters": 4000,
+    "waterColor": "#23414c",
+    "heightLowColor": "#26342c",
+    "heightMidColor": "#8c8d70",
+    "heightHighColor": "#eee9d2",
+    "contourIntervalMeters": 100,
+    "contourIndexIntervalMeters": 500,
+    "contourLabelIntervalMeters": 500,
+    "contourLineColor": "#222923",
+    "contourLineAlpha": 0.34,
+    "contourIndexAlpha": 0.62,
+    "contourMaximumLabels": 24,
+    "contourLabelMinimumRelativeZoom": 1,
+    "contourLabelFontSize": 10,
+    "contourLabelColor": "#202820",
+    "contourLabelHaloColor": "#eee9d2",
+    "moistureDryColor": "#986a3e",
+    "moistureMidColor": "#788c5f",
+    "moistureWetColor": "#3f7485",
+    "resourceBaseColor": "#343832",
+    "forestColor": "#59844d",
+    "jungleColor": "#356c4d"
+  },
+  "interaction": {
+    "pointerDragThresholdPixels": 5,
+    "scaleBarTargetPixels": 120,
+    "tooltipGapPixels": 16,
+    "screenMarginPixels": 10,
+    "panelOverlapPaddingPixels": 8
+  },
+  "fog": {
+    "unknownColor": "#2b2d2c",
+    "patternSpacingScreenPixels": 14,
+    "patternOverdrawScreenPixels": 96,
+    "patternCacheMarginScreenPixels": 24,
+    "maximumPatternDistanceCells": 128,
+    "presentationVisibilityScale": 4
+  },
+  "survey": {
+    "entityHitRadiusScreenPixels": 16,
+    "terrainColors": {
+      "water": "#6c9faa",
+      "plains": "#b9bd73",
+      "hills": "#9a8d5d",
+      "mountains": "#716b5d",
+      "desert": "#c6aa6a",
+      "tundra": "#979a7e",
+      "ice": "#d9ddd0"
+    }
+  },
+  "performance": {
+    "maximumCachedViewsheds": 128,
+    "maximumCachedObserverResults": 32,
+    "targetViewshedCellSizeMeters": 500,
+    "defaultWarmSemanticChunks": 96,
+    "denseSemanticLoadConcurrency": 8,
+    "viewportHaloTiles": 1,
+    "defaultWarmTileLimit": 24,
+    "cultureFieldSamplesPerEdge": 257
+  },
+  "culture": {
+    "palette": [
+      "#6f6272", "#6a727f", "#766261", "#6a727f",
+      "#87978b", "#766261", "#87978b", "#87978b",
+      "#c1bcaa", "#87978b", "#6f6272", "#766261",
+      "#6f6272", "#87978b", "#766261", "#6f6272",
+      "#87978b", "#c1bcaa", "#c1bcaa", "#6a727f",
+      "#766261", "#6a727f", "#6f6272", "#87978b",
+      "#6f6272", "#766261", "#6a727f", "#6a727f",
+      "#c1bcaa", "#6f6272", "#6a727f", "#87978b",
+      "#766261", "#87978b", "#766261", "#6a727f",
+      "#87978b", "#6a727f", "#c1bcaa", "#c1bcaa"
+    ],
+    "mapStyle": {
+      "borderColor": "#000000",
+      "borderAlpha": 0.9,
+      "borderWidth": 3,
+      "fitBorderWidth": 1.25,
+      "atlasCultureDimAlpha": 0.12,
+      "fillAlpha": 0.22,
+      "hoverFillAlpha": 0.36,
+      "selectedFillAlpha": 0.22,
+      "theaterFillAlpha": 0.22,
+      "regionalTheaterFillAlpha": 0.22,
+      "culturePickerSaturation": 32,
+      "edgeWidthPixels": 7,
+      "edgeFillAlpha": 0.48,
+      "edgeColorMix": 1,
+      "hoverColorMix": 0.24
+    }
+  },
+  "theaterPicker": {
+    "atlasDimColor": "#2b2d2c",
+    "theaterDimAlpha": 0.58,
+    "hoverColor": "#eee7c7",
+    "invalidColor": "#a66f63",
+    "selectionColor": "#d8c76f"
+  }
+}

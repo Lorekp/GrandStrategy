@@ -1,0 +1,175 @@
+{
+  "formatVersion": 14,
+  "id": "world-r60-c79",
+  "name": "Nile Valley Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=30.694323 +lon_0=32.0 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 32000000,
+      "latitudeE6": 30694323
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 27840415,
+    "eastLongitudeE6": 36159585,
+    "southLatitudeE6": 27171977,
+    "northLatitudeE6": 34157076,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:7ab8f45a554a795910f7a84daae1696fd5907f8396a5c816012e02273ff999e0",
+    "featureCount": 55041,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "cyprus",
+        "url": "https://download.geofabrik.de/europe/cyprus-260801.osm.pbf",
+        "md5": "33babf8a98132340747d49299ef46207"
+      },
+      {
+        "id": "egypt",
+        "url": "https://download.geofabrik.de/africa/egypt-260801.osm.pbf",
+        "md5": "43586fa1933a1974e5adecae8b9986c3"
+      },
+      {
+        "id": "gcc-states",
+        "url": "https://download.geofabrik.de/asia/gcc-states-260801.osm.pbf",
+        "md5": "d60172fc5c543abbeecd46c68a98c8ff"
+      },
+      {
+        "id": "greece",
+        "url": "https://download.geofabrik.de/europe/greece-260801.osm.pbf",
+        "md5": "70fb4feeba54cc3e4b6fdc8e1afbe0fc"
+      },
+      {
+        "id": "israel-and-palestine",
+        "url": "https://download.geofabrik.de/asia/israel-and-palestine-260801.osm.pbf",
+        "md5": "e9627507dcb0a9edfe77fc888c383013"
+      },
+      {
+        "id": "jordan",
+        "url": "https://download.geofabrik.de/asia/jordan-260801.osm.pbf",
+        "md5": "4a9c16af3fc630871ce964af80f70e8d"
+      },
+      {
+        "id": "lebanon",
+        "url": "https://download.geofabrik.de/asia/lebanon-260801.osm.pbf",
+        "md5": "9cbddd72e98fd4ccec04c8bd49ccc64e"
+      },
+      {
+        "id": "syria",
+        "url": "https://download.geofabrik.de/asia/syria-260801.osm.pbf",
+        "md5": "dea38ac1488896fb67eeec7e202461f8"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 941,
+    "geometryPointCount": 64097
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

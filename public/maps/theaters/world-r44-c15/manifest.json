@@ -1,0 +1,175 @@
+{
+  "formatVersion": 14,
+  "id": "world-r44-c15",
+  "name": "Plains-Prairie Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=43.162744 +lon_0=-106.578947 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": -106578947,
+      "latitudeE6": 43162744
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": -111582881,
+    "eastLongitudeE6": -101575013,
+    "southLatitudeE6": 39614903,
+    "northLatitudeE6": 46618168,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:f28d522333cf842c6f55fde5ecbec2221f979cccf4defda9d3a1934cb70c7b4c",
+    "featureCount": 317115,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "us-west",
+        "url": "https://download.geofabrik.de/north-america/us-west-260801.osm.pbf",
+        "md5": "29b07e34e66235c1c11e7885f29b327d"
+      },
+      {
+        "id": "us/colorado",
+        "url": "https://download.geofabrik.de/north-america/us/colorado-260801.osm.pbf",
+        "md5": "537146a5bc0cccbc9e8b35743d4d0271"
+      },
+      {
+        "id": "us/kansas",
+        "url": "https://download.geofabrik.de/north-america/us/kansas-260801.osm.pbf",
+        "md5": "943d8fa797255a73c41426309272e853"
+      },
+      {
+        "id": "us/nebraska",
+        "url": "https://download.geofabrik.de/north-america/us/nebraska-260801.osm.pbf",
+        "md5": "701218f75142ca2b682b00f9c5b1a630"
+      },
+      {
+        "id": "us/north-dakota",
+        "url": "https://download.geofabrik.de/north-america/us/north-dakota-260801.osm.pbf",
+        "md5": "dae2816f41d4be2afb0df0a9bfae11f0"
+      },
+      {
+        "id": "us/south-dakota",
+        "url": "https://download.geofabrik.de/north-america/us/south-dakota-260801.osm.pbf",
+        "md5": "40503b884ae4c7c20076efb0b17ffc45"
+      },
+      {
+        "id": "us/utah",
+        "url": "https://download.geofabrik.de/north-america/us/utah-260801.osm.pbf",
+        "md5": "91ff75eec7485307da0b3c08923a5b01"
+      },
+      {
+        "id": "us/wyoming",
+        "url": "https://download.geofabrik.de/north-america/us/wyoming-260801.osm.pbf",
+        "md5": "60a6e4436d2821960e50499102940f8f"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 10171,
+    "geometryPointCount": 939220
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

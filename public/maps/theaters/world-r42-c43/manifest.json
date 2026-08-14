@@ -1,0 +1,185 @@
+{
+  "formatVersion": 14,
+  "id": "world-r42-c43",
+  "name": "Western Mediterranean Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=37.177902 +lon_0=8.674699 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 8674699,
+      "latitudeE6": 37177902
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 4141912,
+    "eastLongitudeE6": 13207486,
+    "southLatitudeE6": 33643320,
+    "northLatitudeE6": 40636932,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:7a84b165d51268b2dcfc2dff02130445bcb5125a3e7ce527961cbf3d6503c404",
+    "featureCount": 72055,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "algeria",
+        "url": "https://download.geofabrik.de/africa/algeria-260801.osm.pbf",
+        "md5": "ecaeadf3089260c0d05f3173d5eb9d0a"
+      },
+      {
+        "id": "cataluna",
+        "url": "https://download.geofabrik.de/europe/spain/cataluna-260801.osm.pbf",
+        "md5": "ae5f056d962c8cf8d77bd8eedd63d513"
+      },
+      {
+        "id": "centro",
+        "url": "https://download.geofabrik.de/europe/italy/centro-260801.osm.pbf",
+        "md5": "e60cc86244031ecc2a1daba57b2a7f3b"
+      },
+      {
+        "id": "corse",
+        "url": "https://download.geofabrik.de/europe/france/corse-260801.osm.pbf",
+        "md5": "8808aa0b6279d86c330594cb6f561194"
+      },
+      {
+        "id": "islas-baleares",
+        "url": "https://download.geofabrik.de/europe/spain/islas-baleares-260801.osm.pbf",
+        "md5": "95e7f765cd1ef15a3600043a9b38af34"
+      },
+      {
+        "id": "isole",
+        "url": "https://download.geofabrik.de/europe/italy/isole-260801.osm.pbf",
+        "md5": "0495fa505b933dd7993b87c51cf819ce"
+      },
+      {
+        "id": "libya",
+        "url": "https://download.geofabrik.de/africa/libya-260801.osm.pbf",
+        "md5": "007eab15b7de5054339f56ae2086be7f"
+      },
+      {
+        "id": "malta",
+        "url": "https://download.geofabrik.de/europe/malta-260801.osm.pbf",
+        "md5": "8e35687ab89cf4b3566c66d085202910"
+      },
+      {
+        "id": "sud",
+        "url": "https://download.geofabrik.de/europe/italy/sud-260801.osm.pbf",
+        "md5": "2385a64248523591cbe48c86549260ed"
+      },
+      {
+        "id": "tunisia",
+        "url": "https://download.geofabrik.de/africa/tunisia-260801.osm.pbf",
+        "md5": "91adb5a5f982b08a427fe41bd0992d38"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 996,
+    "geometryPointCount": 102754
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

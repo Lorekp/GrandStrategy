@@ -1,0 +1,34 @@
+{
+  "unlockTechnologyId": "village-administration",
+  "defaultRole": "tribal-leader",
+  "roles": [
+    {
+      "id": "tribal-leader",
+      "villageOnly": false,
+      "knowledgePerWorldDay": 0,
+      "populationGrowthPerInterval": 0,
+      "influenceGrowthMetersPerInterval": 0
+    },
+    {
+      "id": "elder",
+      "villageOnly": true,
+      "knowledgePerWorldDay": 0,
+      "populationGrowthPerInterval": 0,
+      "influenceGrowthMetersPerInterval": 10
+    },
+    {
+      "id": "sage",
+      "villageOnly": true,
+      "knowledgePerWorldDay": 3,
+      "populationGrowthPerInterval": 0,
+      "influenceGrowthMetersPerInterval": 0
+    },
+    {
+      "id": "steward",
+      "villageOnly": true,
+      "knowledgePerWorldDay": 0,
+      "populationGrowthPerInterval": 1,
+      "influenceGrowthMetersPerInterval": 0
+    }
+  ]
+}

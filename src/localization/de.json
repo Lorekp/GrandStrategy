@@ -1,0 +1,564 @@
+{
+  "meta": { "locale": "de-DE" },
+  "months": ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+  "ui": {
+    "earthAge": "Erde // Zeitalter I",
+    "documentTitle": "Grand Strategy — Regionale Spielkarte",
+    "tagline": "Vom ersten Lager zum Zukunftsstaat",
+    "deck": "Wähle eine Heimat auf einer lebendigen Erde. Baue einen Stamm auf, vereine eine Region und trage seine Geschichte in die Zukunft.",
+    "beginCampaign": "Kampagne beginnen",
+    "resumeCampaign": "Kampagne fortsetzen",
+    "openAtlas": "Weltatlas öffnen",
+    "settings": "Einstellungen",
+    "displayInterface": "Anzeige und Oberfläche",
+    "fixedTick": "Simulation mit festem Tick",
+    "prototype": "Regionaler Prototyp",
+    "fieldConfiguration": "Feldkonfiguration",
+    "back": "Zurück",
+    "interfaceScale": "Oberflächengröße",
+    "hudSize": "HUD-Größe",
+    "mapDetail": "Kartendetail",
+    "textureLod": "Textur-LOD",
+    "economy": "Sparsam",
+    "balanced": "Ausgewogen",
+    "detailed": "Detailliert",
+    "detailHelp": "Detailliert lädt eine höhere vorberechnete Kartenstufe; Sparsam eine niedrigere. Die Simulationsdetails bleiben unverändert.",
+    "language": "Sprache",
+    "fieldSurvey": "Felduntersuchung",
+    "surveyHelp": "Zeigt beim Überfahren Biom, Höhe, Zugehörigkeit und Einfluss.",
+    "autoSave": "Änderungen werden automatisch gespeichert",
+    "tribalAge": "Stammeszeit",
+    "menu": "Menü",
+    "homelandSurvey": "Heimaterkundung",
+    "culture": "Kultur",
+    "theater": "Region",
+    "camp": "Lager",
+    "redice": "Neu würfeln",
+    "regionalTradition": "Regionale Tradition",
+    "legacy": "Vermächtnis",
+    "tradeoff": "Nachteil",
+    "acclimatization": "Heimatanpassung",
+    "signatureKnowledge": "Spezialwissen",
+    "works": "Bauten",
+    "train": "Ausbilden",
+    "people": "Bevölkerung",
+    "warriors": "Krieger",
+    "influence": "Einfluss",
+    "terrain": "Gelände",
+    "vegetation": "Vegetation",
+    "moisture": "Feuchtigkeit",
+    "height": "Höhe",
+    "mapViews": "Ansichten",
+    "relief": "Relief",
+    "resources": "Ressourcen",
+    "forestResources": "Nur Wälder",
+    "feature": "Merkmal",
+    "allegiance": "Zugehörigkeit",
+    "biome": "Biom",
+    "natural": "Natur",
+    "ground": "Untergrund",
+    "slope": "Steigung",
+    "pace": "Tempo",
+    "arrival": "Ankunft",
+    "detection": "Sichtweite",
+    "close": "Schließen",
+    "worldClock": "Weltzeit",
+    "fitTheater": "Region einpassen"
+    ,"tribesInSight": "Stämme in Sicht"
+    ,"campWorks": "Lagerbauten"
+    ,"fieldUnit": "Feldeinheit"
+    ,"pointAtMap": "Auf die Karte zeigen"
+    ,"mapRoom": "Kartenraum"
+    ,"openingAtlas": "Weltatlas wird geöffnet…"
+    ,"loadingGeography": "Geografie und Regionaldaten werden geladen"
+    ,"mapInstructions": "Linksklick oder Ziehen wählt · Rechtsklick bewegt · Strg-Rechtsklick reiht ein · Mittlere Taste verschiebt"
+    ,"paceNote": "Steigung und Vegetation verändern das Tempo stufenlos · Reise bei Tageslicht von {start} bis {end}"
+    ,"hydrographyAttribution": "Hydrografie © OpenStreetMap-Mitwirkende"
+    ,"worldAtlasLabel": "Weltatlas mit interaktiven Regionen"
+    ,"mainMenu": "Hauptmenü"
+    ,"campaignSetupProgress": "Fortschritt der Kampagneneinrichtung"
+    ,"campaignSetupNavigation": "Navigation der Kampagneneinrichtung"
+    ,"tribesInTheater": "Stämme in dieser Region"
+    ,"closeConstruction": "Baumenü schließen"
+    ,"campManagement": "Lagerverwaltung"
+    ,"scoutFlatSpeed": "Spähertempo auf ebenem Boden"
+    ,"mapSurveyLabel": "Kartenuntersuchung"
+    ,"mapScale": "Kartenmaßstab"
+    ,"timeControls": "Zeitsteuerung"
+    ,"terrainComposition": "Regionale Geländeverteilung"
+    ,"village": "Dorf"
+    ,"administration": "Verwaltung"
+  },
+  "terms": {
+    "bce": "v. Chr.",
+    "ce": "n. Chr.",
+    "unknown": "Unbekannt",
+    "unclaimed": "Unbeansprucht",
+    "mixed": "Gemischt",
+    "level": "Ebene",
+    "day": "TAG",
+    "night": "NACHT",
+    "play": "Spielen",
+    "pause": "Pause",
+    "paused": "Pausiert",
+    "running": "Läuft · {speed}×",
+    "cultureSelection": "Kulturauswahl",
+    "theaterSelection": "Regionalauswahl",
+    "campFounding": "Lagergründung",
+    "culturalAtlas": "Kulturatlas",
+    "regionalTheater": "Region",
+    "regionalCulture": "Regionalkultur",
+    "yourTribe": "Dein Stamm",
+    "rival": "Rivale",
+    "uphill": "+{degrees}° bergauf",
+    "downhill": "{degrees}° bergab"
+    ,"noPermanentWorks": "Keine dauerhaften Bauten"
+    ,"majorRiver": "Großer Fluss"
+    ,"minorRiver": "Kleiner Fluss"
+    ,"intermittent": "zeitweise"
+    ,"seasonal": "saisonal"
+    ,"influenceOf": "Einfluss von {tribe}"
+    ,"peopleCount": "{count} Menschen"
+  },
+  "terrain": {
+    "water": "Wasser",
+    "plains": "Ebene",
+    "hills": "Hügelland",
+    "mountains": "Gebirge",
+    "desert": "Wüste",
+    "tundra": "Tundra",
+    "ice": "Permanentes Eis",
+    "none": "Keine",
+    "forest": "Wald",
+    "jungle": "Dschungel",
+    "sparse": "Spärlich",
+    "light": "Locker",
+    "moderate": "Mittel",
+    "dense": "Dicht"
+  },
+  "biome": {
+    "open-water": "Offenes Wasser", "permanent-ice": "Permanentes Eis", "taiga": "Taiga",
+    "tundra": "Tundra", "desert": "Wüste", "desert-scrub": "Wüstenbuschland",
+    "jungle-highlands": "Dschungelhochland", "forested-mountains": "Bewaldetes Gebirge",
+    "mountains": "Gebirge", "jungle-hills": "Dschungelhügelland", "forested-hills": "Bewaldetes Hügelland",
+    "open-hills": "Offenes Hügelland", "rainforest": "Regenwald", "tropical-woodland": "Tropischer lichter Wald",
+    "forest": "Wald", "woodland": "Lichter Wald", "grassland": "Grasland"
+  },
+  "stance": {
+    "friendly": "Freundlich",
+    "neutral": "Neutral",
+    "hostile": "Feindselig",
+    "war": "Im Krieg",
+    "at-war": "Im Krieg",
+    "player": "Dein Stamm"
+  },
+  "diplomacy": {
+    "title": "Diplomatie",
+    "tribalRelations": "Beziehungen der Stämme",
+    "introduction": "Taten, Versprechen und erinnerte Kränkungen formen Beziehungen. Abkommen erfordern Kontakt, Wissen und die Zustimmung beider Stämme.",
+    "contacts": "Bekannte Stämme",
+    "noContacts": "Keine Kontakte",
+    "contactCount": "{count} bekannte Stämme",
+    "opinion": "Meinung",
+    "trust": "Vertrauen",
+    "tension": "Spannung",
+    "agreements": "Abkommen",
+    "noAgreements": "Keine bestehenden Abkommen",
+    "incomingProposals": "Vorschläge",
+    "noIncoming": "Keine Vorschläge warten auf Antwort",
+    "actions": "Diplomatische Handlungen",
+    "accept": "Annehmen",
+    "reject": "Ablehnen",
+    "accepted": "Der Vorschlag wurde angenommen.",
+    "rejected": "Der Vorschlag wurde abgelehnt.",
+    "awaitingAnswer": "Wartet auf Antwort: {action}",
+    "awaitingResponse": "Dieser Vorschlag wartet bereits auf Antwort.",
+    "alreadyActive": "Dieses Abkommen besteht bereits.",
+    "wrongWarState": "Diese Handlung ist im gegenwärtigen Kriegszustand nicht möglich.",
+    "requiresKnowledge": "Benötigt: {knowledge}",
+    "cooldown": "Gesandte verfügbar in {duration}.",
+    "actionSent": "{action} wird im nächsten Befehlstick ausgeführt.",
+    "agreementsById": {
+      "guest-right": "Gastrecht",
+      "safe-passage": "Sicheres Geleit",
+      "non-aggression": "Nichtangriffseid",
+      "exchange-pact": "Tauschpakt",
+      "defensive-pact": "Schutzbündnis"
+    },
+    "actionsById": {
+      "send-envoys": { "name": "Gesandte schicken", "description": "Gaben und bedachte Worte verbessern die Beziehungen." },
+      "insult": { "name": "Beleidigung überbringen", "description": "Ihre Stellung öffentlich herabsetzen und Groll wecken." },
+      "threaten": { "name": "Drohen", "description": "Mit der Stärke unserer Krieger Unterordnung fordern." },
+      "declare-war": { "name": "Krieg erklären", "description": "Alle Abkommen beenden und offenen Kampf beginnen." },
+      "propose-guest-right": { "name": "Gastrecht vorschlagen", "description": "Friedlichen Besuchern Schutz und Unterkunft versprechen." },
+      "propose-safe-passage": { "name": "Sicheres Geleit vorschlagen", "description": "Reisende unversehrt durch beider Länder ziehen lassen." },
+      "propose-non-aggression": { "name": "Nichtangriff vorschlagen", "description": "Schwören, einander weder zu überfallen noch anzugreifen." },
+      "propose-exchange-pact": { "name": "Tauschpakt vorschlagen", "description": "Regelmäßigen Austausch von Gütern und Wissen festigen." },
+      "propose-defensive-pact": { "name": "Schutzbündnis vorschlagen", "description": "Gegenseitige Hilfe gegen äußere Angreifer versprechen." },
+      "offer-peace": { "name": "Frieden anbieten", "description": "Um ein Ende des Krieges ohne weiteres Abkommen bitten." }
+    }
+  },
+  "events": {
+    "title": "Ereignisse",
+    "chronicle": "Stammeschronik",
+    "introduction": "Begegnungen entstehen aus Welt, Kundschaftern, Lager, Forschung und Beziehungen. Entscheidungen pausieren das Spiel; Berichte bleiben in der Chronik.",
+    "recent": "Jüngste Ereignisse",
+    "noPending": "Keine Entscheidungen",
+    "pendingCount": "{count} offen",
+    "noEvents": "Die Chronik ist still",
+    "noEventsDescription": "Neue Berichte und Entscheidungen erscheinen hier, während der Stamm erkundet und wächst.",
+    "chosen": "Gewählt: {choice}",
+    "categories": {
+      "diplomatic": "Diplomatie",
+      "scout": "Erkundung",
+      "camp": "Lager",
+      "research": "Forschung",
+      "conflict": "Konflikt",
+      "society": "Gesellschaft"
+    },
+    "effects": {
+      "populationDelta": "{value} Menschen",
+      "warriorsDelta": "{value} Krieger",
+      "influenceDelta": "{value} m Einfluss",
+      "researchKnowledge": "{value} Tage Wissen",
+      "opinionDelta": "{value} Meinung",
+      "trustDelta": "{value} Vertrauen",
+      "tensionDelta": "{value} Spannung"
+    },
+    "definitions": {
+      "first-contact": { "title": "Erster Kontakt", "body": "Menschen von {target} wurden angetroffen. Sie warten darauf, nach welchem Brauch wir sie begrüßen.", "choices": { "open-hands": "Mit offenen Händen nähern", "watchful-distance": "Wachsamen Abstand halten" } },
+      "proposal-received": { "title": "Ein Vorschlag trifft ein", "body": "Gesandte von {target} warten an den äußeren Feuern mit Bedingungen für den Rat.", "choices": {} },
+      "proposal-refused": { "title": "Gesandte kehren allein zurück", "body": "{target} hat unseren Vorschlag abgelehnt. Die Zurückweisung bleibt in Erinnerung.", "choices": {} },
+      "pact-sealed": { "title": "Bindende Worte", "body": "Ein Abkommen mit {target} wurde bezeugt und von beiden Stämmen angenommen.", "choices": {} },
+      "war-declared": { "title": "Offener Konflikt", "body": "Der Frieden mit {target} ist beendet. Alte Abkommen binden keine Seite mehr.", "choices": {} },
+      "battle-won": { "title": "Der Feind weicht", "body": "Unsere Krieger haben die Kämpfer von {target} vom Feld gedrängt. Die Verfolgung bestimmte den Preis.", "choices": {} },
+      "battle-lost": { "title": "Unsere Linie bricht", "body": "Unsere Kämpfer haben das Feld {target} überlassen. Überlebende ziehen sich in vertrautes Gelände zurück.", "choices": {} },
+      "work-completed": { "title": "Arbeit vollendet", "body": "Ein neues Werk steht in {settlement} bereit.", "choices": {} },
+      "unit-trained": { "title": "Eine Gruppe ist bereit", "body": "Die in {settlement} Ausgebildeten warten auf Befehle.", "choices": {} },
+      "research-breakthrough": { "title": "Übung wird Tradition", "body": "Wiederholte Versuche brachten verlässliches Wissen hervor, das der Stamm nun lehren kann.", "choices": {} },
+      "disputed-hunting-ground": { "title": "Umstrittenes Jagdland", "body": "Jäger eines Nachbarstamms beanspruchen dasselbe saisonale Land wie wir.", "choices": { "share-season": "Die Saison teilen", "mark-boundary": "Eine feste Grenze markieren" } },
+      "envoys-at-dusk": { "title": "Gesandte in der Dämmerung", "body": "Unerwartete Besucher kommen vor Einbruch der Nacht und bitten um ein Gespräch am Feuer.", "choices": { "host-feast": "Ein großes Fest geben", "brief-council": "Einen kurzen Rat halten" } },
+      "guest-right-tested": { "title": "Gastrecht auf der Probe", "body": "Reisende berufen sich auf den alten Schutz friedlicher Gäste.", "choices": { "honor-custom": "Den Brauch ehren", "refuse-guests": "Die Gäste abweisen" } },
+      "shared-festival": { "title": "Ein gemeinsames Fest", "body": "Ein nahes Volk lädt uns zu einer Feier jenseits seiner Feuer ein.", "choices": { "join-gathering": "An der Feier teilnehmen", "send-token": "Ein Zeichen des Respekts senden" } },
+      "marriage-between-clans": { "title": "Ein Bund zwischen Sippen", "body": "Zwei Familien bitten den Rat, eine Verbindung über Stammesgrenzen hinweg zu segnen.", "choices": { "bless-union": "Den Bund segnen", "keep-apart": "Die Sippen trennen" } },
+      "hidden-spring": { "title": "Eine verborgene Quelle", "body": "Ein Kundschafter findet frisches Wasser unter Gestrüpp und Stein.", "choices": { "mark-route": "Einen sicheren Weg markieren", "keep-secret": "Die Quelle geheim halten" } },
+      "commanding-ridge": { "title": "Ein beherrschender Rücken", "body": "Die Höhe eröffnet einen weiten Blick über das umliegende Land.", "choices": { "survey-horizon": "Den Horizont vermessen", "raise-cairn": "Einen Grenzstein errichten" } },
+      "dangerous-crossing": { "title": "Ein gefährlicher Übergang", "body": "Der direkte Weg führt durch Wasser und unsicheren Boden.", "choices": { "test-crossing": "Den Übergang prüfen", "turn-back": "Umkehren und ihn vermerken" } },
+      "abandoned-hearth": { "title": "Eine verlassene Feuerstelle", "body": "Kalte Asche und bearbeitete Reste zeigen einen längst verlassenen Ort.", "choices": { "study-remains": "Die Reste untersuchen", "leave-untouched": "Alles unberührt lassen" } },
+      "unfamiliar-trail": { "title": "Eine fremde Spur", "body": "Frische Zeichen kreuzen den Weg und führen in unbekanntes Land.", "choices": { "follow-trail": "Der Spur folgen", "observe-only": "Nur beobachten" } },
+      "wounded-scout": { "title": "Ein verwundeter Kundschafter", "body": "Ein Läufer kehrt verletzt zurück und kann den Weg nicht allein beenden.", "choices": { "carry-home": "Ihn heimtragen", "send-help": "Bewaffnete Hilfe schicken" } },
+      "crowded-hearth": { "title": "Gedrängte Feuerstellen", "body": "Familien drängen sich in Unterkünften, die nicht mehr für alle reichen.", "choices": { "raise-shelters": "Mehr Unterkünfte bauen", "divide-hearths": "Die Haushaltsfeuer teilen" } },
+      "spoiled-stores": { "title": "Verdorbene Vorräte", "body": "Feuchtigkeit und Schädlinge haben einen Teil der Nahrung verdorben.", "choices": { "ration-carefully": "Den Rest sorgsam einteilen", "replace-quickly": "Schnell Ersatz sammeln" } },
+      "clay-deposit": { "title": "Brauchbares Tonlager", "body": "Das Wetter hat nahe dem Lager nützlichen Ton freigelegt.", "choices": { "test-clay": "Den Ton am Feuer prüfen", "mark-deposit": "Das Lager markieren" } },
+      "skilled-craftsperson": { "title": "Eine geschickte Handwerkerin", "body": "Eine geduldige Methode erzeugt ungewöhnlich verlässliche Werkzeuge.", "choices": { "grant-workspace": "Einen Arbeitsplatz geben", "teach-all": "Alle unterrichten lassen" } },
+      "night-watch": { "title": "Die Nachtwache", "body": "Streit wächst darüber, wer das Lager nach Einbruch der Dunkelheit bewachen soll.", "choices": { "regular-rotation": "Einen festen Wechsel einführen", "household-watch": "Jeden Haushalt selbst wachen lassen" } },
+      "fresh-water-concern": { "title": "Sorge um Frischwasser", "body": "Das wachsende Lager beansprucht seine nächste saubere Wasserstelle immer stärker.", "choices": { "dig-deeper": "Einen tieferen Brunnen graben", "limit-growth": "Das Wachstum vorerst begrenzen" } },
+      "remembered-technique": { "title": "Eine erinnerte Technik", "body": "Ein Ältester erinnert sich an Teile einer lange ungenutzten Methode.", "choices": { "reconstruct-method": "Die Methode rekonstruieren", "compare-versions": "Alle Erinnerungen vergleichen" } },
+      "disputed-method": { "title": "Eine umstrittene Methode", "body": "Zwei Gruppen halten jeweils ihren Weg für verlässlicher.", "choices": { "test-both": "Beide Methoden prüfen", "trust-elders": "Dem Urteil der Ältesten folgen" } },
+      "traveling-lorekeeper": { "title": "Ein reisender Wissenshüter", "body": "Ein Besucher bietet fremde Geschichten und praktische Beobachtungen an.", "choices": { "welcome-teacher": "Ihn als Lehrer aufnehmen", "exchange-stories": "Einen Abend Geschichten tauschen" } },
+      "successful-experiment": { "title": "Ein erfolgreicher Versuch", "body": "Ein bewusster Versuch gelingt verlässlicher als erwartet.", "choices": { "repeat-carefully": "Ihn sorgfältig wiederholen", "spread-practice": "Die Praxis sofort verbreiten" } },
+      "broken-prototype": { "title": "Ein zerbrochener Prototyp", "body": "Ein vielversprechender Gegenstand versagt im gewöhnlichen Gebrauch.", "choices": { "learn-from-failure": "Das Versagen untersuchen", "abandon-attempt": "Den Versuch aufgeben" } },
+      "cattle-theft": { "title": "Vieh gestohlen", "body": "Spuren deuten darauf, dass Menschen eines bekannten Stammes nachts Tiere forttrieben.", "choices": { "demand-return": "Die Rückgabe fordern", "accept-loss": "Den Verlust hinnehmen" } },
+      "blood-price-demand": { "title": "Forderung nach Blutgeld", "body": "Ein anderer Stamm verlangt Ausgleich für eine Verletzung, die er uns anlastet.", "choices": { "pay-price": "Das Blutgeld zahlen", "reject-demand": "Die Forderung ablehnen" } },
+      "captive-warrior": { "title": "Ein gefangener Krieger", "body": "Unsere Leute halten einen Bewaffneten aus einer angespannten Begegnung fest.", "choices": { "return-captive": "Den Gefangenen zurückgeben", "demand-oath": "Einen Diensteid fordern" } },
+      "raid-warning": { "title": "Warnung vor einem Überfall", "body": "Kundschafter melden Bewegungen einer sich sammelnden Kriegsschar.", "choices": { "muster-warriors": "Alle Krieger aufbieten", "hide-stores": "Vorräte verbergen und Kampf meiden" } },
+      "truce-opportunity": { "title": "Gelegenheit zum Waffenstillstand", "body": "Erschöpfung auf beiden Seiten schafft eine kurze Gelegenheit für unbewaffnete Worte.", "choices": { "meet-between-camps": "Zwischen den Lagern treffen", "maintain-pressure": "Den Druck aufrechterhalten" } },
+      "communal-feast": { "title": "Ein gemeinsames Festmahl", "body": "Eine gute Saison lässt genug Nahrung für alle Haushalte übrig.", "choices": { "open-feast": "Das Fest für alle öffnen", "honor-workers": "Die besten Arbeiter ehren" } },
+      "adoption-request": { "title": "Eine Familie sucht Aufnahme", "body": "Ein heimatloser Haushalt bittet darum, Pflichten und Zugehörigkeit mit uns zu teilen.", "choices": { "welcome-family": "Als Verwandte aufnehmen", "offer-guest-place": "Vorläufiges Gastrecht geben" } },
+      "burial-of-elder": { "title": "Bestattung eines Ältesten", "body": "Ein geachteter Hüter der Erinnerung ist gestorben, und das Volk versammelt sich.", "choices": { "raise-marker": "Ein bleibendes Zeichen errichten", "recite-memory": "Sein Wissen erzählen und lehren" } },
+      "harsh-season-signs": { "title": "Zeichen einer harten Saison", "body": "Tiere, Wind und früher Frost warnen vor schwierigen Monaten.", "choices": { "prepare-stores": "Größere Vorräte anlegen", "move-early": "Gefährdete Haushalte früh verlegen" } },
+      "young-generation": { "title": "Die junge Generation", "body": "Eine große Gruppe ist alt genug, erwachsene Pflichten zu übernehmen.", "choices": { "teach-traditions": "Die alten Traditionen lehren", "train-hunters": "Jäger und Verteidiger ausbilden" } }
+    }
+  },
+  "setup": {
+    "chooseCultureTitle": "Regionalkultur wählen",
+    "chooseCultureMessage": "Bewege dich über den Kulturatlas und wähle die Tradition, die dein erster Stamm tragen soll.",
+    "chooseCultureHelp": "Bewegen zeigt Vorschau · Linksklick wählt · Mausrad zoomt · Mittlere Taste verschiebt",
+    "chooseCultureInvalid": "Wähle eine bewohnte Landregion; Ozean und Antarktis haben keine Startkultur.",
+    "chooseTheater": "Region wählen",
+    "chooseTheaterTitle": "Spielregion wählen",
+    "enterTheater": "Region betreten",
+    "foundCamp": "Lager gründen",
+    "chooseCampTitle": "Lagerplatz wählen",
+    "chooseCampHelp": "Linksklick wählt oder wechselt Kultur · Mausrad zoomt · Mittlere Taste verschiebt",
+    "chooseCampMessage": "Wähle einen Lagerplatz innerhalb dieser Region.",
+    "chooseCampReach": "Wähle freies Land im {direction} von {culture}, oder klicke vor der Gründung auf ein anderes Kulturgebiet, um es anzunehmen.",
+    "waterCamp": "Auf Wasser kann kein Lager gegründet werden. Wähle festes Land.",
+    "uninhabitedCamp": "Dieses Land hat kein bewohntes Kulturgebiet und kann dein erstes Lager nicht tragen.",
+    "culturalReach": "Du darfst nur innerhalb dieses Kulturgebiets gründen.",
+    "broadTradition": "Breite erlernte Tradition · zum Wählen klicken",
+    "selectedCulture": "Gewählte Kultur",
+    "cultureSelected": "{culture} gewählt. Dies ist eine breite erlernte Tradition; ihre Grenzen können sich überschneiden und im Spiel verändern.",
+    "cultureStillSelected": "{culture} ist gewählt. Wähle ein anderes Kulturgebiet oder fahre mit der Regionalerkundung fort.",
+    "cultureCount": "{count} breite Regionalkulturen · erlernte Traditionen, keine festgelegten Völker",
+    "theaterSummary": "Zentrum {center} · {culture} bedeckt etwa {percent}% des erkundeten Landes im {direction}. {restriction}",
+    "invalidTheater": "Wähle eine landgeeignete Region, die das Kulturgebiet {culture} überschneidet. Rote Umrisse liegen außerhalb.",
+    "surveyTheaters": "Erkunde Regionen, die das Gebiet {culture} berühren. Regionen mit mehreren Kulturen sind gültig; dein Lager muss im richtigen Gebiet beginnen.",
+    "cultureReach": "Gebiet {culture}",
+    "cultureFrontier": "Grenzland {culture}",
+    "eligibleTooltip": "{culture} · {percent}% des erkundeten Landes · {direction}",
+    "ineligibleTooltip": "{culture} hat in dieser Untersuchung keine Landfläche",
+    "switchedCamp": "Zu {culture} gewechselt und diesen Lagerplatz gewählt. Weiter, um mit der Erkundung zu beginnen.",
+    "selectedCamp": "Lagerplatz für {culture} gewählt. Weiter, um mit der Erkundung zu beginnen."
+  },
+  "direction": {
+    "central": "zentralen Gebiet",
+    "west": "westlichen Gebiet",
+    "east": "östlichen Gebiet",
+    "north": "nördlichen Gebiet",
+    "south": "südlichen Gebiet",
+    "north-west": "nordwestlichen Gebiet",
+    "north-east": "nordöstlichen Gebiet",
+    "south-west": "südwestlichen Gebiet",
+    "south-east": "südöstlichen Gebiet",
+    "outside": "außerhalb dieser Region"
+  },
+  "loading": {
+    "paintingCultures": "Große Kulturgebiete werden gezeichnet",
+    "prepareTheater": "Gewählte Region wird gesucht oder erzeugt",
+    "theaterFailed": "Region konnte nicht vorbereitet werden.",
+    "theaterFailedReason": "Region konnte nicht vorbereitet werden: {reason}",
+    "loadingRelief": "Relief, Flüsse und Geländezellen werden geladen",
+    "prepareSurface": "{resolution}-m-Simulationsfläche wird vorbereitet…",
+    "assembleSurface": "Gelände, Vegetation, Feuchtigkeit und Höhe werden zusammengesetzt",
+    "surfaceFailed": "Diese Region konnte nicht vorbereitet werden.",
+    "surfaceFailedReason": "Diese Region konnte nicht vorbereitet werden: {reason}",
+    "theaterPreparing": "Region {theater} wird vorbereitet…"
+  },
+  "orders": {
+    "waterImpassable": "Wasser ist unpassierbar. Wähle Land.",
+    "waypointQueued": "Wegpunkt eingereiht",
+    "orderSet": "Befehl gesetzt",
+    "orderImpassable": "Befehl gesetzt · der direkte Weg kreuzt unpassierbares Gelände.",
+    "pausedOrder": "Befehl gesetzt · zum Reisen auf Spielen drücken.",
+    "travelling": "Reist mit der aktuellen Gelände- und Hanggeschwindigkeit.",
+    "resting": "Rast bis zur Morgendämmerung um {time}.",
+    "instructions": "Rechtsklick bewegt · Strg-Rechtsklick reiht ein."
+  },
+  "combat": {
+    "strength": "Stärke",
+    "morale": "Moral",
+    "cohesion": "Ordnung",
+    "fatigue": "Erschöpfung",
+    "experience": "Erfahrung",
+    "doctrine": "Doktrin",
+    "formation": "Formation",
+    "pursuit": "Verfolgung",
+    "unitDescription": "Eine {archetype}-Tradition, geprägt durch {trait}.",
+    "unitRole": "{people} Personen · {role} · {range} m Reichweite",
+    "groupCount": "{count} × {name}",
+    "experienceValue": "{rank} · {experience} EP",
+    "requiresWar": "Ein Angriff erfordert eine Kriegserklärung.",
+    "orderIssued": "{target} wird beim nächsten Befehlstick angegriffen.",
+    "roles": { "close": "Nahkampf", "ranged": "Fernkampf" },
+    "doctrines": { "cautious": "Vorsichtig", "balanced": "Ausgewogen", "aggressive": "Aggressiv" },
+    "formations": { "loose": "Lockere Ordnung", "line": "Linie", "guard": "Abwehr", "shock": "Ansturm" },
+    "pursuits": { "hold": "Stellung halten", "controlled": "Kontrolliert", "all-out": "Rücksichtslos" },
+    "ranks": { "unblooded": "Unerprobt", "proven": "Bewährt", "veteran": "Veteran", "renowned": "Berühmt" }
+  },
+  "construction": {
+    "built": "Gebaut",
+    "build": "Bauen",
+    "queued": "Eingereiht",
+    "upgrade": "Ausbauen",
+    "established": "Gegründet",
+    "villageDescription": "Baue dieses Lager zu einem dauerhaften Dorf mit organisierter Arbeit und lokaler Verwaltung aus.",
+    "villageQueued": "Das Dorf wird beim nächsten Befehlstick gegründet."
+  },
+  "administration": {
+    "current": "Aktuelle Verwaltung",
+    "assign": "Zuweisen",
+    "assigned": "Zugewiesen",
+    "locked": "Gesperrt",
+    "requiresVillage": "Spezialisierte Verwalter benötigen ein Dorf statt eines Lagers.",
+    "requiresTechnology": "Erforsche Dorfverwaltung, um einen spezialisierten Verwalter zuzuweisen.",
+    "chooseRole": "Wähle einen Verwalter für dieses Dorf. Eine neue Zuweisung ersetzt die bestehende Rolle.",
+    "assignmentQueued": "{role} wird beim nächsten Befehlstick zugewiesen.",
+    "roles": {
+      "tribal-leader": {
+        "name": "Stammesführer",
+        "description": "Der anerkannte Anführer schlichtet Streit und koordiniert gemeinsame Arbeit.",
+        "effect": "Allgemeine Führung · keine Spezialisierung"
+      },
+      "elder": {
+        "name": "Ältester",
+        "description": "Brauch, Erinnerung und vertrautes Urteil stärken die Anerkennung des Dorfes.",
+        "effect": "Schnelleres Einflusswachstum"
+      },
+      "sage": {
+        "name": "Weiser",
+        "description": "Ein Wissenshüter lehrt Beobachtungen, Techniken und mündliche Überlieferungen.",
+        "effect": "Zusätzliches Wissen pro Welttag"
+      },
+      "steward": {
+        "name": "Verwalter",
+        "description": "Ein Organisator koordiniert Vorräte, Arbeit, Behausungen und saisonale Bedürfnisse.",
+        "effect": "Schnelleres Bevölkerungswachstum"
+      }
+    }
+  },
+  "roster": {
+    "chooseBuilding": "Wähle ein Stammesbauwerk. Fertige Bauwerke verbessern Wachstum, Einfluss, Wissen oder Beobachtung.",
+    "chooseUnit": "Wähle eine Feldgruppe. Jede Gruppe bindet dauerhaft einen Teil der Siedlungsbevölkerung.",
+    "requiresVillage": "Benötigt Dorf",
+    "requiresTechnology": "Benötigt {technology}",
+    "requiresBuilding": "Benötigt {building}",
+    "needsPopulation": "Benötigt {count} Personen",
+    "capacity": "{count}/{maximum} eingesetzt",
+    "trainCost": "Ausbilden · {count} Personen · {trained}/{maximum}",
+    "buildingQueued": "{building} wird im nächsten Befehlstick errichtet.",
+    "trainingQueued": "{unit} wird im nächsten Befehlstick organisiert.",
+    "mixedUnits": "{count} ausgewählte Einheiten",
+    "buildings": {
+      "scout-post": { "name": "Späherposten", "description": "Ein erhöhter Ausguck zum Erkennen von Bewegung, Rauch, Wetter und fernem Gelände.", "effect": "12 m Siedlungsausguck" },
+      "hearth": { "name": "Gemeinschaftsherd", "description": "Eine unterhaltene Koch- und Feuerstelle im gesellschaftlichen Mittelpunkt der Siedlung.", "effect": "+1 Bevölkerung je Wachstumsintervall" },
+      "hunters-shelter": { "name": "Jägerunterstand", "description": "Bewahrt Jagdgerät und dient als Treffpunkt für koordinierte Gruppen.", "effect": "+1 Bevölkerung · ermöglicht Jagdgruppen" },
+      "toolmakers-shelter": { "name": "Werkzeugmacherhütte", "description": "Ein trockener gemeinsamer Arbeitsplatz zum Schleifen, Schäften, Reparieren und Lehren.", "effect": "+1 Wissen pro Tag" },
+      "council-circle": { "name": "Ratskreis", "description": "Ein anerkannter Ort für Beratungen, Urteile, Gäste und gemeinsame Beschlüsse.", "effect": "+5 m Einfluss je Wachstumsintervall" },
+      "drying-racks": { "name": "Trockengestelle", "description": "Erhöhte Gestelle und Rauchdächer konservieren Fleisch, Fisch, Früchte und Pflanzen.", "effect": "+1 Bevölkerung je Wachstumsintervall" },
+      "rally-ground": { "name": "Sammelplatz", "description": "Ein freier Musterplatz für Übungen, Signale, Waffen und organisierte Kriegergruppen.", "effect": "+5 m Einfluss · ermöglicht Kriegergruppen" },
+      "lore-hut": { "name": "Wissenshütte", "description": "Ein ruhiger Lehrort, an dem Wege, Jahreszeiten, Bräuche und Techniken eingeübt werden.", "effect": "+2 Wissen pro Tag" },
+      "granary": { "name": "Speicher", "description": "Ein verwalteter Gemeinschaftsvorrat, geschützt vor Feuchte, Schädlingen und Alltagsverbrauch.", "effect": "+2 Bevölkerung je Wachstumsintervall" },
+      "cultivated-fields": { "name": "Bestellte Felder", "description": "Vorbereitete Flächen zum Säen, Pflegen und Ernten nahe dem Dorf.", "effect": "+3 Bevölkerung je Wachstumsintervall" },
+      "corral": { "name": "Pferch", "description": "Ein umzäunter Raum für Zucht, Schutz, Sortierung und Haltung domestizierter Tiere.", "effect": "+2 Bevölkerung je Wachstumsintervall" },
+      "pottery-kiln": { "name": "Töpferofen", "description": "Ein geschützter Brennplatz für verlässlich hergestellte Haushalts- und Vorratsgefäße.", "effect": "+1 Wissen pro Tag" },
+      "weavers-hut": { "name": "Weberhütte", "description": "Ein gemeinsamer Arbeitsplatz zum Spinnen, Weben, Netzknüpfen und Unterrichten.", "effect": "+1 Wissen pro Tag" },
+      "shrine": { "name": "Gemeinschaftsschrein", "description": "Ein dauerhafter Versammlungsort für Riten, Erinnerung, Identität und Jahresfeste.", "effect": "+15 m Einfluss je Wachstumsintervall" },
+      "well": { "name": "Dorfbrunnen", "description": "Eine geschützte Frischwasserquelle mit gepflegtem Zugang und Entwässerung.", "effect": "+2 Bevölkerung je Wachstumsintervall" },
+      "quarry": { "name": "Steinbruch", "description": "Eine organisierte Abbaustelle für Werkzeugstein und verlässliches Baumaterial.", "effect": "+1 Wissen pro Tag" },
+      "palisade": { "name": "Palisade", "description": "Gräben, Holzbarrieren und Wachpunkte markieren einen verteidigten Dorfrand.", "effect": "+5 m Einfluss · 15 m Siedlungsausguck" },
+      "exchange-ground": { "name": "Tauschplatz", "description": "Ein üblicher Ort für Besucher, Tauschhandel, Neuigkeiten und Gastrecht.", "effect": "+10 m Einfluss · +1 Wissen pro Tag" },
+      "specialist-workshop": { "name": "Spezialistenwerkstatt", "description": "Spezialisierte Handwerker pflegen Werkzeuge, Standards, Serien und Lehrverhältnisse.", "effect": "+2 Wissen pro Tag" },
+      "copper-workshop": { "name": "Kupferwerkstatt", "description": "Ein kontrollierter Arbeitsplatz zum Kalthämmern, Glühen und Erproben gediegenen Kupfers.", "effect": "+3 Wissen pro Tag" }
+    },
+    "units": {
+      "scout": { "name": "Späher", "plural": "{count} Späher", "description": "Ein einzelner geübter Reisender zur Geländeerkundung und Fernbeobachtung.", "role": "1 Person · 3 km Erkennung · höchstens 1" },
+      "hunting-party": { "name": "Jagdgruppe", "plural": "{count} Jagdgruppen", "description": "Eine kleine koordinierte Gruppe, die weit ziehen, Spuren lesen und sich verteidigen kann.", "role": "4 Personen · 2 Krieger · 1,5 km Erkennung" },
+      "slingers": { "name": "Schleuderer", "plural": "{count} Schleuderergruppen", "description": "Eine aufgelockerte Fernkampfgruppe für Störangriffe, Sicherung und unwegsames Gelände.", "role": "6 Personen · 6 Krieger · Fernkampfstörung" },
+      "spear-warband": { "name": "Speerkriegergruppe", "plural": "{count} Speerkriegergruppen", "description": "Eine disziplinierte Nahkampfgruppe zum Halten von Gelände und Abwehren feindlicher Krieger.", "role": "8 Personen · 8 Krieger · Linienverteidigung" },
+      "raiding-party": { "name": "Plündergruppe", "plural": "{count} Plündergruppen", "description": "Eine leicht versorgte Gruppe für schnelle Schläge und längere Märsche fern der Heimat.", "role": "6 Personen · 6 Krieger · bewegliche Überfälle" },
+      "axe-warband": { "name": "Axtkriegergruppe", "plural": "{count} Axtkriegergruppen", "description": "Eine Nahkampfgruppe mit haltbaren geschäfteten Werkzeugen für Angriff und Rodung.", "role": "8 Personen · 8 Krieger · Angriff" },
+      "village-guard": { "name": "Dorfwache", "plural": "{count} Dorfwachen", "description": "Ein größeres Verteidigungsaufgebot, geschult an den Barrieren und Alarmstellen des Dorfes.", "role": "10 Personen · 10 Krieger · Siedlungsverteidigung" }
+    }
+  },
+  "technology": {
+    "knowledge": "Wissen",
+    "chooseResearch": "Forschung waehlen",
+    "tribalKnowledge": "Stammeswissen",
+    "title": "Wissensnetz",
+    "introduction": "Verwandle vertraute Praktiken in verlaessliche Traditionen. Waehle ein Ziel; der benoetigte Weg wird automatisch geplant und Teilfortschritt bleibt erhalten.",
+    "perWorldDay": "Wissen / Welttag",
+    "close": "Wissensnetz schliessen",
+    "progress": "Fortschritt",
+    "cost": "Wissenskosten",
+    "prerequisites": "Benoetigt",
+    "unlocks": "Ermoeglicht",
+    "researchPlan": "Forschungsplan",
+    "noPrerequisites": "Lagerpraxis",
+    "anyOneOf": "Eines davon: {names}",
+    "queueCount": "{count} Schritte",
+    "knowledgeCost": "{cost} Wissen",
+    "progressValue": "{percent}% · {invested} / {cost}",
+    "affinity": "Kulturelle Vertrautheit: +{percent}% Wissensleistung bei {branch}.",
+    "noAffinity": "Fuer diesen Zweig gilt kein kultureller Vertrautheitsbonus.",
+    "pausedQueued": "Der Plan ist vorgemerkt. Die Forschung laeuft weiter, sobald die Weltzeit laeuft.",
+    "automaticPath": "Gesperrte Ziele planen automatisch einen eindeutigen Weg durch ihre Voraussetzungen.",
+    "futureSystem": "Kuenftiges Spielsystem",
+    "branches": {
+      "sustenance": "Versorgung",
+      "craft": "Handwerk",
+      "settlement": "Siedlung",
+      "society": "Gesellschaft",
+      "exploration": "Erkundung"
+    },
+    "tiers": {
+      "campPractice": "I · Lagerpraxis",
+      "reliableTradition": "II · Verlaessliche Tradition",
+      "organizedPractice": "III · Organisierte Praxis",
+      "institutions": "IV · Institutionen",
+      "breakthrough": "V · Durchbruch"
+    },
+    "states": {
+      "completed": "Gemeistert",
+      "researching": "In Forschung",
+      "queued": "Geplant",
+      "available": "Verfuegbar",
+      "blocked": "Weg erforderlich"
+    },
+    "actions": {
+      "completed": "Gemeistert",
+      "researching": "Wird erforscht",
+      "select": "Dies erforschen",
+      "change": "Fokus wechseln",
+      "plan": "Weg planen"
+    },
+    "nodes": {
+      "seasonal-lore": { "name": "Jahreszeitenwissen", "description": "Halte Wanderungen, Wetter und Reifezeiten als gemeinsame Vorhersage fest.", "unlock": "Saisonvorhersagen und Wanderungsplaene" },
+      "cooperative-hunts": { "name": "Gemeinschaftsjagd", "description": "Mache aus einzelner Jagderfahrung koordinierte Treibjagden mit Rollen und Signalen.", "unlock": "Jagdgruppen und organisierte Treibjagden" },
+      "cordage-basketry": { "name": "Seile & Korbflechten", "description": "Vereinheitliche Fasern, Knoten, Netze, Schlingen und Behaelter.", "unlock": "Netze, Tragezeug und bessere Fernkampfbereitschaft" },
+      "ground-stone-tools": { "name": "Geschliffene Steinwerkzeuge", "description": "Fertige verlaessliche Reibsteine, Moerser und haltbare Schneiden.", "unlock": "Reibsteine, Moerser und bessere Verarbeitung" },
+      "hearthcraft": { "name": "Herdkunst", "description": "Unterhalte sichere, heisse Herdstellen zum Kochen, Waermen und Trocknen.", "unlock": "Unterhaltene Herdstellen und Rauchkonservierung" },
+      "council-customs": { "name": "Ratsbraeuche", "description": "Schaffe ein verlaessliches Forum fuer Arbeit, Streit und erste Diplomatie.", "unlock": "Stammesrat und ausgehandelte Entscheidungen" },
+      "food-preservation": { "name": "Nahrungskonservierung", "description": "Trockne und raeuchere Ueberschuesse zu verlaesslichen Vorraeten.", "unlock": "Konservierte Nahrung und laengere Reisen" },
+      "plant-tending": { "name": "Pflanzenpflege", "description": "Schuetze und ernte nuetzliche Wildbestaende gezielt, noch ohne Landwirtschaft.", "unlock": "Gepflegte Wildflaechen und selektive Ernte" },
+      "animal-taming": { "name": "Tierzaehmung", "description": "Fange, halte und pruefe geeignete Tiere ueber laengere Zeit.", "unlock": "Gehege und gehaltene Tiere" },
+      "hafted-polished-tools": { "name": "Geschaeftete polierte Werkzeuge", "description": "Setze haltbare polierte Schneiden in Griffe fuer Holz- und Bauarbeit.", "unlock": "Polierte Werkzeuge und staerkere Nahkampfangriffe" },
+      "permanent-dwellings": { "name": "Dauerhafte Behausungen", "description": "Ersetze Notunterkuenfte durch gepflegte Haeuser und Arbeitsraeume.", "unlock": "Dauerhafte Haeuser und permanentes Lager" },
+      "oral-tradition": { "name": "Muendliche Tradition", "description": "Gib Wissenshuetern eine feste Rolle beim Lehren von Wegen und Braeuchen.", "unlock": "Wissenshueter und schnellere Wissensweitergabe" },
+      "trail-networks": { "name": "Pfadnetze", "description": "Verbinde wiederholte Routen zu bekannten Korridoren mit Rastplaetzen und Gefahren.", "unlock": "Markierte Routen und staerkere Trampelpfade" },
+      "warband-discipline": { "name": "Kriegerschardisziplin", "description": "Uebe Sammeln, Formationen und kontrollierte Ueberfaelle statt loser Gewalt.", "unlock": "Kriegerscharen, Sammelpunkte und geplante Ueberfaelle" },
+      "field-cultivation": { "name": "Feldanbau", "description": "Sae und pflege Felder, deren Ertrag von Boden, Wasser, Saison und Arbeit abhaengt.", "unlock": "Anbaufelder und Erntezyklen" },
+      "herd-management": { "name": "Herdenwirtschaft", "description": "Fuehre Herden ueber Weiden, saisonale Wege und geplante Schlachtung.", "unlock": "Herden, Weiderouten und Wanderweidewirtschaft" },
+      "pottery": { "name": "Toepferei", "description": "Forme und brenne lokalen Ton zu Koch- und Vorratsgefaessen.", "unlock": "Tonverarbeitung und gebrannte Gefaesse" },
+      "weaving": { "name": "Weberei", "description": "Ordne Spinnen und Weben zu verlaesslicher Textil- und Netzproduktion.", "unlock": "Textilien, Bindungen und besserer Schutz" },
+      "communal-storage": { "name": "Gemeinschaftsspeicher", "description": "Sammle konservierte Nahrung in verwalteten Reserven fuer schlechte Saisons.", "unlock": "Speicher und gemeinsame Vorratspolitik" },
+      "village-planning": { "name": "Dorfplanung", "description": "Plane dauerhafte Arbeitszonen, gemeinsame Infrastruktur und Platz fuer Wachstum.", "unlock": "Ausbau vom Lager zum Dorf" },
+      "watercraft": { "name": "Wasserfahrzeuge", "description": "Baue Floesse und Einbaeume fuer Querungen, Fischfang, Erkundung und Fracht.", "unlock": "Reisen auf Fluessen und an Kuesten" },
+      "ritual-architecture": { "name": "Ritualarchitektur", "description": "Baue gemeinschaftliche Monumente und Versammlungsorte auch ohne Landwirtschaft.", "unlock": "Heiligtuemer, Monumente und grosse Treffen" },
+      "water-management": { "name": "Wasserwirtschaft", "description": "Ordne Brunnen, Zisternen, Entwaesserung und kleine Umleitungen.", "unlock": "Brunnen, Zisternen und Feldumleitungen" },
+      "kiln-firing": { "name": "Ofenbrand", "description": "Kontrolliere heissere, wiederholbare Braende fuer Keramik und neue Werkstoffe.", "unlock": "Brennoefen und Hochtemperaturbrand" },
+      "mining-quarrying": { "name": "Bergbau & Steinbruch", "description": "Suche und gewinne Werkzeug- und Baustein jenseits leichter Oberflaechenfunde.", "unlock": "Minen, Steinbrueche und Massengewinnung" },
+      "defensive-earthworks": { "name": "Verteidigungswerke", "description": "Koordiniere Graeben, Waelle, Palisaden, Wachen und Verteidigungsaufgebote.", "unlock": "Graeben, Palisaden und befestigte Doerfer" },
+      "tallies-measures": { "name": "Kerben & Masse", "description": "Mache Vorraete, Pflichten, Tausch und Bauplanung nachpruefbar.", "unlock": "Kerbhoelzer, Standardmasse und Arbeitsquoten" },
+      "exchange-networks": { "name": "Tauschnetzwerke", "description": "Mache aus gelegentlichem Tausch wiederkehrende Routen und Gastrecht.", "unlock": "Regelmaessige Tauschrouten und ferne Kontakte" },
+      "craft-specialization": { "name": "Handwerksspezialisierung", "description": "Erhalte Werkstaetten, Lehrverhaeltnisse und einheitliche Serienfertigung.", "unlock": "Spezialwerkstaetten und bessere Werkzeuge" },
+      "village-administration": { "name": "Dorfverwaltung", "description": "Forme lokale Aufsicht, gelehrten Rat und überlieferte Autorität zu verlässlichen Dorfrollen.", "unlock": "Ältester, Weiser und Verwalter" },
+      "copper-working": { "name": "Kupferbearbeitung", "description": "Bearbeite seltenes Naturkupfer kalt und erprobe Erz mit Ofenhitze.", "unlock": "Kupferbeschlaege, Eliteausruestung und Uebergang zur Kupfersteinzeit" }
+    }
+  },
+  "survey": {
+    "surveyedLand": "Erkundetes Land",
+    "undiscovered": "Unentdeckt",
+    "outsideTheater": "Außerhalb der Region"
+  },
+  "settings": { "mapDetailStatus": "Kartendetail: {detail}" },
+  "format": {
+    "durationDay": "{value}T",
+    "durationHour": "{value}Std",
+    "durationMinute": "{value}Min",
+    "arrivalOrder": "{order} · {duration} · Ankunft {arrival}.",
+    "landTheaters": "{count} landgeeignete Regionen",
+    "kilometerTheater": "{distance}-km-Region",
+    "chooseKilometerTheater": "{distance}-km-Region · Lagerplatz wählen",
+    "simulationTick": "Simulationstick {tick}",
+    "unlock": "Schaltet frei: {name}",
+    "paceBonus": "+{percent}% Tempo in {terrain}",
+    "worldDate": "{day}. {month} {year} {era} · {time}",
+    "rivalStatus": "Rivale · {stance}",
+    "rivalsInSight": "{count} Rivalen in Sicht · {distance}-km-Region",
+    "oneRivalInSight": "1 Rivale in Sicht · {distance}-km-Region",
+    "metersPerPixel": "{distance} m/px",
+    "meters": "{distance} m",
+    "kilometers": "{distance} km",
+    "kilometersPerHour": "{speed} km/h",
+    "influenceKilometers": "{distance} km"
+    ,"lookoutHeight": "Erhöht den Ausblick auf {height} m"
+    ,"detectionCost": "{distance} km Sichtweite · kostet {count} Person"
+    ,"playerAllegiance": "Dein Stamm · {tribe}"
+    ,"allegiance": "{stance} · {tribe}"
+    ,"unitFeature": "{unit} · {tribe}"
+    ,"settlementFeature": "{name} · {population} Menschen"
+    ,"lastKnownFeature": "Zuletzt bekannt · {feature}"
+    ,"featureRegime": "{feature} · {regime}"
+  }
+}

@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A physically scaled Regional Theater for a tribal grand-strategy game."
+    />
+    <title data-i18n="ui.documentTitle"></title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="game" data-i18n-aria-label="ui.worldAtlasLabel"></div>
+
+      <section class="game-shell" id="game-shell" role="dialog" aria-modal="true" aria-labelledby="main-menu-title">
+        <div class="epoch-ruler" aria-hidden="true">
+          <span>I</span><i></i><span>II</span><i></i><span>III</span><i></i><span>IV</span>
+        </div>
+        <div class="shell-folio" id="main-menu-view">
+          <header class="shell-heading">
+            <span class="shell-index" data-i18n="ui.earthAge"></span>
+            <p data-i18n="ui.tagline"></p>
+            <h1 id="main-menu-title">Grand<br />Strategy</h1>
+          </header>
+          <p class="shell-deck" data-i18n="ui.deck"></p>
+          <nav class="shell-actions" data-i18n-aria-label="ui.mainMenu">
+            <button id="begin-game" type="button"><span>01</span><strong data-i18n="ui.beginCampaign"></strong><small data-i18n="ui.openAtlas"></small></button>
+            <button id="open-settings" type="button"><span>02</span><strong data-i18n="ui.settings"></strong><small data-i18n="ui.displayInterface"></small></button>
+          </nav>
+          <footer><span data-i18n="ui.fixedTick"></span><span data-i18n="ui.prototype"></span></footer>
+        </div>
+
+        <div class="shell-folio settings-folio" id="settings-view" hidden>
+          <header class="settings-heading">
+            <div><span class="shell-index" data-i18n="ui.fieldConfiguration"></span><h1 data-i18n="ui.settings"></h1></div>
+            <button id="close-settings" type="button" data-i18n="ui.back" data-i18n-aria-label="ui.back"></button>
+          </header>
+          <div class="settings-ledger">
+            <fieldset>
+              <legend><span data-i18n="ui.interfaceScale"></span><small data-i18n="ui.hudSize"></small></legend>
+              <div class="segmented-setting" id="interface-scale-setting">
+                <button type="button" data-interface-scale="1">100%</button>
+                <button type="button" data-interface-scale="1.25">125%</button>
+                <button type="button" data-interface-scale="1.5">150%</button>
+                <button type="button" data-interface-scale="1.75">175%</button>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span data-i18n="ui.mapDetail"></span><small data-i18n="ui.textureLod"></small></legend>
+              <div class="segmented-setting" id="map-detail-setting">
+                <button type="button" data-map-detail="economy" data-i18n="ui.economy"></button>
+                <button type="button" data-map-detail="balanced" data-i18n="ui.balanced"></button>
+                <button type="button" data-map-detail="detailed" data-i18n="ui.detailed"></button>
+              </div>
+              <p data-i18n="ui.detailHelp"></p>
+            </fieldset>
+            <fieldset>
+              <legend><span data-i18n="ui.language"></span></legend>
+              <div class="segmented-setting" id="language-setting">
+                <button type="button" data-language="en">English</button>
+                <button type="button" data-language="de">Deutsch</button>
+              </div>
+            </fieldset>
+            <label class="toggle-setting" for="show-map-survey">
+              <span><strong data-i18n="ui.fieldSurvey"></strong><small data-i18n="ui.surveyHelp"></small></span>
+              <input id="show-map-survey" type="checkbox" />
+              <i aria-hidden="true"></i>
+            </label>
+          </div>
+          <footer><span data-i18n="ui.autoSave"></span><span id="settings-status" role="status"></span></footer>
+        </div>
+      </section>
+
+      <div class="ui-layer">
+
+      <header class="map-readout" aria-live="polite">
+        <span class="era-label" data-i18n="ui.tribalAge"></span>
+        <span id="theater-name" data-i18n="terms.regionalTheater"></span>
+        <span class="world-clock"><strong id="world-clock-value">—</strong></span>
+        <span id="simulation-state" data-i18n="terms.paused"></span>
+        <button id="knowledge-button" class="knowledge-button" type="button" aria-haspopup="dialog">
+          <span data-i18n="technology.knowledge"></span>
+          <strong id="knowledge-button-status" data-i18n="technology.chooseResearch"></strong>
+        </button>
+        <button id="diplomacy-button" class="knowledge-button" type="button" aria-haspopup="dialog">
+          <span data-i18n="diplomacy.title"></span>
+          <strong id="diplomacy-button-status" data-i18n="diplomacy.noContacts"></strong>
+        </button>
+        <button id="events-button" class="knowledge-button" type="button" aria-haspopup="dialog">
+          <span data-i18n="events.title"></span>
+          <strong id="events-button-status" data-i18n="events.noPending"></strong>
+        </button>
+        <button id="menu-button" type="button" data-i18n="ui.menu"></button>
+      </header>
+
+      <aside class="founding-panel" id="founding-panel" aria-labelledby="founding-title">
+        <span class="panel-kicker" data-i18n="ui.homelandSurvey"></span>
+        <ol class="pick-steps" data-i18n-aria-label="ui.campaignSetupProgress">
+          <li data-pick-step="culture"><span>01</span><b data-i18n="ui.culture"></b></li>
+          <li data-pick-step="theater"><span>02</span><b data-i18n="ui.theater"></b></li>
+          <li data-pick-step="camp"><span>03</span><b data-i18n="ui.camp"></b></li>
+        </ol>
+        <h1 id="founding-title" data-i18n="setup.chooseCultureTitle"></h1>
+        <p id="founding-message" data-i18n="setup.chooseCultureMessage"></p>
+        <div class="theater-actions" id="theater-actions">
+          <button id="reroll-theater" type="button" disabled data-i18n="ui.redice"></button>
+        </div>
+        <section class="culture-profile" id="culture-profile" aria-labelledby="culture-profile-name" hidden>
+          <header>
+            <div><span data-i18n="ui.regionalTradition"></span><strong id="culture-profile-name">—</strong></div>
+            <small id="culture-focus">—</small>
+          </header>
+          <dl>
+            <div data-rule="legacy"><dt data-i18n="ui.legacy"></dt><dd><strong id="culture-legacy-name">—</strong><span id="culture-legacy-effect">—</span></dd></div>
+            <div data-rule="tradeoff"><dt data-i18n="ui.tradeoff"></dt><dd><strong id="culture-tradeoff-name">—</strong><span id="culture-tradeoff-effect">—</span></dd></div>
+            <div data-rule="acclimatization"><dt data-i18n="ui.acclimatization"></dt><dd><strong id="culture-acclimatization-name">—</strong><span id="culture-acclimatization-effect">—</span></dd></div>
+            <div data-rule="technology"><dt data-i18n="ui.signatureKnowledge"></dt><dd><strong id="culture-technology-name">—</strong><span id="culture-technology-effect">—</span><em id="culture-technology-unlock">—</em></dd></div>
+          </dl>
+        </section>
+        <nav class="phase-navigation" data-i18n-aria-label="ui.campaignSetupNavigation">
+          <button id="phase-back" type="button" disabled data-i18n="ui.back"></button>
+          <button id="phase-forward" type="button" disabled data-i18n="setup.chooseTheater"></button>
+        </nav>
+        <small id="founding-help" data-i18n="setup.chooseCultureHelp"></small>
+      </aside>
+
+      <aside class="tribe-panel" data-i18n-aria-label="ui.tribesInTheater">
+        <div class="theater-heading">
+          <span class="panel-kicker" data-i18n="terms.regionalTheater"></span>
+          <strong id="theater-stats" data-i18n="ui.loadingGeography"></strong>
+        </div>
+
+        <section class="selected-tribe" aria-labelledby="selected-name">
+          <div class="selected-heading">
+            <h1 id="selected-name">Attic</h1>
+            <span id="selected-status" data-stance="player" data-i18n="terms.yourTribe"></span>
+          </div>
+          <dl>
+            <div><dt data-i18n="ui.people"></dt><dd id="selected-population">—</dd></div>
+            <div><dt data-i18n="ui.warriors"></dt><dd id="selected-warriors">—</dd></div>
+            <div><dt data-i18n="ui.influence"></dt><dd id="selected-influence">—</dd></div>
+          </dl>
+        </section>
+
+        <section class="neighboring-tribes" aria-labelledby="tribe-list-title">
+          <div class="list-heading">
+            <h2 id="tribe-list-title" data-i18n="ui.tribesInSight"></h2>
+            <span data-i18n="ui.warriors"></span>
+          </div>
+          <ol id="tribe-list"></ol>
+        </section>
+
+        <footer class="stance-key">
+          <span><i data-stance="friendly"></i><span data-i18n="stance.friendly"></span></span>
+          <span><i data-stance="hostile"></i><span data-i18n="stance.hostile"></span></span>
+        </footer>
+      </aside>
+
+      <aside
+        class="construction-panel"
+        id="construction-panel"
+        aria-labelledby="construction-title"
+        hidden
+      >
+        <header class="construction-heading">
+          <div>
+            <span class="panel-kicker" data-i18n="ui.campWorks"></span>
+            <h1 id="construction-title">Attic Camp</h1>
+          </div>
+          <button id="close-construction" type="button" data-i18n-aria-label="ui.closeConstruction">×</button>
+        </header>
+        <nav class="camp-tabs" data-i18n-aria-label="ui.campManagement">
+          <button class="is-active" data-camp-tab="works" type="button" data-i18n="ui.works"></button>
+          <button data-camp-tab="train" type="button" data-i18n="ui.train"></button>
+          <button data-camp-tab="administration" type="button" data-i18n="ui.administration"></button>
+        </nav>
+        <div id="camp-works-view">
+          <button class="build-option" id="upgrade-village" type="button">
+            <span class="village-mark" aria-hidden="true">⌂</span>
+            <span>
+              <strong data-i18n="ui.village"></strong>
+              <small data-i18n="construction.villageDescription"></small>
+            </span>
+            <span id="village-action" data-i18n="construction.upgrade"></span>
+          </button>
+          <div class="roster-options" id="camp-building-options"></div>
+        </div>
+        <div id="camp-train-view" hidden>
+          <div class="roster-options" id="camp-unit-options"></div>
+          <dl class="terrain-pace" data-i18n-aria-label="ui.scoutFlatSpeed">
+            <div><dt data-i18n="terrain.plains"></dt><dd id="pace-plains"></dd></div>
+            <div><dt data-i18n="terrain.forest"></dt><dd id="pace-forest"></dd></div>
+            <div><dt data-i18n="terrain.jungle"></dt><dd id="pace-jungle"></dd></div>
+            <div><dt data-i18n="terrain.desert"></dt><dd id="pace-desert"></dd></div>
+            <div><dt data-i18n="terrain.tundra"></dt><dd id="pace-tundra"></dd></div>
+            <div><dt data-i18n="terrain.ice"></dt><dd id="pace-ice"></dd></div>
+          </dl>
+          <small class="pace-note" id="pace-note"></small>
+        </div>
+        <div id="camp-administration-view" hidden>
+          <div class="administration-current">
+            <span data-i18n="administration.current"></span>
+            <strong id="administration-current">—</strong>
+          </div>
+          <div class="administration-options">
+            <button class="administration-option" data-administration-role="tribal-leader" type="button">
+              <span class="administration-mark" aria-hidden="true">TL</span>
+              <span>
+                <strong data-i18n="administration.roles.tribal-leader.name"></strong>
+                <small data-i18n="administration.roles.tribal-leader.description"></small>
+                <em data-i18n="administration.roles.tribal-leader.effect"></em>
+              </span>
+              <span class="administration-role-state"></span>
+            </button>
+            <button class="administration-option" data-administration-role="elder" type="button">
+              <span class="administration-mark" aria-hidden="true">EL</span>
+              <span>
+                <strong data-i18n="administration.roles.elder.name"></strong>
+                <small data-i18n="administration.roles.elder.description"></small>
+                <em data-i18n="administration.roles.elder.effect"></em>
+              </span>
+              <span class="administration-role-state"></span>
+            </button>
+            <button class="administration-option" data-administration-role="sage" type="button">
+              <span class="administration-mark" aria-hidden="true">SG</span>
+              <span>
+                <strong data-i18n="administration.roles.sage.name"></strong>
+                <small data-i18n="administration.roles.sage.description"></small>
+                <em data-i18n="administration.roles.sage.effect"></em>
+              </span>
+              <span class="administration-role-state"></span>
+            </button>
+            <button class="administration-option" data-administration-role="steward" type="button">
+              <span class="administration-mark" aria-hidden="true">ST</span>
+              <span>
+                <strong data-i18n="administration.roles.steward.name"></strong>
+                <small data-i18n="administration.roles.steward.description"></small>
+                <em data-i18n="administration.roles.steward.effect"></em>
+              </span>
+              <span class="administration-role-state"></span>
+            </button>
+          </div>
+        </div>
+        <p id="construction-status" role="status" data-i18n="roster.chooseBuilding"></p>
+      </aside>
+
+      <aside class="unit-panel" id="unit-panel" aria-labelledby="unit-title" hidden>
+        <span class="panel-kicker" data-i18n="ui.fieldUnit"></span>
+        <h1 id="unit-title" data-i18n="roster.units.scout.name"></h1>
+        <dl>
+          <div><dt data-i18n="ui.ground"></dt><dd id="unit-terrain">—</dd></div>
+          <div><dt data-i18n="ui.slope"></dt><dd id="unit-slope">—</dd></div>
+          <div><dt data-i18n="ui.pace"></dt><dd id="unit-pace">—</dd></div>
+          <div><dt data-i18n="ui.arrival"></dt><dd id="unit-arrival">—</dd></div>
+          <div><dt data-i18n="ui.detection"></dt><dd id="unit-detection"></dd></div>
+          <div><dt data-i18n="combat.strength"></dt><dd id="unit-strength">—</dd></div>
+          <div><dt data-i18n="combat.morale"></dt><dd id="unit-morale">—</dd></div>
+          <div><dt data-i18n="combat.cohesion"></dt><dd id="unit-cohesion">—</dd></div>
+          <div><dt data-i18n="combat.fatigue"></dt><dd id="unit-fatigue">—</dd></div>
+          <div><dt data-i18n="combat.experience"></dt><dd id="unit-experience">—</dd></div>
+        </dl>
+        <div class="combat-orders" id="combat-orders" hidden>
+          <label><span data-i18n="combat.doctrine"></span><select id="combat-doctrine"><option value="cautious" data-i18n="combat.doctrines.cautious"></option><option value="balanced" data-i18n="combat.doctrines.balanced"></option><option value="aggressive" data-i18n="combat.doctrines.aggressive"></option></select></label>
+          <label><span data-i18n="combat.formation"></span><select id="combat-formation"></select></label>
+          <label><span data-i18n="combat.pursuit"></span><select id="combat-pursuit"><option value="hold" data-i18n="combat.pursuits.hold"></option><option value="controlled" data-i18n="combat.pursuits.controlled"></option><option value="all-out" data-i18n="combat.pursuits.all-out"></option></select></label>
+        </div>
+        <p id="unit-status" role="status" data-i18n="orders.instructions"></p>
+        <small data-i18n="ui.mapInstructions"></small>
+      </aside>
+
+      <aside class="map-survey" id="map-survey" data-i18n-aria-label="ui.mapSurveyLabel">
+        <header class="survey-heading">
+          <span class="panel-kicker" data-i18n="ui.fieldSurvey"></span>
+          <strong id="survey-title" data-i18n="ui.pointAtMap"></strong>
+        </header>
+        <dl>
+          <div><dt data-i18n="ui.biome"></dt><dd id="survey-biome">—</dd></div>
+          <div><dt data-i18n="ui.terrain"></dt><dd id="survey-terrain">—</dd></div>
+          <div><dt data-i18n="ui.vegetation"></dt><dd id="survey-vegetation">—</dd></div>
+          <div><dt data-i18n="ui.moisture"></dt><dd id="survey-moisture">—</dd></div>
+          <div><dt data-i18n="ui.natural"></dt><dd id="survey-natural">—</dd></div>
+          <div class="survey-height"><dt data-i18n="ui.height"></dt><dd id="survey-height">—</dd></div>
+          <div><dt data-i18n="ui.feature"></dt><dd id="survey-feature">—</dd></div>
+          <div><dt data-i18n="ui.works"></dt><dd id="survey-buildings">—</dd></div>
+          <div><dt data-i18n="ui.influence"></dt><dd id="survey-influence" data-i18n="terms.unclaimed"></dd></div>
+          <div><dt data-i18n="ui.allegiance"></dt><dd id="survey-allegiance" data-i18n="terms.unknown"></dd></div>
+        </dl>
+      </aside>
+
+      <aside class="map-view-menu" id="map-view-menu" data-i18n-aria-label="ui.mapViews">
+        <button
+          class="map-view-toggle"
+          id="map-view-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="map-view-options"
+        >
+          <span data-i18n="ui.mapViews"></span>
+          <i aria-hidden="true"></i>
+        </button>
+        <div class="map-view-options" id="map-view-options" hidden>
+          <button class="is-active" type="button" data-map-view="relief" aria-pressed="true">
+            <i data-view-swatch="relief" aria-hidden="true"></i>
+            <span data-i18n="ui.relief"></span>
+          </button>
+          <button type="button" data-map-view="height" aria-pressed="false">
+            <i data-view-swatch="height" aria-hidden="true"></i>
+            <span data-i18n="ui.height"></span>
+          </button>
+          <button type="button" data-map-view="moisture" aria-pressed="false">
+            <i data-view-swatch="moisture" aria-hidden="true"></i>
+            <span data-i18n="ui.moisture"></span>
+          </button>
+          <button type="button" data-map-view="resources" aria-pressed="false">
+            <i data-view-swatch="resources" aria-hidden="true"></i>
+            <span><b data-i18n="ui.resources"></b><small data-i18n="ui.forestResources"></small></span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="scale-readout" data-i18n-aria-label="ui.mapScale">
+        <span id="scale-value">— m/px</span>
+        <span class="scale-rule"><i id="scale-bar"></i></span>
+        <strong id="scale-bar-label">— km</strong>
+        <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer" data-i18n="ui.hydrographyAttribution"></a>
+      </div>
+
+      <nav class="time-controls" data-i18n-aria-label="ui.timeControls">
+        <button id="pause-button" type="button" aria-pressed="true">
+          <span id="pause-label" data-i18n="terms.play"></span>
+        </button>
+        <span id="speed-controls"></span>
+        <button id="fit-button" type="button" data-i18n="ui.theater"></button>
+      </nav>
+
+      <section class="ledger-panel diplomacy-panel" id="diplomacy-panel" role="dialog" aria-labelledby="diplomacy-title" hidden>
+        <header class="ledger-heading">
+          <div><span class="panel-kicker" data-i18n="diplomacy.tribalRelations"></span><h1 id="diplomacy-title" data-i18n="diplomacy.title"></h1><p data-i18n="diplomacy.introduction"></p></div>
+          <button id="close-diplomacy" type="button" data-i18n-aria-label="ui.close">×</button>
+        </header>
+        <div class="diplomacy-body">
+          <nav class="diplomacy-contacts" id="diplomacy-contacts" data-i18n-aria-label="diplomacy.contacts"></nav>
+          <article class="diplomacy-ledger">
+            <header><span id="diplomacy-culture">—</span><h2 id="diplomacy-tribe-name">—</h2><strong id="diplomacy-stance">—</strong></header>
+            <div class="relation-meters" id="relation-meters"></div>
+            <section><h3 data-i18n="diplomacy.agreements"></h3><div class="agreement-list" id="diplomacy-agreements"></div></section>
+            <section><h3 data-i18n="diplomacy.incomingProposals"></h3><div class="proposal-list" id="diplomacy-proposals"></div></section>
+            <section><h3 data-i18n="diplomacy.actions"></h3><div class="diplomacy-actions" id="diplomacy-actions"></div></section>
+            <p id="diplomacy-status" class="ledger-status" role="status"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ledger-panel event-panel" id="event-panel" role="dialog" aria-labelledby="event-panel-title" hidden>
+        <header class="ledger-heading">
+          <div><span class="panel-kicker" data-i18n="events.chronicle"></span><h1 id="event-panel-title" data-i18n="events.title"></h1><p data-i18n="events.introduction"></p></div>
+          <button id="close-events" type="button" data-i18n-aria-label="ui.close">×</button>
+        </header>
+        <div class="event-body">
+          <article class="event-focus" id="event-focus">
+            <span id="event-category">—</span><h2 id="event-title">—</h2><p id="event-description" data-i18n="events.noEvents"></p>
+            <div class="event-choices" id="event-choices"></div>
+          </article>
+          <aside class="event-chronicle"><header><h3 data-i18n="events.recent"></h3><strong id="event-pending-count">0</strong></header><ol id="event-history"></ol></aside>
+        </div>
+      </section>
+
+      <section
+        class="technology-panel"
+        id="technology-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="technology-title"
+        hidden
+      >
+        <header class="technology-heading">
+          <div>
+            <span class="panel-kicker" data-i18n="technology.tribalKnowledge"></span>
+            <h1 id="technology-title" data-i18n="technology.title"></h1>
+            <p data-i18n="technology.introduction"></p>
+          </div>
+          <div class="technology-heading-actions">
+            <span><b id="knowledge-rate">-</b><small data-i18n="technology.perWorldDay"></small></span>
+            <button id="close-technology" type="button" data-i18n-aria-label="technology.close">x</button>
+          </div>
+        </header>
+        <div class="technology-body">
+          <div class="technology-scroll">
+            <div class="technology-map" id="technology-map">
+              <svg id="technology-links" viewBox="0 0 1160 760" preserveAspectRatio="none" aria-hidden="true"></svg>
+              <div id="technology-nodes"></div>
+              <ol class="technology-era-ruler" aria-hidden="true">
+                <li data-i18n="technology.tiers.campPractice"></li>
+                <li data-i18n="technology.tiers.reliableTradition"></li>
+                <li data-i18n="technology.tiers.organizedPractice"></li>
+                <li data-i18n="technology.tiers.institutions"></li>
+                <li data-i18n="technology.tiers.breakthrough"></li>
+              </ol>
+            </div>
+          </div>
+          <aside class="technology-ledger" aria-live="polite">
+            <span id="technology-detail-branch" class="technology-branch"></span>
+            <h2 id="technology-detail-name">-</h2>
+            <p id="technology-detail-description"></p>
+            <dl>
+              <div><dt data-i18n="technology.progress"></dt><dd id="technology-detail-progress">-</dd></div>
+              <div><dt data-i18n="technology.cost"></dt><dd id="technology-detail-cost">-</dd></div>
+              <div><dt data-i18n="technology.prerequisites"></dt><dd id="technology-detail-prerequisites">-</dd></div>
+              <div><dt data-i18n="technology.unlocks"></dt><dd id="technology-detail-unlocks">-</dd></div>
+            </dl>
+            <button id="research-technology" class="research-technology" type="button" disabled></button>
+            <small id="technology-detail-note"></small>
+            <section class="research-queue" aria-labelledby="research-queue-title">
+              <header><h3 id="research-queue-title" data-i18n="technology.researchPlan"></h3><span id="research-queue-count"></span></header>
+              <ol id="research-queue"></ol>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <div id="loading" role="status" aria-live="polite" aria-busy="true">
+        <div class="loading-sheet">
+          <span data-i18n="ui.mapRoom"></span>
+          <strong id="loading-label" data-i18n="ui.openingAtlas"></strong>
+          <div
+            class="loading-progress"
+            id="loading-progress"
+            role="progressbar"
+            aria-labelledby="loading-label"
+            aria-describedby="loading-note"
+          ><i aria-hidden="true"></i></div>
+          <small id="loading-note" data-i18n="ui.loadingGeography"></small>
+        </div>
+      </div>
+      </div>
+      <aside id="theater-tooltip" class="theater-tooltip" role="tooltip" hidden>
+        <span id="tooltip-kicker" data-i18n="terms.regionalCulture"></span>
+        <strong id="tooltip-culture">—</strong>
+        <b id="tooltip-culture-focus">—</b>
+        <small id="tooltip-region">—</small>
+        <dl class="terrain-mix" data-i18n-aria-label="ui.terrainComposition">
+          <div><dt data-i18n="terrain.water"></dt><dd id="tooltip-water">—</dd></div>
+          <div><dt data-i18n="terrain.plains"></dt><dd id="tooltip-plains">—</dd></div>
+          <div><dt data-i18n="terrain.forest"></dt><dd id="tooltip-forest">—</dd></div>
+          <div><dt data-i18n="terrain.jungle"></dt><dd id="tooltip-jungle">—</dd></div>
+          <div><dt data-i18n="terrain.hills"></dt><dd id="tooltip-hills">—</dd></div>
+          <div><dt data-i18n="terrain.mountains"></dt><dd id="tooltip-mountains">—</dd></div>
+          <div><dt data-i18n="terrain.desert"></dt><dd id="tooltip-desert">—</dd></div>
+          <div><dt data-i18n="terrain.tundra"></dt><dd id="tooltip-tundra">—</dd></div>
+          <div><dt data-i18n="terrain.ice"></dt><dd id="tooltip-ice">—</dd></div>
+        </dl>
+      </aside>
+      <div id="selection-box" aria-hidden="true" hidden></div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

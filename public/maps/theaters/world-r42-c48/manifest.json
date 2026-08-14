@@ -1,0 +1,175 @@
+{
+  "formatVersion": 14,
+  "id": "world-r42-c48",
+  "name": "Anatolian-Caucasian Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=37.177902 +lon_0=30.361446 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 30361446,
+      "latitudeE6": 37177902
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 25828659,
+    "eastLongitudeE6": 34894233,
+    "southLatitudeE6": 33643320,
+    "northLatitudeE6": 40636932,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:c535267e29f49aad8fbcbfee425c0756dff8634afb2f19eddbf0dc19dd0f4813",
+    "featureCount": 74419,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "bulgaria",
+        "url": "https://download.geofabrik.de/europe/bulgaria-260801.osm.pbf",
+        "md5": "f662e95815a1b81692a1c8f2bc87943f"
+      },
+      {
+        "id": "cyprus",
+        "url": "https://download.geofabrik.de/europe/cyprus-260801.osm.pbf",
+        "md5": "33babf8a98132340747d49299ef46207"
+      },
+      {
+        "id": "egypt",
+        "url": "https://download.geofabrik.de/africa/egypt-260801.osm.pbf",
+        "md5": "43586fa1933a1974e5adecae8b9986c3"
+      },
+      {
+        "id": "greece",
+        "url": "https://download.geofabrik.de/europe/greece-260801.osm.pbf",
+        "md5": "70fb4feeba54cc3e4b6fdc8e1afbe0fc"
+      },
+      {
+        "id": "israel-and-palestine",
+        "url": "https://download.geofabrik.de/asia/israel-and-palestine-260801.osm.pbf",
+        "md5": "e9627507dcb0a9edfe77fc888c383013"
+      },
+      {
+        "id": "libya",
+        "url": "https://download.geofabrik.de/africa/libya-260801.osm.pbf",
+        "md5": "007eab15b7de5054339f56ae2086be7f"
+      },
+      {
+        "id": "syria",
+        "url": "https://download.geofabrik.de/asia/syria-260801.osm.pbf",
+        "md5": "dea38ac1488896fb67eeec7e202461f8"
+      },
+      {
+        "id": "turkey",
+        "url": "https://download.geofabrik.de/europe/turkey-260801.osm.pbf",
+        "md5": "4846672d59e5d14890adf3bc07e2b701"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 1868,
+    "geometryPointCount": 495494
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

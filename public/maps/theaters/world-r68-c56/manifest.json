@@ -1,0 +1,105 @@
+{
+  "formatVersion": 4,
+  "id": "world-r68-c56",
+  "name": "Continental Germanic Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=46.653902 +lon_0=10.093458 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 10093458,
+      "latitudeE6": 46653902
+    }
+  },
+  "extent": {
+    "widthMeters": 512000,
+    "heightMeters": 512000
+  },
+  "render": {
+    "width": 4096,
+    "height": 4096,
+    "metersPerPixel": 125.0,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 6601210,
+    "eastLongitudeE6": 13585706,
+    "southLatitudeE6": 44304221,
+    "northLatitudeE6": 48956339,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 1024,
+    "height": 1024,
+    "metersPerCell": 500,
+    "elevationPath": "elevation.i16",
+    "elevationEncoding": "signed-int16-little-endian-meters",
+    "landMaskPath": "land-mask.png",
+    "surfaceCoverPath": "surface-cover.u8",
+    "surfaceCoverEncoding": "surface-cover-u8-v1",
+    "terrainPath": "terrain.u8",
+    "terrainEncoding": "terrain-u8-v1"
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.0538
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 10
+  },
+  "surfaceCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "categorical equirectangular u8"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  }
+}

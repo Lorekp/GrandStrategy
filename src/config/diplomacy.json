@@ -1,0 +1,22 @@
+{
+  "minimumOpinion": -100,
+  "maximumOpinion": 100,
+  "minimumTrust": 0,
+  "maximumTrust": 100,
+  "minimumTension": 0,
+  "maximumTension": 100,
+  "actionCooldownWorldDays": 3,
+  "proposalExpiryWorldDays": 30,
+  "actions": [
+    { "id": "send-envoys", "kind": "unilateral", "requiredTechnologyIds": ["council-customs"], "agreement": null, "opinionDelta": 12, "trustDelta": 6, "tensionDelta": -5, "acceptanceThreshold": 0 },
+    { "id": "insult", "kind": "unilateral", "requiredTechnologyIds": [], "agreement": null, "opinionDelta": -20, "trustDelta": -10, "tensionDelta": 15, "acceptanceThreshold": 0 },
+    { "id": "threaten", "kind": "unilateral", "requiredTechnologyIds": [], "agreement": null, "opinionDelta": -12, "trustDelta": -15, "tensionDelta": 25, "acceptanceThreshold": 0 },
+    { "id": "declare-war", "kind": "war", "requiredTechnologyIds": [], "agreement": null, "opinionDelta": -40, "trustDelta": -40, "tensionDelta": 100, "acceptanceThreshold": 0 },
+    { "id": "propose-guest-right", "kind": "proposal", "requiredTechnologyIds": ["council-customs"], "agreement": "guest-right", "opinionDelta": 5, "trustDelta": 8, "tensionDelta": -4, "acceptanceThreshold": 5 },
+    { "id": "propose-safe-passage", "kind": "proposal", "requiredTechnologyIds": ["trail-networks"], "agreement": "safe-passage", "opinionDelta": 4, "trustDelta": 10, "tensionDelta": -5, "acceptanceThreshold": 12 },
+    { "id": "propose-non-aggression", "kind": "proposal", "requiredTechnologyIds": ["council-customs"], "agreement": "non-aggression", "opinionDelta": 6, "trustDelta": 12, "tensionDelta": -12, "acceptanceThreshold": 18 },
+    { "id": "propose-exchange-pact", "kind": "proposal", "requiredTechnologyIds": ["exchange-networks"], "agreement": "exchange-pact", "opinionDelta": 10, "trustDelta": 14, "tensionDelta": -8, "acceptanceThreshold": 30 },
+    { "id": "propose-defensive-pact", "kind": "proposal", "requiredTechnologyIds": ["warband-discipline", "council-customs"], "agreement": "defensive-pact", "opinionDelta": 12, "trustDelta": 18, "tensionDelta": -10, "acceptanceThreshold": 48 },
+    { "id": "offer-peace", "kind": "peace", "requiredTechnologyIds": [], "agreement": null, "opinionDelta": 5, "trustDelta": 0, "tensionDelta": -35, "acceptanceThreshold": -20 }
+  ]
+}

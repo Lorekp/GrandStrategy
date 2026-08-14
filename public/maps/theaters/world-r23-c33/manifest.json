@@ -1,0 +1,165 @@
+{
+  "formatVersion": 14,
+  "id": "world-r23-c33",
+  "name": "Southern Cone Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=-19.678101 +lon_0=-55.102041 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": -55102041,
+      "latitudeE6": -19678101
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": -58848623,
+    "eastLongitudeE6": -51355459,
+    "southLatitudeE6": -23146225,
+    "northLatitudeE6": -16174121,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:9d3abfd719622b3e36dbb711cede5a0fe2840c5ca850999ec8a04d4e404c2812",
+    "featureCount": 61522,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "argentina",
+        "url": "https://download.geofabrik.de/south-america/argentina-260801.osm.pbf",
+        "md5": "88363203895d0892ce14b1d5422c5e7a"
+      },
+      {
+        "id": "bolivia",
+        "url": "https://download.geofabrik.de/south-america/bolivia-260801.osm.pbf",
+        "md5": "161cdd8f6980c679d644c17e549eb3b9"
+      },
+      {
+        "id": "centro-oeste",
+        "url": "https://download.geofabrik.de/south-america/brazil/centro-oeste-260801.osm.pbf",
+        "md5": "301d1e3b807cfa0c78be43f300b33e80"
+      },
+      {
+        "id": "paraguay",
+        "url": "https://download.geofabrik.de/south-america/paraguay-260801.osm.pbf",
+        "md5": "130200c4c15e4dc348f225c15a2fba55"
+      },
+      {
+        "id": "sudeste",
+        "url": "https://download.geofabrik.de/south-america/brazil/sudeste-260801.osm.pbf",
+        "md5": "7b8728d7c08d3ceffc79988779c8246f"
+      },
+      {
+        "id": "sul",
+        "url": "https://download.geofabrik.de/south-america/brazil/sul-260801.osm.pbf",
+        "md5": "007ebe3505bf5693ad322f12eb386138"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 1648,
+    "geometryPointCount": 437375
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

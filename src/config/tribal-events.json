@@ -1,0 +1,155 @@
+{
+  "pulseWorldDays": 1,
+  "periodicChancePercent": 45,
+  "maximumPendingPerTribe": 3,
+  "maximumHistoryPerTribe": 120,
+  "definitions": [
+    { "id": "first-contact", "category": "diplomatic", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [
+      { "id": "open-hands", "effects": { "opinionDelta": 10, "trustDelta": 6, "tensionDelta": -5 } },
+      { "id": "watchful-distance", "effects": { "opinionDelta": 0, "trustDelta": 1, "tensionDelta": 3 } }
+    ] },
+    { "id": "proposal-received", "category": "diplomatic", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "proposal-refused", "category": "diplomatic", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "pact-sealed", "category": "diplomatic", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "war-declared", "category": "conflict", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "battle-won", "category": "conflict", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "battle-lost", "category": "conflict", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "work-completed", "category": "camp", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "unit-trained", "category": "conflict", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+    { "id": "research-breakthrough", "category": "research", "trigger": "reactive", "weight": 0, "conditions": {}, "choices": [] },
+
+    { "id": "disputed-hunting-ground", "category": "diplomatic", "trigger": "periodic", "weight": 6, "conditions": { "requiresKnownTribe": true }, "choices": [
+      { "id": "share-season", "effects": { "opinionDelta": 8, "trustDelta": 5, "tensionDelta": -8, "influenceDelta": -40 } },
+      { "id": "mark-boundary", "effects": { "opinionDelta": -6, "trustDelta": -3, "tensionDelta": 10, "influenceDelta": 60 } }
+    ] },
+    { "id": "envoys-at-dusk", "category": "diplomatic", "trigger": "periodic", "weight": 5, "conditions": { "requiresKnownTribe": true }, "choices": [
+      { "id": "host-feast", "effects": { "populationDelta": -1, "opinionDelta": 10, "trustDelta": 7, "tensionDelta": -5 } },
+      { "id": "brief-council", "effects": { "opinionDelta": 3, "trustDelta": 2 } }
+    ] },
+    { "id": "guest-right-tested", "category": "diplomatic", "trigger": "periodic", "weight": 4, "conditions": { "requiresKnownTribe": true }, "choices": [
+      { "id": "honor-custom", "effects": { "opinionDelta": 6, "trustDelta": 10, "tensionDelta": -4 } },
+      { "id": "refuse-guests", "effects": { "opinionDelta": -10, "trustDelta": -8, "tensionDelta": 6 } }
+    ] },
+    { "id": "shared-festival", "category": "diplomatic", "trigger": "periodic", "weight": 3, "conditions": { "requiresKnownTribe": true, "requiresVillage": true }, "choices": [
+      { "id": "join-gathering", "effects": { "populationDelta": -1, "opinionDelta": 12, "trustDelta": 8, "researchKnowledge": 3 } },
+      { "id": "send-token", "effects": { "opinionDelta": 5, "trustDelta": 3 } }
+    ] },
+    { "id": "marriage-between-clans", "category": "diplomatic", "trigger": "periodic", "weight": 2, "conditions": { "requiresKnownTribe": true, "minimumPopulation": 40 }, "choices": [
+      { "id": "bless-union", "effects": { "populationDelta": 1, "opinionDelta": 14, "trustDelta": 12, "tensionDelta": -8 } },
+      { "id": "keep-apart", "effects": { "opinionDelta": -5, "trustDelta": -5, "tensionDelta": 4 } }
+    ] },
+
+    { "id": "hidden-spring", "category": "scout", "trigger": "periodic", "weight": 7, "conditions": { "requiresScout": true }, "choices": [
+      { "id": "mark-route", "effects": { "researchKnowledge": 3, "influenceDelta": 35 } },
+      { "id": "keep-secret", "effects": { "researchKnowledge": 1, "influenceDelta": 10 } }
+    ] },
+    { "id": "commanding-ridge", "category": "scout", "trigger": "periodic", "weight": 7, "conditions": { "requiresScout": true }, "choices": [
+      { "id": "survey-horizon", "effects": { "researchKnowledge": 4 } },
+      { "id": "raise-cairn", "effects": { "influenceDelta": 55, "researchKnowledge": 1 } }
+    ] },
+    { "id": "dangerous-crossing", "category": "scout", "trigger": "periodic", "weight": 5, "conditions": { "requiresScout": true }, "choices": [
+      { "id": "test-crossing", "effects": { "researchKnowledge": 5, "warriorsDelta": -1 } },
+      { "id": "turn-back", "effects": { "researchKnowledge": 1 } }
+    ] },
+    { "id": "abandoned-hearth", "category": "scout", "trigger": "periodic", "weight": 5, "conditions": { "requiresScout": true }, "choices": [
+      { "id": "study-remains", "effects": { "researchKnowledge": 4, "populationDelta": -1 } },
+      { "id": "leave-untouched", "effects": { "influenceDelta": 15 } }
+    ] },
+    { "id": "unfamiliar-trail", "category": "scout", "trigger": "periodic", "weight": 6, "conditions": { "requiresScout": true, "requiresKnownTribe": true }, "choices": [
+      { "id": "follow-trail", "effects": { "researchKnowledge": 4, "tensionDelta": 4 } },
+      { "id": "observe-only", "effects": { "researchKnowledge": 2 } }
+    ] },
+    { "id": "wounded-scout", "category": "scout", "trigger": "periodic", "weight": 3, "conditions": { "requiresScout": true }, "choices": [
+      { "id": "carry-home", "effects": { "populationDelta": -1, "influenceDelta": 15 } },
+      { "id": "send-help", "effects": { "warriorsDelta": -1, "researchKnowledge": 2 } }
+    ] },
+
+    { "id": "crowded-hearth", "category": "camp", "trigger": "periodic", "weight": 6, "conditions": { "minimumPopulation": 25 }, "choices": [
+      { "id": "raise-shelters", "effects": { "populationDelta": 2, "influenceDelta": 20 } },
+      { "id": "divide-hearths", "effects": { "populationDelta": 1, "researchKnowledge": 2 } }
+    ] },
+    { "id": "spoiled-stores", "category": "camp", "trigger": "periodic", "weight": 5, "conditions": { "minimumPopulation": 15 }, "choices": [
+      { "id": "ration-carefully", "effects": { "populationDelta": -1, "researchKnowledge": 2 } },
+      { "id": "replace-quickly", "effects": { "populationDelta": -2, "influenceDelta": 20 } }
+    ] },
+    { "id": "clay-deposit", "category": "camp", "trigger": "periodic", "weight": 5, "conditions": {}, "choices": [
+      { "id": "test-clay", "effects": { "researchKnowledge": 4 } },
+      { "id": "mark-deposit", "effects": { "influenceDelta": 35 } }
+    ] },
+    { "id": "skilled-craftsperson", "category": "camp", "trigger": "periodic", "weight": 4, "conditions": { "minimumPopulation": 20 }, "choices": [
+      { "id": "grant-workspace", "effects": { "researchKnowledge": 5, "influenceDelta": 10 } },
+      { "id": "teach-all", "effects": { "researchKnowledge": 3, "populationDelta": 1 } }
+    ] },
+    { "id": "night-watch", "category": "camp", "trigger": "periodic", "weight": 5, "conditions": { "requiresWarriors": true }, "choices": [
+      { "id": "regular-rotation", "effects": { "warriorsDelta": 1, "influenceDelta": 20 } },
+      { "id": "household-watch", "effects": { "influenceDelta": 15 } }
+    ] },
+    { "id": "fresh-water-concern", "category": "camp", "trigger": "periodic", "weight": 4, "conditions": { "minimumPopulation": 30 }, "choices": [
+      { "id": "dig-deeper", "effects": { "populationDelta": 2, "researchKnowledge": 2 } },
+      { "id": "limit-growth", "effects": { "populationDelta": -1, "influenceDelta": 25 } }
+    ] },
+
+    { "id": "remembered-technique", "category": "research", "trigger": "periodic", "weight": 7, "conditions": { "requiresActiveResearch": true }, "choices": [
+      { "id": "reconstruct-method", "effects": { "researchKnowledge": 6 } },
+      { "id": "compare-versions", "effects": { "researchKnowledge": 4, "influenceDelta": 10 } }
+    ] },
+    { "id": "disputed-method", "category": "research", "trigger": "periodic", "weight": 5, "conditions": { "requiresActiveResearch": true }, "choices": [
+      { "id": "test-both", "effects": { "researchKnowledge": 5, "populationDelta": -1 } },
+      { "id": "trust-elders", "effects": { "researchKnowledge": 2, "influenceDelta": 20 } }
+    ] },
+    { "id": "traveling-lorekeeper", "category": "research", "trigger": "periodic", "weight": 4, "conditions": { "requiresActiveResearch": true, "requiresKnownTribe": true }, "choices": [
+      { "id": "welcome-teacher", "effects": { "researchKnowledge": 7, "opinionDelta": 5, "trustDelta": 4 } },
+      { "id": "exchange-stories", "effects": { "researchKnowledge": 4, "opinionDelta": 3 } }
+    ] },
+    { "id": "successful-experiment", "category": "research", "trigger": "periodic", "weight": 6, "conditions": { "requiresActiveResearch": true }, "choices": [
+      { "id": "repeat-carefully", "effects": { "researchKnowledge": 6 } },
+      { "id": "spread-practice", "effects": { "researchKnowledge": 3, "populationDelta": 1 } }
+    ] },
+    { "id": "broken-prototype", "category": "research", "trigger": "periodic", "weight": 4, "conditions": { "requiresActiveResearch": true }, "choices": [
+      { "id": "learn-from-failure", "effects": { "researchKnowledge": 4 } },
+      { "id": "abandon-attempt", "effects": { "influenceDelta": 15 } }
+    ] },
+
+    { "id": "cattle-theft", "category": "conflict", "trigger": "periodic", "weight": 5, "conditions": { "requiresKnownTribe": true, "requiresWarriors": true }, "choices": [
+      { "id": "demand-return", "effects": { "opinionDelta": -6, "tensionDelta": 12, "influenceDelta": 35 } },
+      { "id": "accept-loss", "effects": { "opinionDelta": -2, "tensionDelta": -4, "populationDelta": -1 } }
+    ] },
+    { "id": "blood-price-demand", "category": "conflict", "trigger": "periodic", "weight": 4, "conditions": { "requiresKnownTribe": true, "requiresWarriors": true }, "choices": [
+      { "id": "pay-price", "effects": { "populationDelta": -1, "opinionDelta": 4, "trustDelta": 5, "tensionDelta": -10 } },
+      { "id": "reject-demand", "effects": { "opinionDelta": -10, "trustDelta": -6, "tensionDelta": 15 } }
+    ] },
+    { "id": "captive-warrior", "category": "conflict", "trigger": "periodic", "weight": 3, "conditions": { "requiresKnownTribe": true, "requiresWarriors": true }, "choices": [
+      { "id": "return-captive", "effects": { "opinionDelta": 10, "trustDelta": 8, "tensionDelta": -8 } },
+      { "id": "demand-oath", "effects": { "warriorsDelta": 1, "opinionDelta": -8, "tensionDelta": 8 } }
+    ] },
+    { "id": "raid-warning", "category": "conflict", "trigger": "periodic", "weight": 5, "conditions": { "requiresKnownTribe": true, "requiresWarriors": true }, "choices": [
+      { "id": "muster-warriors", "effects": { "warriorsDelta": 2, "tensionDelta": 10 } },
+      { "id": "hide-stores", "effects": { "populationDelta": -1, "tensionDelta": 4 } }
+    ] },
+    { "id": "truce-opportunity", "category": "conflict", "trigger": "periodic", "weight": 3, "conditions": { "requiresKnownTribe": true, "requiresWarriors": true }, "choices": [
+      { "id": "meet-between-camps", "effects": { "opinionDelta": 8, "trustDelta": 6, "tensionDelta": -15 } },
+      { "id": "maintain-pressure", "effects": { "opinionDelta": -5, "tensionDelta": 8, "influenceDelta": 25 } }
+    ] },
+
+    { "id": "communal-feast", "category": "society", "trigger": "periodic", "weight": 5, "conditions": { "minimumPopulation": 20 }, "choices": [
+      { "id": "open-feast", "effects": { "populationDelta": 1, "influenceDelta": 30 } },
+      { "id": "honor-workers", "effects": { "researchKnowledge": 2, "influenceDelta": 20 } }
+    ] },
+    { "id": "adoption-request", "category": "society", "trigger": "periodic", "weight": 4, "conditions": { "minimumPopulation": 10 }, "choices": [
+      { "id": "welcome-family", "effects": { "populationDelta": 3, "influenceDelta": 15 } },
+      { "id": "offer-guest-place", "effects": { "populationDelta": 1, "influenceDelta": 10 } }
+    ] },
+    { "id": "burial-of-elder", "category": "society", "trigger": "periodic", "weight": 3, "conditions": { "minimumPopulation": 20 }, "choices": [
+      { "id": "raise-marker", "effects": { "populationDelta": -1, "influenceDelta": 45, "researchKnowledge": 2 } },
+      { "id": "recite-memory", "effects": { "populationDelta": -1, "researchKnowledge": 5 } }
+    ] },
+    { "id": "harsh-season-signs", "category": "society", "trigger": "periodic", "weight": 5, "conditions": {}, "choices": [
+      { "id": "prepare-stores", "effects": { "populationDelta": -1, "researchKnowledge": 3 } },
+      { "id": "move-early", "effects": { "influenceDelta": -30, "populationDelta": 1 } }
+    ] },
+    { "id": "young-generation", "category": "society", "trigger": "periodic", "weight": 4, "conditions": { "minimumPopulation": 35 }, "choices": [
+      { "id": "teach-traditions", "effects": { "populationDelta": 2, "researchKnowledge": 3 } },
+      { "id": "train-hunters", "effects": { "populationDelta": 1, "warriorsDelta": 2 } }
+    ] }
+  ]
+}

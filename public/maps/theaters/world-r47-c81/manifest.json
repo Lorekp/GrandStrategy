@@ -1,0 +1,105 @@
+{
+  "formatVersion": 6,
+  "id": "world-r47-c81",
+  "name": "Bantu Belt Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=4.760005 +lon_0=9.230769 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 9230769,
+      "latitudeE6": 4760005
+    }
+  },
+  "extent": {
+    "widthMeters": 512000,
+    "heightMeters": 512000
+  },
+  "render": {
+    "width": 4096,
+    "height": 4096,
+    "metersPerPixel": 125.0,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 6914195,
+    "eastLongitudeE6": 11547343,
+    "southLatitudeE6": 2441681,
+    "northLatitudeE6": 7074941,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 1024,
+    "height": 1024,
+    "metersPerCell": 500,
+    "elevationPath": "elevation.i16",
+    "elevationEncoding": "signed-int16-little-endian-meters",
+    "landMaskPath": "land-mask.png",
+    "vegetationPath": "vegetation.u8",
+    "vegetationEncoding": "vegetation-feature-u8-v1",
+    "terrainPath": "terrain.u8",
+    "terrainEncoding": "terrain-u8-v1"
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.0538
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 10
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  }
+}

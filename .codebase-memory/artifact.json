@@ -1,0 +1,11 @@
+{
+    "schema_version": 2,
+    "commit": "",
+    "indexed_at": "2026-08-14T19:22:51Z",
+    "project": "GrandStrategy",
+    "nodes": 2890,
+    "edges": 6059,
+    "original_size": 5505024,
+    "compressed_size": 623026,
+    "compression_level": 3
+}

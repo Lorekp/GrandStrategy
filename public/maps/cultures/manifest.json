@@ -1,0 +1,397 @@
+{
+  "formatVersion": 1,
+  "coordinateSystem": "WGS84",
+  "kind": "regional-culture-influence-anchors",
+  "assignment": {
+    "method": "nearest-normalized-anchor",
+    "score": "greatCircleDistanceKm / (radiusKm * weight)",
+    "tieBreak": "culture-id-ascending",
+    "landOnly": true
+  },
+  "cultures": [
+    {
+      "id": "norse",
+      "displayName": "Norse",
+      "anchors": [
+        { "longitudeE6": 15000000, "latitudeE6": 61000000, "radiusKm": 1150, "weight": 1 },
+        { "longitudeE6": 10000000, "latitudeE6": 56000000, "radiusKm": 850, "weight": 1 },
+        { "longitudeE6": -19000000, "latitudeE6": 65000000, "radiusKm": 650, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "atlantic-celtic",
+      "displayName": "Atlantic Celtic",
+      "anchors": [
+        { "longitudeE6": -8000000, "latitudeE6": 53000000, "radiusKm": 700, "weight": 1 },
+        { "longitudeE6": -4000000, "latitudeE6": 57000000, "radiusKm": 600, "weight": 0.9 },
+        { "longitudeE6": -3000000, "latitudeE6": 48000000, "radiusKm": 500, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "continental-germanic",
+      "displayName": "Continental Germanic",
+      "anchors": [
+        { "longitudeE6": 10000000, "latitudeE6": 51000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 5000000, "latitudeE6": 52000000, "radiusKm": 650, "weight": 0.85 },
+        { "longitudeE6": 9000000, "latitudeE6": 47000000, "radiusKm": 650, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "balto-slavic",
+      "displayName": "Balto-Slavic",
+      "anchors": [
+        { "longitudeE6": 20000000, "latitudeE6": 52000000, "radiusKm": 1050, "weight": 1 },
+        { "longitudeE6": 30000000, "latitudeE6": 49000000, "radiusKm": 1050, "weight": 1 },
+        { "longitudeE6": 24000000, "latitudeE6": 57000000, "radiusKm": 700, "weight": 0.85 },
+        { "longitudeE6": 38000000, "latitudeE6": 55000000, "radiusKm": 1050, "weight": 0.85 }
+      ]
+    },
+    {
+      "id": "uralic-forest",
+      "displayName": "Uralic Forest",
+      "anchors": [
+        { "longitudeE6": 26000000, "latitudeE6": 64000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 38000000, "latitudeE6": 62000000, "radiusKm": 900, "weight": 0.9 },
+        { "longitudeE6": 56000000, "latitudeE6": 58000000, "radiusKm": 1000, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "hellenic-balkan",
+      "displayName": "Hellenic-Balkan",
+      "anchors": [
+        { "longitudeE6": 23000000, "latitudeE6": 39000000, "radiusKm": 750, "weight": 1 },
+        { "longitudeE6": 21000000, "latitudeE6": 44000000, "radiusKm": 750, "weight": 0.9 },
+        { "longitudeE6": 27000000, "latitudeE6": 38000000, "radiusKm": 550, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "western-mediterranean",
+      "displayName": "Western Mediterranean",
+      "anchors": [
+        { "longitudeE6": 12000000, "latitudeE6": 42000000, "radiusKm": 850, "weight": 1 },
+        { "longitudeE6": -4000000, "latitudeE6": 40000000, "radiusKm": 950, "weight": 1 },
+        { "longitudeE6": 9000000, "latitudeE6": 40000000, "radiusKm": 500, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "anatolian-caucasian",
+      "displayName": "Anatolian-Caucasian",
+      "anchors": [
+        { "longitudeE6": 35000000, "latitudeE6": 39000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 45000000, "latitudeE6": 42000000, "radiusKm": 800, "weight": 1 }
+      ]
+    },
+    {
+      "id": "levantine-mesopotamian",
+      "displayName": "Levantine-Mesopotamian",
+      "anchors": [
+        { "longitudeE6": 36000000, "latitudeE6": 33000000, "radiusKm": 800, "weight": 1 },
+        { "longitudeE6": 44000000, "latitudeE6": 34000000, "radiusKm": 900, "weight": 1 }
+      ]
+    },
+    {
+      "id": "arabian",
+      "displayName": "Arabian",
+      "anchors": [
+        { "longitudeE6": 45000000, "latitudeE6": 24000000, "radiusKm": 1350, "weight": 1 },
+        { "longitudeE6": 44000000, "latitudeE6": 15000000, "radiusKm": 750, "weight": 0.9 },
+        { "longitudeE6": 56000000, "latitudeE6": 21000000, "radiusKm": 700, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "iranian-highland",
+      "displayName": "Iranian Highland",
+      "anchors": [
+        { "longitudeE6": 53000000, "latitudeE6": 33000000, "radiusKm": 1200, "weight": 1 },
+        { "longitudeE6": 66000000, "latitudeE6": 34000000, "radiusKm": 1000, "weight": 0.95 },
+        { "longitudeE6": 70000000, "latitudeE6": 39000000, "radiusKm": 750, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "eurasian-steppe",
+      "displayName": "Eurasian Steppe",
+      "anchors": [
+        { "longitudeE6": 40000000, "latitudeE6": 48000000, "radiusKm": 1200, "weight": 0.85 },
+        { "longitudeE6": 65000000, "latitudeE6": 49000000, "radiusKm": 1500, "weight": 1 },
+        { "longitudeE6": 103000000, "latitudeE6": 47000000, "radiusKm": 1450, "weight": 1 }
+      ]
+    },
+    {
+      "id": "siberian",
+      "displayName": "Siberian",
+      "anchors": [
+        { "longitudeE6": 78000000, "latitudeE6": 61000000, "radiusKm": 1500, "weight": 1 },
+        { "longitudeE6": 105000000, "latitudeE6": 63000000, "radiusKm": 1600, "weight": 1 },
+        { "longitudeE6": 140000000, "latitudeE6": 62000000, "radiusKm": 1600, "weight": 1 },
+        { "longitudeE6": 160000000, "latitudeE6": 58000000, "radiusKm": 900, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "indo-gangetic",
+      "displayName": "Indo-Gangetic",
+      "anchors": [
+        { "longitudeE6": 70000000, "latitudeE6": 30000000, "radiusKm": 900, "weight": 0.9 },
+        { "longitudeE6": 80000000, "latitudeE6": 26000000, "radiusKm": 1150, "weight": 1 },
+        { "longitudeE6": 89000000, "latitudeE6": 24000000, "radiusKm": 850, "weight": 0.9 }
+      ]
+    },
+    {
+      "id": "dravidian",
+      "displayName": "Dravidian",
+      "anchors": [
+        { "longitudeE6": 78000000, "latitudeE6": 13000000, "radiusKm": 900, "weight": 1 },
+        { "longitudeE6": 78000000, "latitudeE6": 18000000, "radiusKm": 750, "weight": 0.85 },
+        { "longitudeE6": 80500000, "latitudeE6": 8000000, "radiusKm": 550, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "himalayan-tibetan",
+      "displayName": "Himalayan-Tibetan",
+      "anchors": [
+        { "longitudeE6": 84000000, "latitudeE6": 29000000, "radiusKm": 700, "weight": 0.9 },
+        { "longitudeE6": 89000000, "latitudeE6": 32000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 94000000, "latitudeE6": 27000000, "radiusKm": 650, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "east-asian-heartland",
+      "displayName": "East Asian Heartland",
+      "anchors": [
+        { "longitudeE6": 112000000, "latitudeE6": 36000000, "radiusKm": 1300, "weight": 1 },
+        { "longitudeE6": 112000000, "latitudeE6": 27000000, "radiusKm": 1150, "weight": 1 },
+        { "longitudeE6": 128000000, "latitudeE6": 37000000, "radiusKm": 650, "weight": 0.85 },
+        { "longitudeE6": 127000000, "latitudeE6": 44000000, "radiusKm": 800, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "japonic",
+      "displayName": "Japonic",
+      "anchors": [
+        { "longitudeE6": 138000000, "latitudeE6": 36000000, "radiusKm": 800, "weight": 1 },
+        { "longitudeE6": 142000000, "latitudeE6": 43000000, "radiusKm": 600, "weight": 0.8 },
+        { "longitudeE6": 128000000, "latitudeE6": 26000000, "radiusKm": 500, "weight": 0.7 }
+      ]
+    },
+    {
+      "id": "mainland-southeast-asian",
+      "displayName": "Mainland Southeast Asian",
+      "anchors": [
+        { "longitudeE6": 96000000, "latitudeE6": 20000000, "radiusKm": 900, "weight": 0.9 },
+        { "longitudeE6": 101000000, "latitudeE6": 15000000, "radiusKm": 950, "weight": 1 },
+        { "longitudeE6": 106000000, "latitudeE6": 17000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": 104000000, "latitudeE6": 12000000, "radiusKm": 650, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "maritime-austronesian",
+      "displayName": "Maritime Austronesian",
+      "anchors": [
+        { "longitudeE6": 121000000, "latitudeE6": 23000000, "radiusKm": 550, "weight": 0.75 },
+        { "longitudeE6": 122000000, "latitudeE6": 13000000, "radiusKm": 900, "weight": 1 },
+        { "longitudeE6": 114000000, "latitudeE6": 1000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 102000000, "latitudeE6": 0, "radiusKm": 1050, "weight": 0.9 },
+        { "longitudeE6": 111000000, "latitudeE6": -7000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": 121000000, "latitudeE6": -2000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": 150000000, "latitudeE6": 7000000, "radiusKm": 950, "weight": 0.65 }
+      ]
+    },
+    {
+      "id": "amazigh-saharan",
+      "displayName": "Amazigh-Saharan",
+      "anchors": [
+        { "longitudeE6": -6000000, "latitudeE6": 32000000, "radiusKm": 900, "weight": 1 },
+        { "longitudeE6": 2000000, "latitudeE6": 28000000, "radiusKm": 1200, "weight": 1 },
+        { "longitudeE6": 10000000, "latitudeE6": 22000000, "radiusKm": 1300, "weight": 0.9 },
+        { "longitudeE6": 6000000, "latitudeE6": 18000000, "radiusKm": 850, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "nile-valley",
+      "displayName": "Nile Valley",
+      "anchors": [
+        { "longitudeE6": 31000000, "latitudeE6": 27000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": 31000000, "latitudeE6": 15000000, "radiusKm": 950, "weight": 0.9 }
+      ]
+    },
+    {
+      "id": "horn-east-african",
+      "displayName": "Horn-East African",
+      "anchors": [
+        { "longitudeE6": 38000000, "latitudeE6": 9000000, "radiusKm": 850, "weight": 1 },
+        { "longitudeE6": 42000000, "latitudeE6": 9000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": 35000000, "latitudeE6": 2000000, "radiusKm": 900, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "sahelian",
+      "displayName": "Sahelian",
+      "anchors": [
+        { "longitudeE6": -14000000, "latitudeE6": 15000000, "radiusKm": 900, "weight": 0.85 },
+        { "longitudeE6": -4000000, "latitudeE6": 15000000, "radiusKm": 1100, "weight": 1 },
+        { "longitudeE6": 10000000, "latitudeE6": 11000000, "radiusKm": 1050, "weight": 0.9 },
+        { "longitudeE6": 18000000, "latitudeE6": 13000000, "radiusKm": 1050, "weight": 0.9 }
+      ]
+    },
+    {
+      "id": "west-african",
+      "displayName": "West African",
+      "anchors": [
+        { "longitudeE6": -10000000, "latitudeE6": 10000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": -1000000, "latitudeE6": 7000000, "radiusKm": 900, "weight": 1 },
+        { "longitudeE6": 7000000, "latitudeE6": 7000000, "radiusKm": 950, "weight": 1 }
+      ]
+    },
+    {
+      "id": "bantu-belt",
+      "displayName": "Bantu Belt",
+      "anchors": [
+        { "longitudeE6": 11000000, "latitudeE6": 3000000, "radiusKm": 950, "weight": 0.9 },
+        { "longitudeE6": 23000000, "latitudeE6": -3000000, "radiusKm": 1250, "weight": 1 },
+        { "longitudeE6": 30000000, "latitudeE6": -3000000, "radiusKm": 950, "weight": 0.9 },
+        { "longitudeE6": 36000000, "latitudeE6": -8000000, "radiusKm": 1200, "weight": 0.9 },
+        { "longitudeE6": 18000000, "latitudeE6": -12000000, "radiusKm": 1200, "weight": 0.9 },
+        { "longitudeE6": 27000000, "latitudeE6": -24000000, "radiusKm": 1100, "weight": 0.85 }
+      ]
+    },
+    {
+      "id": "kalahari-cape",
+      "displayName": "Kalahari-Cape",
+      "anchors": [
+        { "longitudeE6": 18000000, "latitudeE6": -22000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": 23000000, "latitudeE6": -22000000, "radiusKm": 750, "weight": 1 },
+        { "longitudeE6": 18000000, "latitudeE6": -31000000, "radiusKm": 650, "weight": 0.7 }
+      ]
+    },
+    {
+      "id": "malagasy",
+      "displayName": "Malagasy",
+      "anchors": [
+        { "longitudeE6": 47000000, "latitudeE6": -19000000, "radiusKm": 900, "weight": 1 },
+        { "longitudeE6": 43000000, "latitudeE6": -12000000, "radiusKm": 450, "weight": 0.6 }
+      ]
+    },
+    {
+      "id": "arctic-subarctic",
+      "displayName": "Arctic-Subarctic",
+      "anchors": [
+        { "longitudeE6": -151000000, "latitudeE6": 65000000, "radiusKm": 1350, "weight": 1 },
+        { "longitudeE6": -110000000, "latitudeE6": 65000000, "radiusKm": 1700, "weight": 1 },
+        { "longitudeE6": -62000000, "latitudeE6": 55000000, "radiusKm": 1000, "weight": 0.8 },
+        { "longitudeE6": -42000000, "latitudeE6": 68000000, "radiusKm": 1300, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "pacific-northwest",
+      "displayName": "Pacific Northwest",
+      "anchors": [
+        { "longitudeE6": -125000000, "latitudeE6": 49000000, "radiusKm": 800, "weight": 1 },
+        { "longitudeE6": -133000000, "latitudeE6": 57000000, "radiusKm": 900, "weight": 0.9 },
+        { "longitudeE6": -123000000, "latitudeE6": 42000000, "radiusKm": 650, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "eastern-woodlands",
+      "displayName": "Eastern Woodlands",
+      "anchors": [
+        { "longitudeE6": -84000000, "latitudeE6": 44000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": -74000000, "latitudeE6": 43000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": -84000000, "latitudeE6": 34000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": -90000000, "latitudeE6": 36000000, "radiusKm": 800, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "plains-prairie",
+      "displayName": "Plains-Prairie",
+      "anchors": [
+        { "longitudeE6": -103000000, "latitudeE6": 45000000, "radiusKm": 1050, "weight": 1 },
+        { "longitudeE6": -100000000, "latitudeE6": 35000000, "radiusKm": 850, "weight": 0.85 },
+        { "longitudeE6": -107000000, "latitudeE6": 52000000, "radiusKm": 850, "weight": 0.85 }
+      ]
+    },
+    {
+      "id": "desert-southwest",
+      "displayName": "Desert Southwest",
+      "anchors": [
+        { "longitudeE6": -115000000, "latitudeE6": 40000000, "radiusKm": 900, "weight": 0.8 },
+        { "longitudeE6": -110000000, "latitudeE6": 34000000, "radiusKm": 850, "weight": 0.9 },
+        { "longitudeE6": -100000000, "latitudeE6": 31000000, "radiusKm": 800, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "middle-american",
+      "displayName": "Middle American",
+      "anchors": [
+        { "longitudeE6": -100000000, "latitudeE6": 20000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": -89000000, "latitudeE6": 19000000, "radiusKm": 750, "weight": 0.9 },
+        { "longitudeE6": -91000000, "latitudeE6": 15000000, "radiusKm": 750, "weight": 0.9 },
+        { "longitudeE6": -79000000, "latitudeE6": 22000000, "radiusKm": 650, "weight": 0.75 },
+        { "longitudeE6": -71000000, "latitudeE6": 19000000, "radiusKm": 600, "weight": 0.75 },
+        { "longitudeE6": -62000000, "latitudeE6": 16000000, "radiusKm": 600, "weight": 0.65 }
+      ]
+    },
+    {
+      "id": "andean",
+      "displayName": "Andean",
+      "anchors": [
+        { "longitudeE6": -74000000, "latitudeE6": 5000000, "radiusKm": 700, "weight": 0.75 },
+        { "longitudeE6": -78000000, "latitudeE6": -1000000, "radiusKm": 800, "weight": 0.9 },
+        { "longitudeE6": -75000000, "latitudeE6": -10000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": -66000000, "latitudeE6": -17000000, "radiusKm": 850, "weight": 0.9 }
+      ]
+    },
+    {
+      "id": "amazonian",
+      "displayName": "Amazonian",
+      "anchors": [
+        { "longitudeE6": -70000000, "latitudeE6": -5000000, "radiusKm": 1100, "weight": 1 },
+        { "longitudeE6": -60000000, "latitudeE6": -4000000, "radiusKm": 1250, "weight": 1 },
+        { "longitudeE6": -51000000, "latitudeE6": -4000000, "radiusKm": 1050, "weight": 0.9 },
+        { "longitudeE6": -57000000, "latitudeE6": 5000000, "radiusKm": 800, "weight": 0.75 }
+      ]
+    },
+    {
+      "id": "southern-cone",
+      "displayName": "Southern Cone",
+      "anchors": [
+        { "longitudeE6": -61000000, "latitudeE6": -24000000, "radiusKm": 900, "weight": 0.85 },
+        { "longitudeE6": -62000000, "latitudeE6": -35000000, "radiusKm": 1100, "weight": 1 },
+        { "longitudeE6": -70000000, "latitudeE6": -45000000, "radiusKm": 1100, "weight": 0.9 },
+        { "longitudeE6": -72000000, "latitudeE6": -35000000, "radiusKm": 850, "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "papuan-melanesian",
+      "displayName": "Papuan-Melanesian",
+      "anchors": [
+        { "longitudeE6": 145000000, "latitudeE6": -6000000, "radiusKm": 950, "weight": 1 },
+        { "longitudeE6": 151000000, "latitudeE6": -5000000, "radiusKm": 650, "weight": 0.8 },
+        { "longitudeE6": 160000000, "latitudeE6": -9000000, "radiusKm": 800, "weight": 0.9 },
+        { "longitudeE6": 167000000, "latitudeE6": -16000000, "radiusKm": 750, "weight": 0.75 },
+        { "longitudeE6": 178000000, "latitudeE6": -17000000, "radiusKm": 650, "weight": 0.6 }
+      ]
+    },
+    {
+      "id": "polynesian",
+      "displayName": "Polynesian",
+      "anchors": [
+        { "longitudeE6": -172000000, "latitudeE6": -14000000, "radiusKm": 850, "weight": 1 },
+        { "longitudeE6": -175000000, "latitudeE6": -20000000, "radiusKm": 700, "weight": 0.85 },
+        { "longitudeE6": 173000000, "latitudeE6": -41000000, "radiusKm": 1000, "weight": 1 },
+        { "longitudeE6": -156000000, "latitudeE6": 20000000, "radiusKm": 650, "weight": 0.75 },
+        { "longitudeE6": -109000000, "latitudeE6": -27000000, "radiusKm": 500, "weight": 0.65 },
+        { "longitudeE6": -149000000, "latitudeE6": -17000000, "radiusKm": 800, "weight": 0.9 }
+      ]
+    },
+    {
+      "id": "aboriginal-australian",
+      "displayName": "Aboriginal Australian",
+      "anchors": [
+        { "longitudeE6": 122000000, "latitudeE6": -24000000, "radiusKm": 1400, "weight": 1 },
+        { "longitudeE6": 134000000, "latitudeE6": -14000000, "radiusKm": 1150, "weight": 0.9 },
+        { "longitudeE6": 133000000, "latitudeE6": -25000000, "radiusKm": 1250, "weight": 1 },
+        { "longitudeE6": 145000000, "latitudeE6": -36000000, "radiusKm": 1000, "weight": 0.9 },
+        { "longitudeE6": 147000000, "latitudeE6": -42000000, "radiusKm": 550, "weight": 0.7 }
+      ]
+    }
+  ]
+}

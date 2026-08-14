@@ -1,0 +1,107 @@
+{
+  "world": {
+    "earthMeanRadiusMeters": 6371008.8,
+    "minimumInhabitedLatitude": -60
+  },
+  "simulation": {
+    "ticksPerSecond": 10,
+    "worldMinutesPerTick": 1,
+    "startPaused": true,
+    "defaultSpeed": 1,
+    "speedOptions": [1, 2, 4]
+  },
+  "settlements": {
+    "minimumInfluenceMeters": 4000,
+    "maximumInfluenceMeters": 24000,
+    "growthIntervalWorldDays": 90,
+    "populationGrowthPerInterval": 1,
+    "influenceGrowthMetersPerInterval": 10
+  },
+  "research": {
+    "baseKnowledgePerWorldDay": 18,
+    "populationPerAdditionalKnowledge": 50,
+    "villageKnowledgePerWorldDay": 3,
+    "cultureAffinityPercent": 20
+  },
+  "visibility": {
+    "terrainRefractionCoefficient": 0.13,
+    "terrainLimitMeters": 80000,
+    "humanObserverHeightMeters": 1.75,
+    "villageObserverHeightMeters": 6,
+    "footprintRadiusMeters": 1000,
+    "footprintPerimeterSamples": 360,
+    "unitDetectionRadiusMeters": 500,
+    "campDetectionRadiusMeters": 10000,
+    "villageDetectionRadiusMeters": 20000,
+    "nightMultiplier": 0.5,
+    "envelope": {
+      "nearFieldMeters": 6000,
+      "midFieldMeters": 30000,
+      "midSupportFraction": 0.1,
+      "farSupportFraction": 0.25,
+      "minimumVisibleComponentCells": 256
+    }
+  },
+  "scout": {
+    "marchStartHour": 6,
+    "marchEndHour": 18,
+    "slopeModel": {
+      "minimumDegrees": -45,
+      "maximumDegrees": 45,
+      "numerator": 77.6346,
+      "width": 20.9482,
+      "offsetDegrees": 2.8292,
+      "constantMetersPerSecond": 0.2228,
+      "linearSlopeCoefficient": 0.0004
+    },
+    "terrainFactors": {
+      "water": 0,
+      "plains": 0.9,
+      "hills": 0.9,
+      "mountains": 0.65,
+      "desert": 0.9,
+      "tundra": 0.75,
+      "ice": 0.5
+    },
+    "vegetationFactors": {
+      "none": { "none": 1, "sparse": 1, "light": 1, "moderate": 1, "dense": 1 },
+      "forest": { "none": 1, "sparse": 1, "light": 0.97, "moderate": 0.944, "dense": 0.72 },
+      "jungle": { "none": 1, "sparse": 0.944, "light": 0.72, "moderate": 0.5, "dense": 0.333 }
+    }
+  },
+  "openingScenario": {
+    "baseSeed": 1212501068,
+    "playerId": 1,
+    "playerTribeId": 1,
+    "playerSettlementId": 1,
+    "firstRivalTribeId": 2,
+    "rivalCampCount": 8,
+    "minimumRivalDistanceMeters": 35000,
+    "minimumRivalSeparationMeters": 24000,
+    "playerPopulation": 100,
+    "playerWarriors": 0,
+    "playerInfluenceMeters": 10000,
+    "rivalPopulationMinimum": 160,
+    "rivalPopulationMaximum": 360,
+    "rivalWarriorsMinimum": 24,
+    "rivalWarriorsMaximum": 80,
+    "rivalInfluenceHalfKilometersMinimum": 15,
+    "rivalInfluenceHalfKilometersMaximum": 32,
+    "friendlyChance": 0.12,
+    "hostileChance": 0.25,
+    "startWorldTime": { "year": -9999, "month": 3, "day": 1, "hour": 6, "minute": 0 },
+    "rivalTribes": [
+      { "name": "Boeotian", "color": "#b96855" },
+      { "name": "Euboean", "color": "#6aa79a" },
+      { "name": "Corinthian", "color": "#a785b5" },
+      { "name": "Aetolian", "color": "#8ea45d" },
+      { "name": "Thessalian", "color": "#c58b55" },
+      { "name": "Argive", "color": "#6f8fbd" },
+      { "name": "Lacedaemonian", "color": "#b5534c" },
+      { "name": "Messenian", "color": "#9b79a8" },
+      { "name": "Epirote", "color": "#7d9b68" },
+      { "name": "Cycladic", "color": "#68a2b4" },
+      { "name": "Macedonian", "color": "#c2784e" }
+    ]
+  }
+}

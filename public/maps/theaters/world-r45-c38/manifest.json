@@ -1,0 +1,340 @@
+{
+  "formatVersion": 14,
+  "id": "world-r45-c38",
+  "name": "Western Mediterranean Regional Theater",
+  "kind": "regional-theater",
+  "projection": {
+    "type": "azimuthal-equidistant",
+    "definition": "+proj=aeqd +lat_0=46.155166 +lon_0=15.0 +ellps=WGS84 +units=m +no_defs",
+    "center": {
+      "longitudeE6": 15000000,
+      "latitudeE6": 46155166
+    }
+  },
+  "extent": {
+    "widthMeters": 768000,
+    "heightMeters": 768000
+  },
+  "render": {
+    "width": 8192,
+    "height": 8192,
+    "metersPerPixel": 93.75,
+    "tileSize": 512,
+    "paletteColors": 48,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      },
+      {
+        "level": 2,
+        "width": 4096,
+        "height": 4096,
+        "columns": 8,
+        "rows": 8
+      },
+      {
+        "level": 3,
+        "width": 8192,
+        "height": 8192,
+        "columns": 16,
+        "rows": 16
+      }
+    ]
+  },
+  "atlasPreview": {
+    "westLongitudeE6": 9698570,
+    "eastLongitudeE6": 20301430,
+    "southLatitudeE6": 42599639,
+    "northLatitudeE6": 49608776,
+    "width": 2048,
+    "height": 2048,
+    "tileSize": 512,
+    "levels": [
+      {
+        "level": 0,
+        "width": 1024,
+        "height": 1024,
+        "columns": 2,
+        "rows": 2
+      },
+      {
+        "level": 1,
+        "width": 2048,
+        "height": 2048,
+        "columns": 4,
+        "rows": 4
+      }
+    ],
+    "tilePath": "atlas-preview"
+  },
+  "semantic": {
+    "width": 3072,
+    "height": 3072,
+    "metersPerCell": 250,
+    "landMaskPath": "land-mask.png",
+    "chunkSize": 128,
+    "chunkColumns": 24,
+    "chunkRows": 24,
+    "chunkPath": "semantic/{column}_{row}.bin",
+    "chunkEncoding": "terrain-u8-vegetation-u8-moisture-u8-elevation-i16le-v2",
+    "moistureModelVersion": 1
+  },
+  "validation": {
+    "maximumEstimatedScaleErrorPercent": 0.1212
+  },
+  "source": {
+    "name": "Mapzen Terrain Tiles (AWS Open Data)",
+    "url": "https://registry.opendata.aws/terrain-tiles/",
+    "format": "Terrarium elevation PNG",
+    "sourceZoom": 11
+  },
+  "naturalCoverSource": {
+    "name": "Natural Earth II 1:10m idealized land cover v3.2.0",
+    "url": "https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/",
+    "format": "independent base-terrain and vegetation-density rasters"
+  },
+  "physicalGeometrySource": {
+    "name": "Natural Earth 1:10m land, minor islands, and lakes",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/",
+    "format": "WGS84 GeoJSON rasterized directly to the local Theater grid"
+  },
+  "hydrographySource": {
+    "name": "OpenStreetMap natural waterways",
+    "url": "https://www.openstreetmap.org/copyright",
+    "format": "checksummed regional PBF extracts normalized to WGS84 GeoJSON and rasterized offline",
+    "snapshot": "2026-08-01",
+    "normalizerVersion": 5,
+    "normalizedHash": "sha256:44fba8238c2d03facd47e31bab03e6753720c29318a961e8ad4c1b95fbdb6db6",
+    "featureCount": 1521587,
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "Open Data Commons Open Database License 1.0",
+    "extracts": [
+      {
+        "id": "albania",
+        "url": "https://download.geofabrik.de/europe/albania-260801.osm.pbf",
+        "md5": "d67c88a160fda977fe3f28ba84ef71f7"
+      },
+      {
+        "id": "alps",
+        "url": "https://download.geofabrik.de/europe/alps-260801.osm.pbf",
+        "md5": "3ea2453c300fac12d98d69583e80e393"
+      },
+      {
+        "id": "austria",
+        "url": "https://download.geofabrik.de/europe/austria-260801.osm.pbf",
+        "md5": "0d765f0ee09c9169bca95fef722bc998"
+      },
+      {
+        "id": "bosnia-herzegovina",
+        "url": "https://download.geofabrik.de/europe/bosnia-herzegovina-260801.osm.pbf",
+        "md5": "6ad3cfd8aac01e93911c61ab18ab53dd"
+      },
+      {
+        "id": "centro",
+        "url": "https://download.geofabrik.de/europe/italy/centro-260801.osm.pbf",
+        "md5": "e60cc86244031ecc2a1daba57b2a7f3b"
+      },
+      {
+        "id": "corse",
+        "url": "https://download.geofabrik.de/europe/france/corse-260801.osm.pbf",
+        "md5": "8808aa0b6279d86c330594cb6f561194"
+      },
+      {
+        "id": "croatia",
+        "url": "https://download.geofabrik.de/europe/croatia-260801.osm.pbf",
+        "md5": "3115f41c014a47aa92b8975df89205fb"
+      },
+      {
+        "id": "dolnoslaskie",
+        "url": "https://download.geofabrik.de/europe/poland/dolnoslaskie-260801.osm.pbf",
+        "md5": "a474409a0d5c2779a6721913ccdd323d"
+      },
+      {
+        "id": "freiburg-regbez",
+        "url": "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-260801.osm.pbf",
+        "md5": "d5bf6e37f3e3e63a7f1f4ba5ddb0dd15"
+      },
+      {
+        "id": "hessen",
+        "url": "https://download.geofabrik.de/europe/germany/hessen-260801.osm.pbf",
+        "md5": "183e0e5dba04dcc23c6bbd63b559e4f1"
+      },
+      {
+        "id": "hungary",
+        "url": "https://download.geofabrik.de/europe/hungary-260801.osm.pbf",
+        "md5": "d9a4283bb858528547f1370b370df21e"
+      },
+      {
+        "id": "isole",
+        "url": "https://download.geofabrik.de/europe/italy/isole-260801.osm.pbf",
+        "md5": "0495fa505b933dd7993b87c51cf819ce"
+      },
+      {
+        "id": "kosovo",
+        "url": "https://download.geofabrik.de/europe/kosovo-260801.osm.pbf",
+        "md5": "1cae77f66048c42136f3944df3cb6999"
+      },
+      {
+        "id": "liberecky",
+        "url": "https://download.geofabrik.de/europe/czech-republic/liberecky-260801.osm.pbf",
+        "md5": "1f413e2f7f8fba318ddf0365d80a1b7f"
+      },
+      {
+        "id": "lubelskie",
+        "url": "https://download.geofabrik.de/europe/poland/lubelskie-260801.osm.pbf",
+        "md5": "f6df4441e6e888b63c1bddf600fa2664"
+      },
+      {
+        "id": "macedonia",
+        "url": "https://download.geofabrik.de/europe/macedonia-260801.osm.pbf",
+        "md5": "30ba0fca3e7df5d84bfdff9cad8b6c0f"
+      },
+      {
+        "id": "malopolskie",
+        "url": "https://download.geofabrik.de/europe/poland/malopolskie-260801.osm.pbf",
+        "md5": "53216542610c2223786563f4de2ad353"
+      },
+      {
+        "id": "mittelfranken",
+        "url": "https://download.geofabrik.de/europe/germany/bayern/mittelfranken-260801.osm.pbf",
+        "md5": "4d2628467ec9bc42d907a1007bf214e9"
+      },
+      {
+        "id": "montenegro",
+        "url": "https://download.geofabrik.de/europe/montenegro-260801.osm.pbf",
+        "md5": "cd5f4b91d88aacfe070ce21f5cf91669"
+      },
+      {
+        "id": "moravskoslezky",
+        "url": "https://download.geofabrik.de/europe/czech-republic/moravskoslezky-260801.osm.pbf",
+        "md5": "fa025443058e959f63421370084947ac"
+      },
+      {
+        "id": "niederbayern",
+        "url": "https://download.geofabrik.de/europe/germany/bayern/niederbayern-260801.osm.pbf",
+        "md5": "67860b34507f8324389f40db10aaadba"
+      },
+      {
+        "id": "nord-est",
+        "url": "https://download.geofabrik.de/europe/italy/nord-est-260801.osm.pbf",
+        "md5": "09eaef10690ddddea9296c57b6ad4a01"
+      },
+      {
+        "id": "nord-ovest",
+        "url": "https://download.geofabrik.de/europe/italy/nord-ovest-260801.osm.pbf",
+        "md5": "0226412f4d4e8250bd6fcb4ba8cde19d"
+      },
+      {
+        "id": "oberbayern",
+        "url": "https://download.geofabrik.de/europe/germany/bayern/oberbayern-260801.osm.pbf",
+        "md5": "897e6f28e7a27c22004e8683d195f2c2"
+      },
+      {
+        "id": "olomoucky",
+        "url": "https://download.geofabrik.de/europe/czech-republic/olomoucky-260801.osm.pbf",
+        "md5": "76062fac17f8d523b648c0019e8656f3"
+      },
+      {
+        "id": "plzensky",
+        "url": "https://download.geofabrik.de/europe/czech-republic/plzensky-260801.osm.pbf",
+        "md5": "fec4f1f15b6417836dd628d1f079ed16"
+      },
+      {
+        "id": "podkarpackie",
+        "url": "https://download.geofabrik.de/europe/poland/podkarpackie-260801.osm.pbf",
+        "md5": "db5c9e8b426284c228728d3dd6bdaba1"
+      },
+      {
+        "id": "rheinland-pfalz",
+        "url": "https://download.geofabrik.de/europe/germany/rheinland-pfalz-260801.osm.pbf",
+        "md5": "40fda95b5e3889a378d79a24efca95f9"
+      },
+      {
+        "id": "romania",
+        "url": "https://download.geofabrik.de/europe/romania-260801.osm.pbf",
+        "md5": "f17b9f37ac2abc622c8ff99ca00381f2"
+      },
+      {
+        "id": "sachsen",
+        "url": "https://download.geofabrik.de/europe/germany/sachsen-260801.osm.pbf",
+        "md5": "088ec13c100055856588887d7b9ce3fc"
+      },
+      {
+        "id": "serbia",
+        "url": "https://download.geofabrik.de/europe/serbia-260801.osm.pbf",
+        "md5": "819df3db2e51321b87a1f032e72a4003"
+      },
+      {
+        "id": "slaskie",
+        "url": "https://download.geofabrik.de/europe/poland/slaskie-260801.osm.pbf",
+        "md5": "969bbad6a8edeed34d3ff879f8c053c2"
+      },
+      {
+        "id": "slovakia",
+        "url": "https://download.geofabrik.de/europe/slovakia-260801.osm.pbf",
+        "md5": "76d2a76ad8d0cba1c00642f5247cc83b"
+      },
+      {
+        "id": "slovenia",
+        "url": "https://download.geofabrik.de/europe/slovenia-260801.osm.pbf",
+        "md5": "e008d306a583ef84f89c51054c0c8995"
+      },
+      {
+        "id": "stuttgart-regbez",
+        "url": "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-260801.osm.pbf",
+        "md5": "a326db435f9dfff964f93993f1fc4960"
+      },
+      {
+        "id": "sud",
+        "url": "https://download.geofabrik.de/europe/italy/sud-260801.osm.pbf",
+        "md5": "2385a64248523591cbe48c86549260ed"
+      },
+      {
+        "id": "swietokrzyskie",
+        "url": "https://download.geofabrik.de/europe/poland/swietokrzyskie-260801.osm.pbf",
+        "md5": "bb943b2429945515711a575793ee3f2a"
+      },
+      {
+        "id": "switzerland",
+        "url": "https://download.geofabrik.de/europe/switzerland-260801.osm.pbf",
+        "md5": "879a46ac4b8ff57ce0f2ebc1fa480baf"
+      },
+      {
+        "id": "thueringen",
+        "url": "https://download.geofabrik.de/europe/germany/thueringen-260801.osm.pbf",
+        "md5": "67e891d407b775a0ccb9cba67e49d432"
+      },
+      {
+        "id": "tuebingen-regbez",
+        "url": "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-260801.osm.pbf",
+        "md5": "6a8eb8e4d4d23bfe1a0aca4f72760563"
+      },
+      {
+        "id": "vysocina",
+        "url": "https://download.geofabrik.de/europe/czech-republic/vysocina-260801.osm.pbf",
+        "md5": "f2ffd6a28a2e9efc4084889acc4ecdd7"
+      }
+    ],
+    "geometryPath": "waterways.bin",
+    "geometryEncoding": "projected-waterway-f32-v1",
+    "geometryFeatureCount": 39779,
+    "geometryPointCount": 2402040
+  },
+  "moistureModel": {
+    "version": 1,
+    "meaning": "long-term available moisture from climate supply and natural freshwater access",
+    "climateAdapter": "Natural Earth II idealized natural cover",
+    "drainageAdapter": "OSM natural freshwater network with Horton-Strahler prominence"
+  }
+}

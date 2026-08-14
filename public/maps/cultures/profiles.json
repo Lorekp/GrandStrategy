@@ -1,0 +1,365 @@
+{
+  "formatVersion": 1,
+  "profiles": [
+    {
+      "id": "norse",
+      "name": "Norse",
+      "focus": ["Seafaring", "Raiding"],
+      "legacy": { "name": "Longshore Muster", "effect": "Coastal musters form 20% faster and return 10% more loot from shoreline raids." },
+      "tradeoff": { "name": "Thin Farmland", "effect": "Dense inland settlements need 15% more stored food before upgrading." },
+      "acclimatization": { "name": "Northern Coasts", "description": "Cold-weather campcraft and sure-footed travel soften harsh northern ground.", "terrain": [{ "terrain": "tundra", "movementBonusPercent": 30 }, { "terrain": "hills", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Clinker-built Hulls", "effect": "Unlocks durable shallow-draft boats and coastal raiding routes.", "unlock": "Longboat Landing" }
+    },
+    {
+      "id": "atlantic-celtic",
+      "name": "Atlantic Celtic",
+      "focus": ["Kinship", "Hillforts"],
+      "legacy": { "name": "Kin-road Hospitality", "effect": "Alliances spread 15% more influence between connected Camps." },
+      "tradeoff": { "name": "Dispersed Authority", "effect": "Central levies take 20% longer to assemble beyond the homeland." },
+      "acclimatization": { "name": "Rainward Uplands", "description": "Local tracks and wet-country husbandry keep movement steady in wooded hills.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 20 }, { "terrain": "forest", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Ringwork Fortification", "effect": "Camps may raise an earthen ring that improves raid defense.", "unlock": "Hillfort Ring" }
+    },
+    {
+      "id": "continental-germanic",
+      "name": "Continental Germanic",
+      "focus": ["Assemblies", "Woodcraft"],
+      "legacy": { "name": "Thing Assembly", "effect": "Friendly tribes accept confederation proposals 10% more readily." },
+      "tradeoff": { "name": "Personal Retinues", "effect": "Warbands lose 10% cohesion when several rival leaders share command." },
+      "acclimatization": { "name": "Forest Marches", "description": "Timber knowledge and seasonal tracks reduce the cost of forest and winter travel.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 25 }, { "terrain": "tundra", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Timber Palisades", "effect": "Unlocks quickly built wooden defenses around a Camp.", "unlock": "Palisaded Camp" }
+    },
+    {
+      "id": "balto-slavic",
+      "name": "Balto-Slavic",
+      "focus": ["Forest Farming", "Riverways"],
+      "legacy": { "name": "Clearing Communities", "effect": "New woodland Production Sites begin with 15% more output." },
+      "tradeoff": { "name": "Seasonal Roads", "effect": "Engineered routes cost 15% more to maintain outside wooded homelands." },
+      "acclimatization": { "name": "Woodland Winters", "description": "Cold-season stores and river-portage knowledge aid movement through forest and tundra.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 25 }, { "terrain": "tundra", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Log Trackways", "effect": "Wet woodland paths strengthen twice as quickly under traffic.", "unlock": "Corduroy Path" }
+    },
+    {
+      "id": "uralic-forest",
+      "name": "Uralic Forest",
+      "focus": ["Winter Travel", "Foraging"],
+      "legacy": { "name": "Seasonal Round", "effect": "Foraging grounds recover 20% faster after winter use." },
+      "tradeoff": { "name": "Small Surpluses", "effect": "Population growth is 10% slower until dependable farming is established." },
+      "acclimatization": { "name": "Taiga Knowledge", "description": "Cold-ground travel, river crossings, and forest camps preserve pace in the taiga.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 30 }, { "terrain": "tundra", "movementBonusPercent": 30 }] },
+      "specialTechnology": { "name": "Birch-bark Craft", "effect": "Light containers reduce the supply burden of Scouts and gatherers.", "unlock": "Portable Stores" }
+    },
+    {
+      "id": "hellenic-balkan",
+      "name": "Hellenic-Balkan",
+      "focus": ["Exchange", "Civic Rivalry"],
+      "legacy": { "name": "Agora Exchange", "effect": "Trade between independent friendly settlements yields 15% more knowledge." },
+      "tradeoff": { "name": "Polis Rivalry", "effect": "Absorbed settlements retain 15% more local resistance to central orders." },
+      "acclimatization": { "name": "Broken Peninsula", "description": "Terraces and ridge paths make dry hills and mountain passes easier to cross.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "mountains", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Dry-stone Terraces", "effect": "Hills may host stable early Farms with reduced erosion loss.", "unlock": "Terraced Farm" }
+    },
+    {
+      "id": "western-mediterranean",
+      "name": "Western Mediterranean",
+      "focus": ["Coastal Trade", "Orchards"],
+      "legacy": { "name": "Harbor Brokerage", "effect": "First contact through a coastal route starts with 10 additional goodwill." },
+      "tradeoff": { "name": "Clan Competition", "effect": "Unconnected inland settlements contribute 10% less shared influence." },
+      "acclimatization": { "name": "Sunward Ranges", "description": "Cisterns, switchbacks, and dryland crops support travel across hot uneven ground.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 20 }, { "terrain": "desert", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Cistern Masonry", "effect": "Settlements store seasonal water and resist dry-period growth penalties.", "unlock": "Rock-cut Cistern" }
+    },
+    {
+      "id": "anatolian-caucasian",
+      "name": "Anatolian-Caucasian",
+      "focus": ["Strongholds", "Caravans"],
+      "legacy": { "name": "Pass Wardens", "effect": "Fortified upland routes exert 20% more defensive influence." },
+      "tradeoff": { "name": "Valley Particularism", "effect": "Diplomatic integration across mountain divides progresses 15% slower." },
+      "acclimatization": { "name": "High Passes", "description": "Pack routes and highland shelter markedly improve travel through broken country.", "terrain": [{ "terrain": "mountains", "movementBonusPercent": 35 }, { "terrain": "hills", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Cyclopean Masonry", "effect": "Unlocks durable stone foundations for upland defenses.", "unlock": "Stone Gate" }
+    },
+    {
+      "id": "levantine-mesopotamian",
+      "name": "Levantine-Mesopotamian",
+      "focus": ["Irrigation", "Commerce"],
+      "legacy": { "name": "Market Ledger", "effect": "Trade and tribute transfers lose 15% less value in transit." },
+      "tradeoff": { "name": "Water Dependence", "effect": "Settlements far from dependable water need 20% more labor to grow." },
+      "acclimatization": { "name": "Fertile Crescent", "description": "Canal-side routes and dryland logistics sustain movement across plains and arid margins.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 25 }, { "terrain": "plains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Canal Survey", "effect": "Unlocks gravity-fed irrigation channels between nearby water and Farms.", "unlock": "Irrigation Channel" }
+    },
+    {
+      "id": "arabian",
+      "name": "Arabian",
+      "focus": ["Caravans", "Oases"],
+      "legacy": { "name": "Oasis Compact", "effect": "Distant trade routes consume 20% fewer supplies when they link water stops." },
+      "tradeoff": { "name": "Scarce Timber", "effect": "Wood-heavy buildings require 20% more imported material in arid regions." },
+      "acclimatization": { "name": "Desert Ways", "description": "Water discipline and night travel sharply reduce the cost of desert movement.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 40 }, { "terrain": "hills", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Star Navigation", "effect": "Scouts keep accurate headings beyond known paths and reveal routes more quickly.", "unlock": "Night Caravan" }
+    },
+    {
+      "id": "iranian-highland",
+      "name": "Iranian Highland",
+      "focus": ["Highland Roads", "Irrigation"],
+      "legacy": { "name": "Caravan Stations", "effect": "Overland routes recover 15% more supply at allied settlements." },
+      "tradeoff": { "name": "Plateau Distances", "effect": "Unstationed routes accumulate travel fatigue 15% faster." },
+      "acclimatization": { "name": "Plateau Corridors", "description": "Highland paths and dry-climate provisioning improve travel across hills, mountains, and desert.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "mountains", "movementBonusPercent": 20 }, { "terrain": "desert", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Qanat Digging", "effect": "Unlocks underground water channels for dry inland settlements.", "unlock": "Qanat" }
+    },
+    {
+      "id": "eurasian-steppe",
+      "name": "Eurasian Steppe",
+      "focus": ["Pastoralism", "Mobility"],
+      "legacy": { "name": "Pastoral Muster", "effect": "Mobile warbands assemble 25% faster on open plains." },
+      "tradeoff": { "name": "Light Foundations", "effect": "Permanent settlement upgrades require 20% more construction labor." },
+      "acclimatization": { "name": "Open Steppe", "description": "Herd routes and horizon navigation reward movement across exposed grassland and cold steppe.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 30 }, { "terrain": "tundra", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Composite Bow", "effect": "Unlocks a mobile ranged retinue with strong pursuit capability.", "unlock": "Mounted Archer" }
+    },
+    {
+      "id": "siberian",
+      "name": "Siberian",
+      "focus": ["Cold Logistics", "Hunting"],
+      "legacy": { "name": "Winter Stores", "effect": "Camps consume 20% fewer reserves during severe cold." },
+      "tradeoff": { "name": "Brief Growing Season", "effect": "Early Farms produce 15% less before cold-resistant crops are learned." },
+      "acclimatization": { "name": "Taiga and Tundra", "description": "Layered shelters and winter trails preserve movement in deep forest and tundra.", "terrain": [{ "terrain": "tundra", "movementBonusPercent": 40 }, { "terrain": "forest", "movementBonusPercent": 25 }] },
+      "specialTechnology": { "name": "Fur-layer Shelters", "effect": "Remote Camps remain viable through harsh winters with smaller stockpiles.", "unlock": "Winter Camp" }
+    },
+    {
+      "id": "indo-gangetic",
+      "name": "Indo-Gangetic",
+      "focus": ["Floodplain Farming", "Urban Growth"],
+      "legacy": { "name": "Monsoon Granaries", "effect": "Seasonal harvest surpluses spoil 20% more slowly in settled plains." },
+      "tradeoff": { "name": "Flood Exposure", "effect": "Unprotected lowland Sites take 25% more disruption during exceptional floods." },
+      "acclimatization": { "name": "Monsoon Plains", "description": "Raised paths and floodplain routines keep travel moving across wet plains and wooded margins.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 20 }, { "terrain": "forest", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Floodplain Bunding", "effect": "Unlocks embanked fields that retain water and blunt seasonal floods.", "unlock": "Bund Farm" }
+    },
+    {
+      "id": "dravidian",
+      "name": "Dravidian",
+      "focus": ["Reservoirs", "Dry Farming"],
+      "legacy": { "name": "Tank Cascade", "effect": "Linked reservoirs make nearby Farms 15% more drought-resistant." },
+      "tradeoff": { "name": "Laborious Waterworks", "effect": "Major irrigation projects reserve 10% more settlement labor while building." },
+      "acclimatization": { "name": "Peninsular Tablelands", "description": "Dry farming and reservoir routes improve pace across hot plains, hills, and scrub.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 20 }, { "terrain": "hills", "movementBonusPercent": 15 }, { "terrain": "plains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Reservoir Earthworks", "effect": "Unlocks a settlement tank that stores rain for Farms and people.", "unlock": "Irrigation Tank" }
+    },
+    {
+      "id": "himalayan-tibetan",
+      "name": "Himalayan-Tibetan",
+      "focus": ["Highland Travel", "Pastoralism"],
+      "legacy": { "name": "Pass Communities", "effect": "Allied upland settlements extend supply reach 20% farther." },
+      "tradeoff": { "name": "Thin Soils", "effect": "Low-intensity Farms need 15% more land to support the same population." },
+      "acclimatization": { "name": "Roof of the World", "description": "Altitude routines, pack animals, and ridge paths transform highland mobility.", "terrain": [{ "terrain": "mountains", "movementBonusPercent": 45 }, { "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "ice", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Rope Bridgework", "effect": "Unlocks light crossings that connect paths across steep river gorges.", "unlock": "Rope Bridge" }
+    },
+    {
+      "id": "east-asian-heartland",
+      "name": "East Asian Heartland",
+      "focus": ["Public Works", "Intensive Farming"],
+      "legacy": { "name": "Coordinated Labor", "effect": "Settlement-wide works complete 15% faster when food needs are met." },
+      "tradeoff": { "name": "Administrative Burden", "effect": "Each distant settlement adds 5% more coordination cost before roads connect it." },
+      "acclimatization": { "name": "River Basins", "description": "Dikes, field paths, and foothill roads favor movement through plains and rolling country.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 20 }, { "terrain": "hills", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Rammed Earth", "effect": "Unlocks fast compacted-earth walls and durable raised foundations.", "unlock": "Rammed-earth Wall" }
+    },
+    {
+      "id": "japonic",
+      "name": "Japonic",
+      "focus": ["Coastal Villages", "Wet Farming"],
+      "legacy": { "name": "Bay Networks", "effect": "Coastal settlements share food and information 15% more efficiently." },
+      "tradeoff": { "name": "Fragmented Valleys", "effect": "Inland influence crosses mountain barriers 15% less effectively." },
+      "acclimatization": { "name": "Wooded Islands", "description": "Mountain footpaths and practiced forestry improve movement across wooded, hilly islands.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 25 }, { "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "mountains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Wet-field Bunds", "effect": "Unlocks compact irrigated fields with high output near dependable water.", "unlock": "Paddy Field" }
+    },
+    {
+      "id": "mainland-southeast-asian",
+      "name": "Mainland Southeast Asian",
+      "focus": ["Monsoon Farming", "River Trade"],
+      "legacy": { "name": "River Mandala", "effect": "Friendly influence follows navigable river corridors 20% farther." },
+      "tradeoff": { "name": "Dry-season Bottleneck", "effect": "Sites without stored water lose 15% output late in the dry season." },
+      "acclimatization": { "name": "Monsoon Forests", "description": "Raised trails, boats, and seasonal timing aid travel through warm forests and hills.", "terrain": [{ "terrain": "jungle", "movementBonusPercent": 30 }, { "terrain": "hills", "movementBonusPercent": 15 }, { "terrain": "plains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Stilt Construction", "effect": "Flood-prone settlements suffer less seasonal disruption and disease.", "unlock": "Stilt Village" }
+    },
+    {
+      "id": "maritime-austronesian",
+      "name": "Maritime Austronesian",
+      "focus": ["Wayfinding", "Island Exchange"],
+      "legacy": { "name": "Sea-road Kinship", "effect": "First contact across water begins friendly and maritime trade carries 20% farther." },
+      "tradeoff": { "name": "Scattered Holdings", "effect": "Large inland warbands cost 15% more supply to maintain." },
+      "acclimatization": { "name": "Tropical Islands", "description": "Island gardening and ridge tracks aid movement through forested coastal highlands.", "terrain": [{ "terrain": "jungle", "movementBonusPercent": 25 }, { "terrain": "hills", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Outrigger Sailing", "effect": "Unlocks reliable open-water travel between visible coasts and islands.", "unlock": "Outrigger Canoe" }
+    },
+    {
+      "id": "amazigh-saharan",
+      "name": "Amazigh-Saharan",
+      "focus": ["Caravans", "Pastoralism"],
+      "legacy": { "name": "Caravan Confederacy", "effect": "Trade pacts with independent tribes build trust 20% faster." },
+      "tradeoff": { "name": "Autonomous Clans", "effect": "Central levy orders mobilize 15% fewer warriors without high goodwill." },
+      "acclimatization": { "name": "Sahara Margins", "description": "Water finding, heat scheduling, and mountain tracks enable exceptional desert travel.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 45 }, { "terrain": "hills", "movementBonusPercent": 20 }, { "terrain": "mountains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Foggara Channels", "effect": "Unlocks underground irrigation galleries for oasis settlements.", "unlock": "Foggara" }
+    },
+    {
+      "id": "nile-valley",
+      "name": "Nile Valley",
+      "focus": ["River Farming", "Accounting"],
+      "legacy": { "name": "Flood Reckoning", "effect": "River harvest forecasts reduce food loss and improve levy planning by 15%." },
+      "tradeoff": { "name": "Narrow Lifeline", "effect": "Settlements beyond irrigable land require 20% more water logistics." },
+      "acclimatization": { "name": "River and Desert", "description": "Basin routes and water discipline support movement on floodplains and arid banks.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 30 }, { "terrain": "plains", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Basin Irrigation", "effect": "Unlocks seasonal basins that turn floodwater into dependable grain.", "unlock": "Flood Basin" }
+    },
+    {
+      "id": "horn-east-african",
+      "name": "Horn-East African",
+      "focus": ["Highland Trade", "Herding"],
+      "legacy": { "name": "Escarpment Caravans", "effect": "Upland trade routes carry 15% more goods through allied settlements." },
+      "tradeoff": { "name": "Rainfall Volatility", "effect": "Unstored pasture output varies 20% more between wet and dry seasons." },
+      "acclimatization": { "name": "Escarpments", "description": "Terrace paths and mobile herding smooth movement across highlands and arid lowlands.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 30 }, { "terrain": "mountains", "movementBonusPercent": 20 }, { "terrain": "desert", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Contour Terracing", "effect": "Unlocks erosion-resistant Farms on steep hillsides.", "unlock": "Contour Farm" }
+    },
+    {
+      "id": "sahelian",
+      "name": "Sahelian",
+      "focus": ["Transhumance", "Market Routes"],
+      "legacy": { "name": "Seasonal Migration", "effect": "Herding Sites retain 20% more output as rainfall belts shift." },
+      "tradeoff": { "name": "Rainline Risk", "effect": "Permanent Farms lose 15% output in consecutive dry seasons." },
+      "acclimatization": { "name": "Savanna Belt", "description": "Seasonal wells and herd corridors reward travel across open and semi-arid country.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 25 }, { "terrain": "desert", "movementBonusPercent": 25 }] },
+      "specialTechnology": { "name": "Dry-season Granary", "effect": "Stored grain lasts longer and supports larger seasonal gatherings.", "unlock": "Raised Granary" }
+    },
+    {
+      "id": "west-african",
+      "name": "West African",
+      "focus": ["Forest Farming", "Ironwork"],
+      "legacy": { "name": "Compound Agriculture", "effect": "Mixed Farms recover soil 15% faster and support diverse food stores." },
+      "tradeoff": { "name": "Heavy-season Roads", "effect": "Unimproved routes decay 20% faster during prolonged rains." },
+      "acclimatization": { "name": "Forest-Savanna Mosaic", "description": "Clearing knowledge and seasonal paths preserve movement through humid woods and uplands.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 35 }, { "terrain": "hills", "movementBonusPercent": 15 }, { "terrain": "plains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Bloomery Furnace", "effect": "Unlocks local iron tools that improve clearing and construction.", "unlock": "Forest Bloomery" }
+    },
+    {
+      "id": "bantu-belt",
+      "name": "Bantu Belt",
+      "focus": ["Mixed Farming", "Expansion"],
+      "legacy": { "name": "Adaptable Homesteads", "effect": "New settlements establish Production Sites 15% faster in mixed terrain." },
+      "tradeoff": { "name": "Dispersed Expansion", "effect": "Rapidly founded settlements begin with 15% less political influence." },
+      "acclimatization": { "name": "Woodland Savannas", "description": "Mixed farming and iron clearing enable steady travel through forests, plains, and hills.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 25 }, { "terrain": "plains", "movementBonusPercent": 15 }, { "terrain": "hills", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Efficient Bloomery", "effect": "Iron tools reduce the labor cost of Farms, paths, and timber works.", "unlock": "Iron Tool Workshop" }
+    },
+    {
+      "id": "kalahari-cape",
+      "name": "Kalahari-Cape",
+      "focus": ["Water Knowledge", "Foraging"],
+      "legacy": { "name": "Seasonal Water Memory", "effect": "Scouts locate dry-country water Sources at twice the normal distance." },
+      "tradeoff": { "name": "Low Stored Surplus", "effect": "Large permanent settlements require 20% more regional food capacity." },
+      "acclimatization": { "name": "Dry Interior", "description": "Water caches and heat-aware travel substantially improve movement across desert and open veld.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 40 }, { "terrain": "plains", "movementBonusPercent": 20 }, { "terrain": "hills", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Water Cache", "effect": "Unlocks concealed seasonal stores that extend Scout and forager range.", "unlock": "Field Water Cache" }
+    },
+    {
+      "id": "malagasy",
+      "name": "Malagasy",
+      "focus": ["Highland Farming", "Sea Exchange"],
+      "legacy": { "name": "Coast-to-Highland Exchange", "effect": "Connected settlements in different elevation bands trade 20% more efficiently." },
+      "tradeoff": { "name": "Island Divides", "effect": "Unroaded influence crosses steep interior ranges 15% less effectively." },
+      "acclimatization": { "name": "Red Island Highlands", "description": "Terraces and forest paths support movement from wooded coasts into steep highlands.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 30 }, { "terrain": "jungle", "movementBonusPercent": 20 }, { "terrain": "mountains", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Hillside Rice Terraces", "effect": "Unlocks productive irrigated Farms on suitable hills.", "unlock": "Highland Terrace" }
+    },
+    {
+      "id": "arctic-subarctic",
+      "name": "Arctic-Subarctic",
+      "focus": ["Cold Survival", "Marine Hunting"],
+      "legacy": { "name": "Cold-season Mobility", "effect": "Winter movement and hunting consume 25% fewer supplies." },
+      "tradeoff": { "name": "Fragile Surplus", "effect": "Population growth is 20% slower without preserved food diversity." },
+      "acclimatization": { "name": "Ice and Tundra", "description": "Layered clothing and precise seasonal knowledge transform cold-country movement.", "terrain": [{ "terrain": "tundra", "movementBonusPercent": 40 }, { "terrain": "ice", "movementBonusPercent": 50 }, { "terrain": "forest", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Skin Boat Construction", "effect": "Unlocks light portable craft for coasts and broad rivers.", "unlock": "Skin Boat" }
+    },
+    {
+      "id": "pacific-northwest",
+      "name": "Pacific Northwest",
+      "focus": ["Stored Abundance", "Woodcraft"],
+      "legacy": { "name": "Seasonal Storehouses", "effect": "Preserved food supports 20% larger gatherings and winter populations." },
+      "tradeoff": { "name": "Run Dependence", "effect": "A failed seasonal harvest removes 20% more stored food without backup Sites." },
+      "acclimatization": { "name": "Rainforest Coast", "description": "Cedar craft and river corridors improve travel through dense wet woods and coastal hills.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 40 }, { "terrain": "hills", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Plankhouse Carpentry", "effect": "Unlocks durable communal housing with high cold-season capacity.", "unlock": "Plankhouse" }
+    },
+    {
+      "id": "eastern-woodlands",
+      "name": "Eastern Woodlands",
+      "focus": ["Confederation", "Horticulture"],
+      "legacy": { "name": "Council Fires", "effect": "Multi-tribe alliances lose goodwill 20% more slowly." },
+      "tradeoff": { "name": "Consensus Rule", "effect": "Offensive war declarations require 20% longer preparation." },
+      "acclimatization": { "name": "Great Woodlands", "description": "Portages, forest gardens, and ridge trails make wooded country easier to traverse.", "terrain": [{ "terrain": "forest", "movementBonusPercent": 35 }, { "terrain": "hills", "movementBonusPercent": 15 }, { "terrain": "tundra", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Raised-field Horticulture", "effect": "Wet lowlands may support productive drained garden beds.", "unlock": "Raised Field" }
+    },
+    {
+      "id": "plains-prairie",
+      "name": "Plains-Prairie",
+      "focus": ["Open-country Travel", "Herding"],
+      "legacy": { "name": "Horizon Scouts", "effect": "Scouts on open plains gain 20% greater entity detection distance." },
+      "tradeoff": { "name": "Timber Scarcity", "effect": "Wooden fortifications cost 20% more outside river valleys and wooded margins." },
+      "acclimatization": { "name": "Grassland Seasons", "description": "Open-ground navigation and seasonal camps make plains travel exceptionally quick.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 35 }, { "terrain": "tundra", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Travois Transport", "effect": "Early land movement carries more supplies without engineered roads.", "unlock": "Travois Caravan" }
+    },
+    {
+      "id": "desert-southwest",
+      "name": "Desert Southwest",
+      "focus": ["Waterworks", "Dry Farming"],
+      "legacy": { "name": "Watershed Discipline", "effect": "Stored water is lost 20% more slowly and dryland Farms fail less often." },
+      "tradeoff": { "name": "Measured Growth", "effect": "Settlement upgrades need 15% more water reserve before construction." },
+      "acclimatization": { "name": "Mesa Country", "description": "Water knowledge and canyon routes improve desert, hill, and mountain movement.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 45 }, { "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "mountains", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Check-dam Farming", "effect": "Unlocks small stone dams that retain runoff for dryland fields.", "unlock": "Check Dam" }
+    },
+    {
+      "id": "middle-american",
+      "name": "Middle American",
+      "focus": ["Intensive Farming", "Calendrics"],
+      "legacy": { "name": "Seasonal Reckoning", "effect": "Synchronized planting and public works complete 15% more efficiently." },
+      "tradeoff": { "name": "Ceremonial Obligations", "effect": "Large settlements reserve 10% more surplus for legitimacy and festivals." },
+      "acclimatization": { "name": "Tropical Highlands", "description": "Milpa cycles and upland causeways aid movement through forested hills and plateaus.", "terrain": [{ "terrain": "jungle", "movementBonusPercent": 30 }, { "terrain": "hills", "movementBonusPercent": 25 }, { "terrain": "mountains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Milpa Rotation", "effect": "Mixed forest-edge Farms restore fertility faster between harvests.", "unlock": "Milpa Garden" }
+    },
+    {
+      "id": "andean",
+      "name": "Andean",
+      "focus": ["Vertical Exchange", "Terracing"],
+      "legacy": { "name": "Vertical Archipelago", "effect": "Settlements at different elevations exchange 25% more varied goods." },
+      "tradeoff": { "name": "Scattered Ecologies", "effect": "Losing a mountain route removes 20% more network supply until it is reopened." },
+      "acclimatization": { "name": "High Andes", "description": "Altitude knowledge, switchback roads, and pack animals transform mountain travel.", "terrain": [{ "terrain": "mountains", "movementBonusPercent": 50 }, { "terrain": "hills", "movementBonusPercent": 30 }, { "terrain": "ice", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Suspension Bridgework", "effect": "Unlocks fiber bridges across deep ravines and rivers.", "unlock": "Rope Suspension Bridge" }
+    },
+    {
+      "id": "amazonian",
+      "name": "Amazonian",
+      "focus": ["Forest Gardens", "River Networks"],
+      "legacy": { "name": "Living Forest", "effect": "Managed woodland Sites recover 25% faster and reveal more useful plants." },
+      "tradeoff": { "name": "Road Reclamation", "effect": "Unused inland paths decay 25% faster under dense growth." },
+      "acclimatization": { "name": "Rainforest Rivers", "description": "Forest knowledge and riverine routines make dense tropical country far more passable.", "terrain": [{ "terrain": "jungle", "movementBonusPercent": 45 }, { "terrain": "plains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Terra Preta", "effect": "Unlocks long-lived fertile soils around established settlements.", "unlock": "Dark-earth Garden" }
+    },
+    {
+      "id": "southern-cone",
+      "name": "Southern Cone",
+      "focus": ["Open-country Mobility", "Pastoralism"],
+      "legacy": { "name": "Far-horizon Camps", "effect": "Mobile parties carry 20% more supplies across open country." },
+      "tradeoff": { "name": "Sparse Shelter", "effect": "Unprepared Camps suffer 15% more disruption from exposed winter weather." },
+      "acclimatization": { "name": "Pampas and Patagonia", "description": "Wind knowledge and open-ground travel improve plains, hills, and cold steppe movement.", "terrain": [{ "terrain": "plains", "movementBonusPercent": 35 }, { "terrain": "hills", "movementBonusPercent": 15 }, { "terrain": "tundra", "movementBonusPercent": 15 }] },
+      "specialTechnology": { "name": "Hide Windbreaks", "effect": "Unlocks portable shelters that reduce exposure on treeless plains.", "unlock": "Wind Camp" }
+    },
+    {
+      "id": "papuan-melanesian",
+      "name": "Papuan-Melanesian",
+      "focus": ["Garden Diversity", "Valley Exchange"],
+      "legacy": { "name": "Many-crop Gardens", "effect": "Mixed garden Sites resist crop failure 20% better." },
+      "tradeoff": { "name": "Valley Particularism", "effect": "Confederating across mountain divides requires 15% more goodwill." },
+      "acclimatization": { "name": "Tropical Highlands", "description": "Garden paths and ridge knowledge improve movement through forest, hills, and steep interiors.", "terrain": [{ "terrain": "jungle", "movementBonusPercent": 35 }, { "terrain": "hills", "movementBonusPercent": 30 }, { "terrain": "mountains", "movementBonusPercent": 20 }] },
+      "specialTechnology": { "name": "Garden Drainage", "effect": "Unlocks ditched garden beds with dependable output in wet ground.", "unlock": "Drained Garden" }
+    },
+    {
+      "id": "polynesian",
+      "name": "Polynesian",
+      "focus": ["Wayfinding", "Colonization"],
+      "legacy": { "name": "Genealogical Sea Roads", "effect": "New island settlements retain 20% more loyalty across long distances." },
+      "tradeoff": { "name": "Finite Materials", "effect": "Resource-heavy construction costs 20% more on small isolated islands." },
+      "acclimatization": { "name": "Oceanic Islands", "description": "Ridge paths, horticulture, and coastal knowledge support movement across wooded volcanic islands.", "terrain": [{ "terrain": "hills", "movementBonusPercent": 30 }, { "terrain": "jungle", "movementBonusPercent": 20 }, { "terrain": "mountains", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Star Compass", "effect": "Unlocks long-distance navigation along memorized ocean bearings.", "unlock": "Voyaging Canoe" }
+    },
+    {
+      "id": "aboriginal-australian",
+      "name": "Aboriginal Australian",
+      "focus": ["Land Stewardship", "Mobility"],
+      "legacy": { "name": "Seasonal Country", "effect": "Foraging and hunting grounds recover 20% faster when use rotates seasonally." },
+      "tradeoff": { "name": "Low Permanent Surplus", "effect": "Dense settlement upgrades need 20% more established food Sites." },
+      "acclimatization": { "name": "Continental Songlines", "description": "Route memory, fire stewardship, and water knowledge enable travel across dry and open country.", "terrain": [{ "terrain": "desert", "movementBonusPercent": 45 }, { "terrain": "plains", "movementBonusPercent": 25 }, { "terrain": "hills", "movementBonusPercent": 10 }] },
+      "specialTechnology": { "name": "Cultural Burning", "effect": "Unlocks controlled mosaic burning that improves selected forage and lowers severe fire risk.", "unlock": "Managed Burn" }
+    }
+  ]
+}

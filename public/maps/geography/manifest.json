@@ -1,0 +1,31 @@
+{
+  "formatVersion": 3,
+  "kind": "global-natural-cover",
+  "projection": "equirectangular",
+  "width": 16384,
+  "height": 8192,
+  "baseTerrainPath": "base-terrain.png",
+  "vegetationPath": "vegetation.png",
+  "source": "Natural Earth II 1:10m idealized land cover v3.2.0",
+  "sourceUrl": "https://naciscdn.org/naturalearth/10m/raster/NE2_HR_LC.zip",
+  "terrainCodes": {
+    "water": 0,
+    "plains": 1,
+    "hills": 2,
+    "mountains": 3,
+    "desert": 4,
+    "tundra": 5,
+    "ice": 6
+  },
+  "vegetationCodes": {
+    "none": 0,
+    "forest-sparse": 1,
+    "forest-light": 2,
+    "forest-moderate": 3,
+    "forest-dense": 4,
+    "jungle-sparse": 5,
+    "jungle-light": 6,
+    "jungle-moderate": 7,
+    "jungle-dense": 8
+  }
+}

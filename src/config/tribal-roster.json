@@ -1,0 +1,28 @@
+{
+  "buildings": [
+    { "id": "scout-post", "requiredTechnologyId": null, "minimumTier": "camp", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 12 },
+    { "id": "hearth", "requiredTechnologyId": "hearthcraft", "minimumTier": "camp", "populationGrowthPerInterval": 1, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "hunters-shelter", "requiredTechnologyId": "cooperative-hunts", "minimumTier": "camp", "populationGrowthPerInterval": 1, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "toolmakers-shelter", "requiredTechnologyId": "ground-stone-tools", "minimumTier": "camp", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 1, "observerHeightMeters": 0 },
+    { "id": "council-circle", "requiredTechnologyId": "council-customs", "minimumTier": "camp", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 5, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "drying-racks", "requiredTechnologyId": "food-preservation", "minimumTier": "camp", "populationGrowthPerInterval": 1, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "rally-ground", "requiredTechnologyId": "warband-discipline", "minimumTier": "camp", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 5, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "lore-hut", "requiredTechnologyId": "oral-tradition", "minimumTier": "camp", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 2, "observerHeightMeters": 0 },
+    { "id": "granary", "requiredTechnologyId": "communal-storage", "minimumTier": "village", "populationGrowthPerInterval": 2, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "cultivated-fields", "requiredTechnologyId": "field-cultivation", "minimumTier": "village", "populationGrowthPerInterval": 3, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "corral", "requiredTechnologyId": "herd-management", "minimumTier": "village", "populationGrowthPerInterval": 2, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "pottery-kiln", "requiredTechnologyId": "pottery", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 1, "observerHeightMeters": 0 },
+    { "id": "weavers-hut", "requiredTechnologyId": "weaving", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 1, "observerHeightMeters": 0 },
+    { "id": "shrine", "requiredTechnologyId": "ritual-architecture", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 15, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "well", "requiredTechnologyId": "water-management", "minimumTier": "village", "populationGrowthPerInterval": 2, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 0, "observerHeightMeters": 0 },
+    { "id": "quarry", "requiredTechnologyId": "mining-quarrying", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 1, "observerHeightMeters": 0 },
+    { "id": "palisade", "requiredTechnologyId": "defensive-earthworks", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 5, "knowledgePerWorldDay": 0, "observerHeightMeters": 15 },
+    { "id": "exchange-ground", "requiredTechnologyId": "exchange-networks", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 10, "knowledgePerWorldDay": 1, "observerHeightMeters": 0 },
+    { "id": "specialist-workshop", "requiredTechnologyId": "craft-specialization", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 2, "observerHeightMeters": 0 },
+    { "id": "copper-workshop", "requiredTechnologyId": "copper-working", "minimumTier": "village", "populationGrowthPerInterval": 0, "influenceGrowthMetersPerInterval": 0, "knowledgePerWorldDay": 3, "observerHeightMeters": 0 }
+  ],
+  "units": [
+    { "id": "scout", "abbreviation": "SC", "requiredTechnologyIds": [], "requiredBuildingId": null, "minimumTier": "camp", "populationCost": 1, "minimumPopulationAfterTraining": 1, "maximumPerSettlement": 1, "warriors": 0, "detectionRadiusMeters": 3000, "footprintRadiusMeters": 1000, "maximumTerrainDistanceMeters": 80000 },
+    { "id": "hunting-party", "abbreviation": "HU", "requiredTechnologyIds": ["cooperative-hunts"], "requiredBuildingId": "hunters-shelter", "minimumTier": "camp", "populationCost": 4, "minimumPopulationAfterTraining": 2, "maximumPerSettlement": 2, "warriors": 0, "detectionRadiusMeters": 1500, "footprintRadiusMeters": 250, "maximumTerrainDistanceMeters": 30000 }
+  ]
+}

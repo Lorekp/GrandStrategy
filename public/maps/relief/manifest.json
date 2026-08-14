@@ -1,0 +1,39 @@
+{
+  "formatVersion": 3,
+  "projection": "equirectangular",
+  "source": "Natural Earth II 1:10m with shaded relief and water v3.2.0",
+  "sourceUrl": "https://naciscdn.org/naturalearth/10m/raster/NE2_HR_LC_SR_W.zip",
+  "tileSize": 1024,
+  "paletteColors": 64,
+  "riverColor": "#2c8fae",
+  "levels": [
+    {
+      "level": 0,
+      "width": 2048,
+      "height": 1024,
+      "columns": 2,
+      "rows": 1
+    },
+    {
+      "level": 1,
+      "width": 4096,
+      "height": 2048,
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "level": 2,
+      "width": 8192,
+      "height": 4096,
+      "columns": 8,
+      "rows": 4
+    },
+    {
+      "level": 3,
+      "width": 16384,
+      "height": 8192,
+      "columns": 16,
+      "rows": 8
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "meta": { "locale": "en-US" },
+  "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  "ui": {
+    "earthAge": "Earth // Age I",
+    "documentTitle": "Grand Strategy — Regional Theater",
+    "tagline": "From first camp to future state",
+    "deck": "Choose a homeland on a living Earth. Build a tribe, unite a region, and carry its history into the future.",
+    "beginCampaign": "Begin campaign",
+    "resumeCampaign": "Resume campaign",
+    "openAtlas": "Open the world atlas",
+    "settings": "Settings",
+    "displayInterface": "Display and interface",
+    "fixedTick": "Fixed-tick simulation",
+    "prototype": "Regional theater prototype",
+    "fieldConfiguration": "Field configuration",
+    "back": "Back",
+    "interfaceScale": "Interface scale",
+    "hudSize": "HUD size",
+    "mapDetail": "Map detail",
+    "textureLod": "Texture LOD",
+    "economy": "Economy",
+    "balanced": "Balanced",
+    "detailed": "Detailed",
+    "detailHelp": "Detailed loads one higher pre-rendered map level; Economy loads one lower. Simulation detail is unchanged.",
+    "language": "Language",
+    "fieldSurvey": "Field survey",
+    "surveyHelp": "Show biome, elevation, allegiance and influence while hovering.",
+    "autoSave": "Changes save automatically",
+    "tribalAge": "Tribal age",
+    "menu": "Menu",
+    "homelandSurvey": "Homeland survey",
+    "culture": "Culture",
+    "theater": "Theater",
+    "camp": "Camp",
+    "redice": "Re-dice",
+    "regionalTradition": "Regional tradition",
+    "legacy": "Legacy",
+    "tradeoff": "Tradeoff",
+    "acclimatization": "Homeland acclimatization",
+    "signatureKnowledge": "Signature knowledge",
+    "works": "Works",
+    "train": "Train",
+    "people": "People",
+    "warriors": "Warriors",
+    "influence": "Influence",
+    "terrain": "Terrain",
+    "vegetation": "Vegetation",
+    "moisture": "Moisture",
+    "height": "Height",
+    "mapViews": "Views",
+    "relief": "Relief",
+    "resources": "Resources",
+    "forestResources": "Forests only",
+    "feature": "Feature",
+    "allegiance": "Allegiance",
+    "biome": "Biome",
+    "natural": "Natural",
+    "ground": "Ground",
+    "slope": "Slope",
+    "pace": "Pace",
+    "arrival": "Arrival",
+    "detection": "Detection",
+    "close": "Close",
+    "worldClock": "World clock",
+    "fitTheater": "Fit theater"
+    ,"tribesInSight": "Tribes in sight"
+    ,"campWorks": "Camp works"
+    ,"fieldUnit": "Field unit"
+    ,"pointAtMap": "Point at the map"
+    ,"mapRoom": "Map room"
+    ,"openingAtlas": "Opening the World Atlas…"
+    ,"loadingGeography": "Loading geography and regional records"
+    ,"mapInstructions": "Left click or drag selects · Right click moves · Ctrl-right-click queues · Middle drag pans"
+    ,"paceNote": "Slope and vegetation adjust pace continuously · travels in daylight from {start}–{end}"
+    ,"hydrographyAttribution": "Hydrography © OpenStreetMap contributors"
+    ,"worldAtlasLabel": "World Atlas with interactive Regional Theaters"
+    ,"mainMenu": "Main menu"
+    ,"campaignSetupProgress": "Campaign setup progress"
+    ,"campaignSetupNavigation": "Campaign setup navigation"
+    ,"tribesInTheater": "Tribes in this theater"
+    ,"closeConstruction": "Close construction"
+    ,"campManagement": "Camp management"
+    ,"scoutFlatSpeed": "Scout flat-ground travel speed"
+    ,"mapSurveyLabel": "Map survey"
+    ,"mapScale": "Map scale"
+    ,"timeControls": "Time controls"
+    ,"terrainComposition": "Regional terrain composition"
+    ,"village": "Village"
+    ,"administration": "Administration"
+  },
+  "terms": {
+    "bce": "BCE",
+    "ce": "CE",
+    "unknown": "Unknown",
+    "unclaimed": "Unclaimed",
+    "mixed": "Mixed",
+    "level": "Level",
+    "day": "DAY",
+    "night": "NIGHT",
+    "play": "Play",
+    "pause": "Pause",
+    "paused": "Paused",
+    "running": "Running · {speed}×",
+    "cultureSelection": "Culture selection",
+    "theaterSelection": "Theater selection",
+    "campFounding": "Camp founding",
+    "culturalAtlas": "Cultural Atlas",
+    "regionalTheater": "Regional Theater",
+    "regionalCulture": "Regional culture",
+    "yourTribe": "Your tribe",
+    "rival": "Rival",
+    "uphill": "+{degrees}° uphill",
+    "downhill": "{degrees}° downhill"
+    ,"noPermanentWorks": "No permanent works"
+    ,"majorRiver": "Major river"
+    ,"minorRiver": "Minor river"
+    ,"intermittent": "intermittent"
+    ,"seasonal": "seasonal"
+    ,"influenceOf": "{tribe} influence"
+    ,"peopleCount": "{count} people"
+  },
+  "terrain": {
+    "water": "Water",
+    "plains": "Plains",
+    "hills": "Hills",
+    "mountains": "Mountains",
+    "desert": "Desert",
+    "tundra": "Tundra",
+    "ice": "Permanent ice",
+    "none": "None",
+    "forest": "Forest",
+    "jungle": "Jungle",
+    "sparse": "Sparse",
+    "light": "Light",
+    "moderate": "Moderate",
+    "dense": "Dense"
+  },
+  "biome": {
+    "open-water": "Open water", "permanent-ice": "Permanent ice", "taiga": "Taiga",
+    "tundra": "Tundra", "desert": "Desert", "desert-scrub": "Desert scrub",
+    "jungle-highlands": "Jungle highlands", "forested-mountains": "Forested mountains",
+    "mountains": "Mountains", "jungle-hills": "Jungle hills", "forested-hills": "Forested hills",
+    "open-hills": "Open hills", "rainforest": "Rainforest", "tropical-woodland": "Tropical woodland",
+    "forest": "Forest", "woodland": "Woodland", "grassland": "Grassland"
+  },
+  "stance": {
+    "friendly": "Friendly",
+    "neutral": "Neutral",
+    "hostile": "Hostile",
+    "war": "At war",
+    "at-war": "At war",
+    "player": "Your tribe"
+  },
+  "diplomacy": {
+    "title": "Diplomacy",
+    "tribalRelations": "Tribal relations",
+    "introduction": "Relations are shaped by deeds, promises, and remembered injuries. Agreements require contact, knowledge, and the consent of both tribes.",
+    "contacts": "Known tribes",
+    "noContacts": "No contacts",
+    "contactCount": "{count} known tribes",
+    "opinion": "Opinion",
+    "trust": "Trust",
+    "tension": "Tension",
+    "agreements": "Agreements",
+    "noAgreements": "No standing agreements",
+    "incomingProposals": "Proposals",
+    "noIncoming": "No proposals awaiting an answer",
+    "actions": "Diplomatic actions",
+    "accept": "Accept",
+    "reject": "Reject",
+    "accepted": "The proposal was accepted.",
+    "rejected": "The proposal was refused.",
+    "awaitingAnswer": "Awaiting answer: {action}",
+    "awaitingResponse": "This proposal is already awaiting a response.",
+    "alreadyActive": "This agreement is already active.",
+    "wrongWarState": "This action is unavailable in the current war state.",
+    "requiresKnowledge": "Requires: {knowledge}",
+    "cooldown": "Envoys available in {duration}.",
+    "actionSent": "{action} will be carried out on the next command tick.",
+    "agreementsById": {
+      "guest-right": "Guest right",
+      "safe-passage": "Safe passage",
+      "non-aggression": "Non-aggression oath",
+      "exchange-pact": "Exchange pact",
+      "defensive-pact": "Defensive pact"
+    },
+    "actionsById": {
+      "send-envoys": { "name": "Send envoys", "description": "Offer gifts and careful words to improve relations." },
+      "insult": { "name": "Deliver an insult", "description": "Publicly slight their standing and provoke resentment." },
+      "threaten": { "name": "Threaten", "description": "Demand deference by invoking the strength of your warriors." },
+      "declare-war": { "name": "Declare war", "description": "End every agreement and begin open conflict." },
+      "propose-guest-right": { "name": "Propose guest right", "description": "Promise shelter and protection to peaceful visitors." },
+      "propose-safe-passage": { "name": "Propose safe passage", "description": "Permit travelers to cross each other's lands unharmed." },
+      "propose-non-aggression": { "name": "Propose non-aggression", "description": "Swear not to raid or attack one another." },
+      "propose-exchange-pact": { "name": "Propose exchange pact", "description": "Formalize recurring exchanges of goods and knowledge." },
+      "propose-defensive-pact": { "name": "Propose defensive pact", "description": "Promise mutual aid against outside attackers." },
+      "offer-peace": { "name": "Offer peace", "description": "Ask to end the war without a standing pact." }
+    }
+  },
+  "events": {
+    "title": "Events",
+    "chronicle": "Tribal chronicle",
+    "introduction": "Encounters arise from the world, your scouts, the camp, research, and relations. Decisions pause the game; reports remain in the chronicle.",
+    "recent": "Recent events",
+    "noPending": "No decisions",
+    "pendingCount": "{count} pending",
+    "noEvents": "The chronicle is quiet",
+    "noEventsDescription": "New reports and decisions will be recorded here as the tribe explores and grows.",
+    "chosen": "Chosen: {choice}",
+    "categories": {
+      "diplomatic": "Diplomatic",
+      "scout": "Scouting",
+      "camp": "Camp",
+      "research": "Research",
+      "conflict": "Conflict",
+      "society": "Society"
+    },
+    "effects": {
+      "populationDelta": "{value} people",
+      "warriorsDelta": "{value} warriors",
+      "influenceDelta": "{value} m influence",
+      "researchKnowledge": "{value} days of Knowledge",
+      "opinionDelta": "{value} opinion",
+      "trustDelta": "{value} trust",
+      "tensionDelta": "{value} tension"
+    },
+    "definitions": {
+      "first-contact": { "title": "First contact", "body": "People of {target} have been encountered. They watch for the custom by which we will greet them.", "choices": { "open-hands": "Approach with open hands", "watchful-distance": "Keep a watchful distance" } },
+      "proposal-received": { "title": "A proposal arrives", "body": "Envoys from {target} wait by the outer fires with terms for the council.", "choices": {} },
+      "proposal-refused": { "title": "Envoys return alone", "body": "{target} has refused our proposal. The rejection will be remembered.", "choices": {} },
+      "pact-sealed": { "title": "Words made binding", "body": "An agreement with {target} has been witnessed and accepted by both tribes.", "choices": {} },
+      "war-declared": { "title": "Open conflict", "body": "Peace with {target} has ended. Old agreements no longer bind either side.", "choices": {} },
+      "battle-won": { "title": "The enemy breaks", "body": "Our warband has forced the fighters of {target} from the field. Pursuit policy decided the cost.", "choices": {} },
+      "battle-lost": { "title": "Our line breaks", "body": "Our fighters have yielded the field to {target}. Survivors are retreating toward familiar ground.", "choices": {} },
+      "work-completed": { "title": "Work completed", "body": "A new work stands ready at {settlement}.", "choices": {} },
+      "unit-trained": { "title": "A company is ready", "body": "The people trained at {settlement} are ready to receive orders.", "choices": {} },
+      "research-breakthrough": { "title": "Practice becomes tradition", "body": "Repeated trials have produced reliable knowledge that the tribe can now teach.", "choices": {} },
+      "disputed-hunting-ground": { "title": "Disputed hunting ground", "body": "Hunters from a neighboring tribe claim the same seasonal ground as ours.", "choices": { "share-season": "Share the season", "mark-boundary": "Mark a firm boundary" } },
+      "envoys-at-dusk": { "title": "Envoys at dusk", "body": "Unexpected visitors arrive before nightfall and ask to speak around our fire.", "choices": { "host-feast": "Host a full feast", "brief-council": "Hold a brief council" } },
+      "guest-right-tested": { "title": "Guest right tested", "body": "Travelers invoke the old protection owed to peaceful guests.", "choices": { "honor-custom": "Honor the custom", "refuse-guests": "Refuse the guests" } },
+      "shared-festival": { "title": "A shared festival", "body": "A nearby people invite us to join a gathering beyond their hearths.", "choices": { "join-gathering": "Join the gathering", "send-token": "Send a token of respect" } },
+      "marriage-between-clans": { "title": "A bond between clans", "body": "Two families ask the council to bless a union across tribal lines.", "choices": { "bless-union": "Bless the union", "keep-apart": "Keep the clans apart" } },
+      "hidden-spring": { "title": "A hidden spring", "body": "A scout finds fresh water concealed beneath brush and stone.", "choices": { "mark-route": "Mark a safe route", "keep-secret": "Keep the spring secret" } },
+      "commanding-ridge": { "title": "A commanding ridge", "body": "The high ground opens a broad view across the surrounding country.", "choices": { "survey-horizon": "Survey the horizon", "raise-cairn": "Raise a boundary cairn" } },
+      "dangerous-crossing": { "title": "A dangerous crossing", "body": "The direct path continues through water and unstable ground.", "choices": { "test-crossing": "Test the crossing", "turn-back": "Turn back and record it" } },
+      "abandoned-hearth": { "title": "An abandoned hearth", "body": "Cold ashes and worked fragments reveal a place left behind long ago.", "choices": { "study-remains": "Study the remains", "leave-untouched": "Leave it untouched" } },
+      "unfamiliar-trail": { "title": "An unfamiliar trail", "body": "Fresh marks cross the scout's path and lead toward unknown ground.", "choices": { "follow-trail": "Follow the trail", "observe-only": "Observe without pursuit" } },
+      "wounded-scout": { "title": "A wounded scout", "body": "A field runner returns hurt and cannot finish the route alone.", "choices": { "carry-home": "Carry them home", "send-help": "Send an armed escort" } },
+      "crowded-hearth": { "title": "Crowded hearths", "body": "Families press close around shelters no longer large enough for them.", "choices": { "raise-shelters": "Raise more shelters", "divide-hearths": "Divide the household fires" } },
+      "spoiled-stores": { "title": "Spoiled stores", "body": "Damp and pests have ruined part of the camp's gathered food.", "choices": { "ration-carefully": "Ration what remains", "replace-quickly": "Send everyone to replace it" } },
+      "clay-deposit": { "title": "A workable clay deposit", "body": "Useful clay lies exposed near the camp after recent weather.", "choices": { "test-clay": "Test it at the hearth", "mark-deposit": "Mark the deposit" } },
+      "skilled-craftsperson": { "title": "A skilled craftsperson", "body": "One worker's patient method produces unusually dependable tools.", "choices": { "grant-workspace": "Grant a dedicated workspace", "teach-all": "Have them teach everyone" } },
+      "night-watch": { "title": "The night watch", "body": "Arguments grow over who should guard the camp after darkness.", "choices": { "regular-rotation": "Establish a regular rotation", "household-watch": "Leave watch to each household" } },
+      "fresh-water-concern": { "title": "Fresh-water concern", "body": "The growing camp draws more heavily on its nearest clean water.", "choices": { "dig-deeper": "Dig and line a deeper well", "limit-growth": "Limit growth for now" } },
+      "remembered-technique": { "title": "A remembered technique", "body": "An elder recalls part of a method no one has used for years.", "choices": { "reconstruct-method": "Reconstruct the method", "compare-versions": "Compare every remembered version" } },
+      "disputed-method": { "title": "A disputed method", "body": "Two groups insist that their approach gives the more reliable result.", "choices": { "test-both": "Test both methods", "trust-elders": "Trust the elders' judgment" } },
+      "traveling-lorekeeper": { "title": "A traveling lorekeeper", "body": "A visitor offers unfamiliar stories and practical observations.", "choices": { "welcome-teacher": "Welcome them as a teacher", "exchange-stories": "Exchange stories for one evening" } },
+      "successful-experiment": { "title": "A successful experiment", "body": "A deliberate trial works more reliably than anyone expected.", "choices": { "repeat-carefully": "Repeat it carefully", "spread-practice": "Spread the practice now" } },
+      "broken-prototype": { "title": "A broken prototype", "body": "A promising new object fails under ordinary use.", "choices": { "learn-from-failure": "Study the failure", "abandon-attempt": "Abandon the attempt" } },
+      "cattle-theft": { "title": "Livestock taken", "body": "Tracks suggest that people from a known tribe drove animals away at night.", "choices": { "demand-return": "Demand their return", "accept-loss": "Accept the loss" } },
+      "blood-price-demand": { "title": "A blood-price demand", "body": "Another tribe demands compensation for an injury they blame on our people.", "choices": { "pay-price": "Pay the blood price", "reject-demand": "Reject the demand" } },
+      "captive-warrior": { "title": "A captive warrior", "body": "Our people hold an armed stranger taken during a tense encounter.", "choices": { "return-captive": "Return the captive", "demand-oath": "Demand an oath of service" } },
+      "raid-warning": { "title": "Warning of a raid", "body": "Scouts report movement consistent with a war party gathering nearby.", "choices": { "muster-warriors": "Muster every warrior", "hide-stores": "Hide stores and avoid battle" } },
+      "truce-opportunity": { "title": "An opening for truce", "body": "Weariness on both sides creates a brief chance to speak without weapons.", "choices": { "meet-between-camps": "Meet between the camps", "maintain-pressure": "Maintain pressure" } },
+      "communal-feast": { "title": "A communal feast", "body": "A successful season leaves enough food for a gathering of every household.", "choices": { "open-feast": "Open the feast to all", "honor-workers": "Honor the best workers" } },
+      "adoption-request": { "title": "A family seeks adoption", "body": "A displaced household asks to join our people and share our obligations.", "choices": { "welcome-family": "Welcome them as kin", "offer-guest-place": "Offer a temporary guest place" } },
+      "burial-of-elder": { "title": "Burial of an elder", "body": "A respected keeper of memory has died, and the people gather to remember.", "choices": { "raise-marker": "Raise a lasting marker", "recite-memory": "Recite and teach their memory" } },
+      "harsh-season-signs": { "title": "Signs of a harsh season", "body": "Animals, wind, and early frost all warn of difficult months ahead.", "choices": { "prepare-stores": "Prepare larger stores", "move-early": "Move vulnerable households early" } },
+      "young-generation": { "title": "The young generation", "body": "A large group has reached the age to take on the tribe's adult duties.", "choices": { "teach-traditions": "Teach the old traditions", "train-hunters": "Train hunters and defenders" } }
+    }
+  },
+  "setup": {
+    "chooseCultureTitle": "Choose a Regional Culture",
+    "chooseCultureMessage": "Move across the cultural Atlas, then choose the learned tradition your first tribe will carry.",
+    "chooseCultureHelp": "Move previews · Left click selects · Wheel zooms · Middle drag pans",
+    "chooseCultureInvalid": "Choose an inhabited land region; ocean and Antarctica have no starting culture.",
+    "chooseTheater": "Choose Theater",
+    "chooseTheaterTitle": "Choose a Regional Theater",
+    "enterTheater": "Enter Theater",
+    "foundCamp": "Found Camp",
+    "chooseCampTitle": "Choose a Camp site",
+    "chooseCampHelp": "Left click selects or switches Culture · Wheel zooms · Middle drag pans",
+    "chooseCampMessage": "Choose a Camp site inside this Regional Theater.",
+    "chooseCampReach": "Select clear land inside the {culture} {direction}, or click another Culture Field to adopt it before founding.",
+    "waterCamp": "Water cannot hold a Camp. Choose solid land.",
+    "uninhabitedCamp": "This land has no inhabited Culture Field and cannot hold your first Camp.",
+    "culturalReach": "You may found only inside that cultural reach.",
+    "broadTradition": "Broad learned tradition · click to select",
+    "selectedCulture": "Selected culture",
+    "cultureSelected": "{culture} selected. This is a broad learned starting tradition; its borders can overlap and change during play.",
+    "cultureStillSelected": "{culture} is selected. Choose another cultural field, or continue to the Theater survey.",
+    "cultureCount": "{count} broad Regional Cultures · learned traditions, not fixed peoples",
+    "theaterSummary": "{center} center · {culture} covers about {percent}% of its surveyed land in the {direction}. {restriction}",
+    "invalidTheater": "Choose a land-qualified Theater that overlaps the {culture} cultural field. Red outlines fall outside it.",
+    "surveyTheaters": "Survey any Regional Theater touching the {culture} field. Mixed-culture Theaters are valid; your Camp must begin inside the correct reach.",
+    "cultureReach": "{culture} reach",
+    "cultureFrontier": "{culture} frontier",
+    "eligibleTooltip": "{culture} · {percent}% of surveyed land · {direction}",
+    "ineligibleTooltip": "{culture} has no land presence in this survey",
+    "switchedCamp": "Switched to {culture} and selected this Camp site. Continue to begin scouting.",
+    "selectedCamp": "{culture} Camp site selected. Continue to begin scouting."
+  },
+  "direction": {
+    "central": "central reach",
+    "west": "western reach",
+    "east": "eastern reach",
+    "north": "northern reach",
+    "south": "southern reach",
+    "north-west": "north-western reach",
+    "north-east": "north-eastern reach",
+    "south-west": "south-western reach",
+    "south-east": "south-eastern reach",
+    "outside": "outside this theater"
+  },
+  "loading": {
+    "paintingCultures": "Painting broad cultural homelands",
+    "prepareTheater": "Compiling or locating the selected geography",
+    "theaterFailed": "Theater preparation failed.",
+    "theaterFailedReason": "Theater preparation failed: {reason}",
+    "loadingRelief": "Loading relief, rivers, and terrain cells",
+    "prepareSurface": "Preparing the {resolution} m simulation surface…",
+    "assembleSurface": "Assembling terrain, vegetation, moisture, and elevation",
+    "surfaceFailed": "Unable to prepare this Theater.",
+    "surfaceFailedReason": "Unable to prepare this Theater: {reason}",
+    "theaterPreparing": "Preparing the {theater} Theater…"
+  },
+  "orders": {
+    "waterImpassable": "Water is impassable. Choose land.",
+    "waypointQueued": "Waypoint queued",
+    "orderSet": "Order set",
+    "orderImpassable": "Order set · the direct route crosses impassable ground.",
+    "pausedOrder": "Order set · press Play to travel.",
+    "travelling": "Travelling at the current ground and slope pace.",
+    "resting": "Resting until dawn at {time}.",
+    "instructions": "Right click moves · Ctrl-right-click queues."
+  },
+  "combat": {
+    "strength": "Strength",
+    "morale": "Morale",
+    "cohesion": "Cohesion",
+    "fatigue": "Fatigue",
+    "experience": "Experience",
+    "doctrine": "Doctrine",
+    "formation": "Formation",
+    "pursuit": "Pursuit",
+    "unitDescription": "A {archetype} tradition shaped by {trait}.",
+    "unitRole": "{people} people · {role} · {range} m reach",
+    "groupCount": "{count} × {name}",
+    "experienceValue": "{rank} · {experience} XP",
+    "requiresWar": "Combat requires a declaration of war.",
+    "orderIssued": "Engage {target} on the next command tick.",
+    "roles": { "close": "close range", "ranged": "ranged" },
+    "doctrines": { "cautious": "Cautious", "balanced": "Balanced", "aggressive": "Aggressive" },
+    "formations": { "loose": "Loose order", "line": "Line", "guard": "Guard", "shock": "Shock" },
+    "pursuits": { "hold": "Hold ground", "controlled": "Controlled", "all-out": "All-out" },
+    "ranks": { "unblooded": "Unblooded", "proven": "Proven", "veteran": "Veteran", "renowned": "Renowned" }
+  },
+  "construction": {
+    "built": "Built",
+    "build": "Build",
+    "queued": "Queued",
+    "upgrade": "Upgrade",
+    "established": "Established",
+    "villageDescription": "Turn this Camp into a permanent Village with organized work and local administration.",
+    "villageQueued": "Establishing the Village on the next command tick."
+  },
+  "administration": {
+    "current": "Current administrator",
+    "assign": "Assign",
+    "assigned": "Assigned",
+    "locked": "Locked",
+    "requiresVillage": "Specialized administrators require this Camp to become a Village.",
+    "requiresTechnology": "Research Village Administration to assign a specialized administrator.",
+    "chooseRole": "Choose one administrator for this Village. Assigning another replaces the current role.",
+    "assignmentQueued": "Assigning {role} on the next command tick.",
+    "roles": {
+      "tribal-leader": {
+        "name": "Tribal Leader",
+        "description": "The recognized leader settles disputes and coordinates communal work.",
+        "effect": "General leadership · no specialization"
+      },
+      "elder": {
+        "name": "Elder",
+        "description": "Custom, memory, and trusted judgment strengthen the Village's legitimacy.",
+        "effect": "Faster influence growth"
+      },
+      "sage": {
+        "name": "Sage",
+        "description": "A dedicated keeper teaches observations, techniques, and oral records.",
+        "effect": "Additional Knowledge each world day"
+      },
+      "steward": {
+        "name": "Steward",
+        "description": "A practical organizer coordinates stores, labour, dwellings, and seasonal needs.",
+        "effect": "Faster population growth"
+      }
+    }
+  },
+  "roster": {
+    "chooseBuilding": "Choose a Tribal work. Completed works improve settlement growth, influence, knowledge, or observation.",
+    "chooseUnit": "Choose a field group. Each group permanently assigns part of the settlement population.",
+    "requiresVillage": "Requires Village",
+    "requiresTechnology": "Requires {technology}",
+    "requiresBuilding": "Requires {building}",
+    "needsPopulation": "Needs {count} people",
+    "capacity": "{count}/{maximum} deployed",
+    "trainCost": "Train · {count} people · {trained}/{maximum}",
+    "buildingQueued": "Raising {building} on the next command tick.",
+    "trainingQueued": "Organizing {unit} on the next command tick.",
+    "mixedUnits": "{count} selected units",
+    "buildings": {
+      "scout-post": { "name": "Scout Post", "description": "A raised lookout for reading movement, smoke, weather, and distant terrain.", "effect": "12 m settlement lookout" },
+      "hearth": { "name": "Communal Hearth", "description": "A maintained cooking and gathering fire at the settlement's social center.", "effect": "+1 population each growth interval" },
+      "hunters-shelter": { "name": "Hunters' Shelter", "description": "Stores hunting gear and provides a meeting place for coordinated parties.", "effect": "+1 population · enables Hunting Parties" },
+      "toolmakers-shelter": { "name": "Toolmakers' Shelter", "description": "A dry shared workspace for grinding, hafting, repairing, and teaching toolcraft.", "effect": "+1 Knowledge per day" },
+      "council-circle": { "name": "Council Circle", "description": "A recognized place for councils, judgments, guests, and common decisions.", "effect": "+5 m influence each growth interval" },
+      "drying-racks": { "name": "Drying Racks", "description": "Raised racks and smoke shelters preserve meat, fish, fruit, and gathered plants.", "effect": "+1 population each growth interval" },
+      "rally-ground": { "name": "Rally Ground", "description": "A clear mustering place for drills, signals, weapons, and organized warbands.", "effect": "+5 m influence · enables Warbands" },
+      "lore-hut": { "name": "Lore Hut", "description": "A quiet teaching place where routes, seasons, customs, and techniques are rehearsed.", "effect": "+2 Knowledge per day" },
+      "granary": { "name": "Granary", "description": "A managed communal store protected from damp, pests, and everyday consumption.", "effect": "+2 population each growth interval" },
+      "cultivated-fields": { "name": "Cultivated Fields", "description": "Prepared plots for sowing, tending, and harvesting near the Village.", "effect": "+3 population each growth interval" },
+      "corral": { "name": "Corral", "description": "Fenced space for breeding, protecting, sorting, and managing domesticated animals.", "effect": "+2 population each growth interval" },
+      "pottery-kiln": { "name": "Pottery Kiln", "description": "A sheltered firing place for repeatable household and storage vessels.", "effect": "+1 Knowledge per day" },
+      "weavers-hut": { "name": "Weavers' Hut", "description": "A shared workspace for spinning, weaving, net-making, and textile instruction.", "effect": "+1 Knowledge per day" },
+      "shrine": { "name": "Communal Shrine", "description": "A durable gathering place for rites, memory, identity, and seasonal assembly.", "effect": "+15 m influence each growth interval" },
+      "well": { "name": "Village Well", "description": "A protected source of fresh water with maintained access and drainage.", "effect": "+2 population each growth interval" },
+      "quarry": { "name": "Quarry", "description": "An organized extraction face for toolstone and dependable building material.", "effect": "+1 Knowledge per day" },
+      "palisade": { "name": "Palisade", "description": "Ditches, timber barriers, and watch positions define a defended Village edge.", "effect": "+5 m influence · 15 m settlement lookout" },
+      "exchange-ground": { "name": "Exchange Ground", "description": "A customary place for visiting parties, barter, news, and guest-right.", "effect": "+10 m influence · +1 Knowledge per day" },
+      "specialist-workshop": { "name": "Specialist Workshop", "description": "Dedicated craftspeople maintain tools, standards, batches, and apprenticeships.", "effect": "+2 Knowledge per day" },
+      "copper-workshop": { "name": "Copper Workshop", "description": "A controlled workspace for cold-working, annealing, and testing native copper.", "effect": "+3 Knowledge per day" }
+    },
+    "units": {
+      "scout": { "name": "Scout", "plural": "{count} Scouts", "description": "A lone trained traveler for terrain reconnaissance and distant observation.", "role": "1 person · 3 km identification · maximum 1" },
+      "hunting-party": { "name": "Hunting Party", "plural": "{count} Hunting Parties", "description": "A small coordinated group able to range, track, and defend itself in the wild.", "role": "4 people · 2 warriors · 1.5 km identification" },
+      "slingers": { "name": "Slingers", "plural": "{count} Slinger Bands", "description": "A dispersed missile band for harassment, screening, and fighting from rough ground.", "role": "6 people · 6 warriors · ranged harassment" },
+      "spear-warband": { "name": "Spear Warband", "plural": "{count} Spear Warbands", "description": "A disciplined close-order band for holding ground and meeting hostile warriors.", "role": "8 people · 8 warriors · line defense" },
+      "raiding-party": { "name": "Raiding Party", "plural": "{count} Raiding Parties", "description": "A lightly supplied band organized for fast strikes and longer movement away from home.", "role": "6 people · 6 warriors · mobile raiding" },
+      "axe-warband": { "name": "Axe Warband", "plural": "{count} Axe Warbands", "description": "A close-combat band equipped with durable hafted tools suited to assault and clearing.", "role": "8 people · 8 warriors · assault" },
+      "village-guard": { "name": "Village Guard", "plural": "{count} Village Guards", "description": "A larger defensive muster trained around the Village's prepared barriers and alarms.", "role": "10 people · 10 warriors · settlement defense" }
+    }
+  },
+  "technology": {
+    "knowledge": "Knowledge",
+    "chooseResearch": "Choose research",
+    "tribalKnowledge": "Tribal knowledge",
+    "title": "Knowledge Web",
+    "introduction": "Turn familiar practices into reliable traditions. Choose any destination; its required path is planned automatically and partial progress is never lost.",
+    "perWorldDay": "Knowledge / world day",
+    "close": "Close Knowledge Web",
+    "progress": "Progress",
+    "cost": "Knowledge cost",
+    "prerequisites": "Requires",
+    "unlocks": "Makes possible",
+    "researchPlan": "Research plan",
+    "noPrerequisites": "Opening practice",
+    "anyOneOf": "Any one of: {names}",
+    "queueCount": "{count} steps",
+    "knowledgeCost": "{cost} Knowledge",
+    "progressValue": "{percent}% · {invested} / {cost}",
+    "affinity": "Cultural familiarity: +{percent}% Knowledge output in {branch} research.",
+    "noAffinity": "No cultural familiarity bonus applies to this branch.",
+    "pausedQueued": "The plan is queued. Research advances when world time is running.",
+    "automaticPath": "Locked destinations automatically plan a deterministic prerequisite-first route.",
+    "futureSystem": "Future gameplay system",
+    "branches": {
+      "sustenance": "Sustenance",
+      "craft": "Craft",
+      "settlement": "Settlement",
+      "society": "Society",
+      "exploration": "Exploration"
+    },
+    "tiers": {
+      "campPractice": "I · Camp practice",
+      "reliableTradition": "II · Reliable tradition",
+      "organizedPractice": "III · Organized practice",
+      "institutions": "IV · Institutions",
+      "breakthrough": "V · Breakthrough"
+    },
+    "states": {
+      "completed": "Mastered",
+      "researching": "Researching",
+      "queued": "Planned",
+      "available": "Available",
+      "blocked": "Path required"
+    },
+    "actions": {
+      "completed": "Mastered",
+      "researching": "Researching now",
+      "select": "Research this",
+      "change": "Change focus",
+      "plan": "Plan route"
+    },
+    "nodes": {
+      "seasonal-lore": { "name": "Seasonal Lore", "description": "Record migrations, weather, and ripening cycles as a shared seasonal forecast.", "unlock": "Seasonal forecasts and migration plans" },
+      "cooperative-hunts": { "name": "Cooperative Hunts", "description": "Turn individual hunting skill into coordinated drives with roles and rally signals.", "unlock": "Hunting parties and organized drives" },
+      "cordage-basketry": { "name": "Cordage & Basketry", "description": "Standardize fibres, knots, nets, snares, and containers for repeated production.", "unlock": "Nets, carrying gear, and stronger ranged readiness" },
+      "ground-stone-tools": { "name": "Ground-Stone Tools", "description": "Make reliable querns, mortars, and durable ground edges from suitable stone.", "unlock": "Querns, mortars, and improved processing" },
+      "hearthcraft": { "name": "Hearthcraft", "description": "Maintain safer, hotter hearths for communal cooking, warmth, and preservation trials.", "unlock": "Maintained hearths and smoke drying" },
+      "council-customs": { "name": "Council Customs", "description": "Establish a repeatable forum for shared work, disputes, and first diplomacy.", "unlock": "Councils and negotiated decisions" },
+      "food-preservation": { "name": "Food Preservation", "description": "Dry and smoke seasonal surpluses into dependable stores and expedition rations.", "unlock": "Preserved food and longer expeditions" },
+      "plant-tending": { "name": "Plant Tending", "description": "Protect and selectively harvest useful wild stands without requiring agriculture.", "unlock": "Managed wild plots and selective harvests" },
+      "animal-taming": { "name": "Animal Taming", "description": "Capture, corral, and evaluate locally manageable animals over time.", "unlock": "Corrals and managed captive animals" },
+      "hafted-polished-tools": { "name": "Hafted & Polished Tools", "description": "Fit durable polished edges to handles for efficient timber and building work.", "unlock": "Polished tools and stronger close-warband attacks" },
+      "permanent-dwellings": { "name": "Permanent Dwellings", "description": "Replace temporary shelter with maintained homes and resident work spaces.", "unlock": "Durable dwellings and permanent Camp status" },
+      "oral-tradition": { "name": "Oral Tradition", "description": "Give lorekeepers a formal role in teaching routes, events, and customary practice.", "unlock": "Lorekeepers and faster knowledge sharing" },
+      "trail-networks": { "name": "Trail Networks", "description": "Connect repeated routes into recognized corridors with known rests and hazards.", "unlock": "Marked routes and stronger beaten paths" },
+      "warband-discipline": { "name": "Warband Discipline", "description": "Train coordinated rallying, formations, and controlled raids instead of loose violence.", "unlock": "Warbands, rally points, and controlled raids" },
+      "field-cultivation": { "name": "Field Cultivation", "description": "Sow and tend placeable fields whose yield depends on soil, moisture, season, and labour.", "unlock": "Cultivated fields and harvest cycles" },
+      "herd-management": { "name": "Herd Management", "description": "Manage reproducing herds through grazing routes, seasonal movement, and culling.", "unlock": "Herds, grazing routes, and pastoral movement" },
+      "pottery": { "name": "Pottery", "description": "Shape and fire local clay into cooking and household storage vessels.", "unlock": "Clay working and fired vessels" },
+      "weaving": { "name": "Weaving", "description": "Organize spinning and weaving into repeatable textile and net production.", "unlock": "Textiles, bindings, and better warband protection" },
+      "communal-storage": { "name": "Communal Storage", "description": "Pool preserved food in managed reserves that can outlast a poor season.", "unlock": "Storehouses and shared reserve policies" },
+      "village-planning": { "name": "Village Planning", "description": "Lay out permanent work zones, shared infrastructure, and space for a growing population.", "unlock": "Camp-to-Village upgrade" },
+      "watercraft": { "name": "Watercraft", "description": "Build rafts and logboats for crossings, waterborne scouting, fishing, and cargo.", "unlock": "River and coastal travel" },
+      "ritual-architecture": { "name": "Ritual Architecture", "description": "Coordinate communal monuments and gathering spaces without requiring agriculture.", "unlock": "Shrines, monuments, and major gatherings" },
+      "water-management": { "name": "Water Management", "description": "Organize wells, cisterns, drainage, and small diversions where terrain permits.", "unlock": "Wells, cisterns, and field diversions" },
+      "kiln-firing": { "name": "Kiln Firing", "description": "Control hotter, repeatable firings for durable ceramics and experimental materials.", "unlock": "Kilns and high-temperature firing" },
+      "mining-quarrying": { "name": "Mining & Quarrying", "description": "Prospect and extract toolstone and building stone beyond easy surface finds.", "unlock": "Mines, quarries, and bulk stone extraction" },
+      "defensive-earthworks": { "name": "Defensive Earthworks", "description": "Coordinate ditches, berms, palisades, watch points, and defensive musters.", "unlock": "Ditches, palisades, and fortified Villages" },
+      "tallies-measures": { "name": "Tallies & Measures", "description": "Make stores, obligations, exchanges, and building estimates auditable.", "unlock": "Tallies, standard measures, and work quotas" },
+      "exchange-networks": { "name": "Exchange Networks", "description": "Turn occasional barter into recurring routes, guest-right, and knowledge diffusion.", "unlock": "Recurring exchange routes and distant contacts" },
+      "craft-specialization": { "name": "Craft Specialization", "description": "Support dedicated workshops, apprenticeships, and standardized batch production.", "unlock": "Specialist workshops and higher-quality tools" },
+      "village-administration": { "name": "Village Administration", "description": "Separate local stewardship, learned counsel, and customary authority into dependable Village roles.", "unlock": "Elder, Sage, and Steward administrators" },
+      "copper-working": { "name": "Copper Working", "description": "Cold-work and anneal scarce native copper while experimenting with ore and kiln heat.", "unlock": "Copper fittings, elite loadouts, and the Chalcolithic transition" }
+    }
+  },
+  "survey": {
+    "surveyedLand": "Surveyed land",
+    "undiscovered": "Undiscovered",
+    "outsideTheater": "Outside theater"
+  },
+  "settings": { "mapDetailStatus": "{detail} map detail" },
+  "format": {
+    "durationDay": "{value}d",
+    "durationHour": "{value}h",
+    "durationMinute": "{value}m",
+    "arrivalOrder": "{order} · {duration} · arrives {arrival}.",
+    "landTheaters": "{count} land-qualified Regional Theaters",
+    "kilometerTheater": "{distance} km theater",
+    "chooseKilometerTheater": "{distance} km theater · choose a Camp site",
+    "simulationTick": "Simulation tick {tick}",
+    "unlock": "Unlocks: {name}",
+    "paceBonus": "+{percent}% {terrain} pace",
+    "worldDate": "{day} {month} {year} {era} · {time}",
+    "rivalStatus": "Rival · {stance}",
+    "rivalsInSight": "{count} rivals in sight · {distance} km theater",
+    "oneRivalInSight": "1 rival in sight · {distance} km theater",
+    "metersPerPixel": "{distance} m/px",
+    "meters": "{distance} m",
+    "kilometers": "{distance} km",
+    "kilometersPerHour": "{speed} km/h",
+    "influenceKilometers": "{distance} km"
+    ,"lookoutHeight": "Raises lookout to {height} m"
+    ,"detectionCost": "{distance} km detection · costs {count} person"
+    ,"playerAllegiance": "Your tribe · {tribe}"
+    ,"allegiance": "{stance} · {tribe}"
+    ,"unitFeature": "{unit} · {tribe}"
+    ,"settlementFeature": "{name} · {population} people"
+    ,"lastKnownFeature": "Last known · {feature}"
+    ,"featureRegime": "{feature} · {regime}"
+  }
+}

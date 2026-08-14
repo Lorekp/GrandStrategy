@@ -1,0 +1,73 @@
+{
+  "branches": ["sustenance", "craft", "settlement", "society", "exploration"],
+  "implementedUnlocks": [
+    "village",
+    "village-administration",
+    "managed-hearths",
+    "hunting-parties",
+    "querns-and-mortars",
+    "tribal-council",
+    "preserved-rations",
+    "lorekeepers",
+    "warband-formations",
+    "storehouse",
+    "cultivated-fields",
+    "managed-herds",
+    "fired-vessels",
+    "textile-workspace",
+    "communal-monuments",
+    "wells-and-diversions",
+    "mines-and-quarries",
+    "ditches-and-palisades",
+    "recurring-exchange",
+    "specialist-workshops",
+    "copper-workshop"
+  ],
+  "technologies": [
+    { "id": "seasonal-lore", "branch": "sustenance", "column": 0, "row": 0, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["seasonal-forecast"] },
+    { "id": "cooperative-hunts", "branch": "sustenance", "column": 0, "row": 1, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["hunting-parties"] },
+    { "id": "cordage-basketry", "branch": "craft", "column": 0, "row": 2, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["nets-and-baskets"] },
+    { "id": "ground-stone-tools", "branch": "craft", "column": 0, "row": 3, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["querns-and-mortars"] },
+    { "id": "hearthcraft", "branch": "settlement", "column": 0, "row": 4, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["managed-hearths"] },
+    { "id": "council-customs", "branch": "society", "column": 0, "row": 5, "cost": 45, "prerequisites": [], "alternativePrerequisites": [], "unlocks": ["tribal-council"] },
+
+    { "id": "food-preservation", "branch": "sustenance", "column": 1, "row": 0, "cost": 90, "prerequisites": ["seasonal-lore", "hearthcraft"], "alternativePrerequisites": [], "unlocks": ["preserved-rations"] },
+    { "id": "plant-tending", "branch": "sustenance", "column": 1, "row": 1, "cost": 90, "prerequisites": ["seasonal-lore", "ground-stone-tools"], "alternativePrerequisites": [], "unlocks": ["managed-wild-plots"] },
+    { "id": "animal-taming", "branch": "sustenance", "column": 1, "row": 2, "cost": 90, "prerequisites": ["seasonal-lore", "cooperative-hunts"], "alternativePrerequisites": [], "unlocks": ["animal-corrals"] },
+    { "id": "hafted-polished-tools", "branch": "craft", "column": 1, "row": 3, "cost": 90, "prerequisites": ["cordage-basketry", "ground-stone-tools"], "alternativePrerequisites": [], "unlocks": ["axes-and-adzes"] },
+    { "id": "permanent-dwellings", "branch": "settlement", "column": 1, "row": 4, "cost": 90, "prerequisites": ["cordage-basketry", "hearthcraft"], "alternativePrerequisites": [], "unlocks": ["durable-dwellings"] },
+    { "id": "oral-tradition", "branch": "society", "column": 1, "row": 5, "cost": 90, "prerequisites": ["seasonal-lore", "council-customs"], "alternativePrerequisites": [], "unlocks": ["lorekeepers"] },
+    { "id": "trail-networks", "branch": "exploration", "column": 1, "row": 6, "cost": 90, "prerequisites": ["seasonal-lore", "council-customs"], "alternativePrerequisites": [], "unlocks": ["marked-routes"] },
+    { "id": "warband-discipline", "branch": "society", "column": 1, "row": 7, "cost": 90, "prerequisites": ["cooperative-hunts", "council-customs"], "alternativePrerequisites": [], "unlocks": ["warband-formations"] },
+
+    { "id": "field-cultivation", "branch": "sustenance", "column": 2, "row": 0, "cost": 170, "prerequisites": ["plant-tending", "hafted-polished-tools"], "alternativePrerequisites": [], "unlocks": ["cultivated-fields"] },
+    { "id": "herd-management", "branch": "sustenance", "column": 2, "row": 1, "cost": 170, "prerequisites": ["animal-taming", "trail-networks"], "alternativePrerequisites": [], "unlocks": ["managed-herds"] },
+    { "id": "pottery", "branch": "craft", "column": 2, "row": 2, "cost": 170, "prerequisites": ["hearthcraft"], "alternativePrerequisites": [], "unlocks": ["fired-vessels"] },
+    { "id": "weaving", "branch": "craft", "column": 2, "row": 3, "cost": 170, "prerequisites": ["cordage-basketry", "oral-tradition"], "alternativePrerequisites": [], "unlocks": ["textile-workspace"] },
+    { "id": "communal-storage", "branch": "settlement", "column": 2, "row": 4, "cost": 170, "prerequisites": ["food-preservation", "permanent-dwellings"], "alternativePrerequisites": [], "unlocks": ["storehouse"] },
+    { "id": "village-planning", "branch": "settlement", "column": 2, "row": 5, "cost": 170, "prerequisites": ["council-customs", "permanent-dwellings"], "alternativePrerequisites": [], "unlocks": ["village"] },
+    { "id": "watercraft", "branch": "exploration", "column": 2, "row": 6, "cost": 170, "prerequisites": ["seasonal-lore", "cordage-basketry", "hafted-polished-tools"], "alternativePrerequisites": [], "unlocks": ["waterborne-travel"] },
+    { "id": "ritual-architecture", "branch": "society", "column": 2, "row": 7, "cost": 170, "prerequisites": ["ground-stone-tools", "oral-tradition"], "alternativePrerequisites": [], "unlocks": ["communal-monuments"] },
+
+    { "id": "water-management", "branch": "sustenance", "column": 3, "row": 0, "cost": 300, "prerequisites": ["field-cultivation", "village-planning"], "alternativePrerequisites": [], "unlocks": ["wells-and-diversions"] },
+    { "id": "kiln-firing", "branch": "craft", "column": 3, "row": 1, "cost": 300, "prerequisites": ["hafted-polished-tools", "pottery"], "alternativePrerequisites": [], "unlocks": ["controlled-kiln"] },
+    { "id": "mining-quarrying", "branch": "craft", "column": 3, "row": 2, "cost": 300, "prerequisites": ["hafted-polished-tools", "trail-networks"], "alternativePrerequisites": [], "unlocks": ["mines-and-quarries"] },
+    { "id": "defensive-earthworks", "branch": "settlement", "column": 3, "row": 3, "cost": 300, "prerequisites": ["warband-discipline", "village-planning"], "alternativePrerequisites": [], "unlocks": ["ditches-and-palisades"] },
+    { "id": "tallies-measures", "branch": "society", "column": 3, "row": 4, "cost": 300, "prerequisites": ["oral-tradition", "communal-storage"], "alternativePrerequisites": [], "unlocks": ["auditable-inventories"] },
+    { "id": "exchange-networks", "branch": "exploration", "column": 3, "row": 5, "cost": 300, "prerequisites": ["oral-tradition", "trail-networks"], "alternativePrerequisites": [], "unlocks": ["recurring-exchange"] },
+    { "id": "craft-specialization", "branch": "craft", "column": 3, "row": 6, "cost": 300, "prerequisites": ["communal-storage"], "alternativePrerequisites": ["pottery", "weaving", "mining-quarrying"], "unlocks": ["specialist-workshops"] },
+    { "id": "village-administration", "branch": "society", "column": 3, "row": 7, "cost": 300, "prerequisites": ["village-planning", "tallies-measures"], "alternativePrerequisites": [], "unlocks": ["village-administration"] },
+
+    { "id": "copper-working", "branch": "craft", "column": 4, "row": 2, "cost": 520, "prerequisites": ["kiln-firing", "mining-quarrying", "craft-specialization"], "alternativePrerequisites": [], "unlocks": ["copper-workshop"] }
+  ],
+  "cultureAffinities": {
+    "norse": "exploration", "atlantic-celtic": "society", "continental-germanic": "craft", "balto-slavic": "settlement", "uralic-forest": "sustenance",
+    "hellenic-balkan": "craft", "western-mediterranean": "exploration", "anatolian-caucasian": "craft", "levantine-mesopotamian": "settlement", "arabian": "exploration",
+    "iranian-highland": "craft", "eurasian-steppe": "exploration", "siberian": "sustenance", "indo-gangetic": "sustenance", "dravidian": "sustenance",
+    "himalayan-tibetan": "settlement", "east-asian-heartland": "settlement", "japonic": "craft", "mainland-southeast-asian": "sustenance", "maritime-austronesian": "exploration",
+    "amazigh-saharan": "exploration", "nile-valley": "settlement", "horn-east-african": "exploration", "sahelian": "society", "west-african": "sustenance",
+    "bantu-belt": "sustenance", "kalahari-cape": "exploration", "malagasy": "exploration", "arctic-subarctic": "exploration", "pacific-northwest": "craft",
+    "eastern-woodlands": "society", "plains-prairie": "exploration", "desert-southwest": "settlement", "middle-american": "settlement", "andean": "settlement",
+    "amazonian": "sustenance", "southern-cone": "exploration", "papuan-melanesian": "sustenance", "polynesian": "exploration", "aboriginal-australian": "exploration"
+  }
+}
