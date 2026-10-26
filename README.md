@@ -1,159 +1,115 @@
-# Grand Strategy
+# GrandStrategy
 
-A first vertical slice for a large, low-overhead 2D Earth grand-strategy game.
-The current playable surface is an accurately scaled Regional Theater for the
-tribal era.
+A browser-based grand-strategy prototype centered on a tribal-era regional map. Choose a founding area on an Earth atlas, establish a camp, explore terrain, develop technologies and settlements, negotiate with neighboring tribes, and command military groups.
 
-## Run it
+The project explores how geographic terrain, limited information, and deterministic rules can share one simulation across an interactive client and a headless multi-agent environment. It is a development prototype, not a complete historical campaign or released multiplayer game.
 
-From `C:\Users\laure\Desktop\GrandStrategy`:
+## Implemented systems
 
-```powershell
-npm.cmd install
-npm.cmd run dev
+- A PixiJS map client with atlas selection, pan/zoom, tiled regional relief, culture overlays, field survey, and English/German localization.
+- A fixed-tick TypeScript simulation with ordered commands, seeded state, replay checksums, and a browser-worker adapter. Geographic positions use integer WGS84 coordinates independently of render pixels.
+- Scouts and military groups, terrain-paced movement, waypoint orders, daytime travel, settlement growth, technology prerequisites, camp-to-village upgrades, buildings, and administrators.
+- Diplomatic actions, proposals, relations, and event choices.
+- Deterministic group combat incorporating ranged and melee exchanges, supporting units, terrain, elevation, river crossings, ambushes, morale, cohesion, fatigue, casualties, routing, and experience.
+- Unknown, explored, and currently visible terrain; elevation/curvature viewsheds; separate entity detection; and last-known intelligence. Player snapshots remove unknown entities and enemy orders before worker transport.
+- A headless `TribalRlEnvironment` using the same simulation, with simultaneous decisions, legal-action catalogs, sparse visible terrain observations, configurable rewards, and seeded reset.
+
+NPC behavior is limited. Existing population growth, research, and diplomatic responses should not be read as a complete strategic opponent. Tribe names, cultures, balance values, and the historical model remain provisional.
+
+## Run locally
+
+The setup below follows the checked-in configuration. A fresh-checkout run has not yet been verified.
+
+Use Node.js 22.12 or later in the 22.x line, or Node.js 24+, with npm. The lockfile records the dependencies; use a modern browser with WebGL support. Run commands from the repository root:
+
+```sh
+npm ci
+npm run dev
 ```
 
-Open the local URL printed by Vite, normally `http://localhost:5173/`. Opening
-`index.html` directly with a `file:///` URL bypasses the module server and does
-not run the game.
+Open the local URL printed by Vite. Opening `index.html` directly does not run the application. On PowerShell installations that block `npm.ps1`, use `npm.cmd` for the same commands.
 
-Use Space to pause/play, 1-3 to change speed, F to fit the theater, drag to pan,
-and the wheel to zoom. Select a Camp on the map or a tribe in the left roster to
-inspect its people, warriors, influence radius, and stance toward the player.
+The application starts with the founding atlas. Selecting a theater calls the local Vite map-preparation middleware. A current cached theater is reused; a missing or obsolete theater is compiled before play. Set up the Python tools below before exploring arbitrary regions.
 
-## Current slice
+Use Space to pause/resume, the numbered speed keys to change speed, F to fit the map, drag to pan, and the wheel to zoom. Select units and settlements to inspect their actions. Right-click replaces a selected unit's route; Ctrl-right-click appends a waypoint. Escape opens or closes the menu. Orders issued while paused wait for the clock to resume.
 
-- A zoomable, pannable whole-Earth founding Atlas with 1,492 overlapping,
-  land-qualified Regional Theater choices and pointer-driven previews
-- Forty broad regional-culture traditions assigned from 144 weighted geodetic
-  anchors and shown without fixed cultural borders
-- A selected 768 km Regional Theater generated at 93.75 metres per render pixel
-- Azimuthal-equidistant local projection with a compiler-validated maximum
-  scale-error budget of 0.13%
-- Nine asymmetric tribes, one player-controlled Camp, and eight autonomous
-  rival Camps
-- Three-state fog of war: unknown terrain, remembered explored terrain, and
-  current full-color sight, with unknown space rendered as neutral charcoal
-- Elevation-aware terrain viewsheds with ridge occlusion, Earth curvature, and
-  shorter per-observer entity-detection limits
-- One-kilometre Settlement footprints with 360 perimeter samples deduplicated
-  onto the canonical semantic grid
-- One-kilometre Scout footprints using the same 360-sample visibility model,
-  while entity detection remains limited to 3 km
-- A discrete day/night cycle: 06:00â€“18:00 daylight, overnight Scout rest,
-  static night tint, and authoritative half-range night viewsheds
-- Art-directed visibility envelopes that retain near-field LOS, require broader
-  observer support at long range, close pinholes, and discard detached flecks
-- Twice-refined Scale2x fog contours mapped crisply onto the 93.75 m render
-  while simulation and player knowledge remain on canonical 250 m cells
-- Spatially bounded visibility updates plus a deterministic 500 m elevation
-  LOD that keep moving-Scout LOS work bounded on the full 3,072² grid
-- A strict paused clock: orders queue without advancing ticks, and repeated
-  Unit move orders coalesce to the latest destination; the client previews the
-  newest queued route immediately
-- Browser-safe waypoint input: right click replaces the route and
-  Ctrl-right-click appends while paused or running
-- A fog-safe Field Survey readout for terrain, vegetation kind and density,
-  elevation, nearby Units and Sites,
-  Settlement works, influence, and allegiance
-- Information-safe player snapshots that omit unseen tribes, Camps, and
-  diplomatic relationships before data reaches the renderer
-- Kilometer-scale organic influence footprints clipped to generated land
-- Explicit friendly, neutral, hostile, and war-ready diplomatic state
-- Camp-to-Village in-place upgrade command in the deterministic simulation
-- Four visual levels from 1,024 to 8,192 pixels; only visible 512 px tiles plus
-  a one-tile prefetch halo occupy the GPU
-- Independent 250 m terrain, vegetation-density, and elevation cells split
-  into cacheable 32 km chunks and shared by
-  movement, line-of-sight, and hover information
-- Natural drainage compiled from a pinned OpenStreetMap snapshot into a smooth
-  Available Moisture field, while automatic network prominence keeps only
-  strategically legible minor and major Rivers on the visible map
+### Regional map preparation
 
-The tribe labels and starting values are provisional gameplay data, not the
-project's eventual historical research pass. Combat is a firm tribal-era
-requirement; warband movement and resolution are the next gameplay layer, not a
-hidden part of this map slice.
+The Python compiler requires NumPy, Pillow, pyproj, and osmium at the versions in `tools/map-preprocess/requirements.txt`. Use a Python version supported by those pinned packages; the repository does not pin an interpreter version.
 
-## Architecture
-
-- **TypeScript** is shared by the browser client, simulation worker, future
-  authoritative server, replay tools, and headless AI/RL adapters.
-- **PixiJS 8** renders through WebGL with demand-driven frames and nearest-neighbor
-  sampling.
-- **Proj4JS** projects authoritative WGS84 entity positions into the disposable
-  Regional Theater view. Render pixels never enter simulation state.
-- **Pure deterministic core:** `GameSimulation` consumes an ordered command
-  batch for every fixed tick and imports no DOM, renderer, worker, or networking
-  API.
-- **Worker adapter:** local play advances the same core intended for an
-  authoritative multiplayer server. Its player-view boundary filters hidden
-  world state before transport rather than merely covering it with graphics.
-- **Generated geography:** the renderer streams a manifest-driven tile pyramid
-  and 32 km semantic chunks. Gameplay startup assembles the same cells once and
-  transfers their buffers directly to the worker; projected waterway geometry
-  remains independent of terrain-cell resolution.
-
-## Source layout
-
-- `src/core/Viewshed.ts` — deterministic elevation and curvature line-of-sight
-
-- `src/core` — deterministic rules and state
-- `src/core/PlayerView.ts` — detection-safe per-player entity filtering
-- `src/core/VisibilityEnvelope.ts` — deterministic LOS support shaping
-- `src/worker` — local fixed-tick clock and transport messages
-- `src/map` — theater manifest, projection, tiles, influence, and camera
-- `src/map/FogOfWarLayer.ts` — unknown, remembered, and visible map states
-- `src/scenarios` — geodetic tribal starts and relations
-- `tools/map-preprocess` — offline geography compilers
-- `public/maps/theaters` — generated Regional Theater derivatives
-
-## Generate the global Theater catalog
-
-Create an isolated tool environment once:
+Windows PowerShell:
 
 ```powershell
 python -m venv .cache/map-tools
-.cache\map-tools\Scripts\python.exe -m pip install -r tools\map-preprocess\requirements.txt
+.cache\map-tools\Scripts\python.exe -m pip install -r tools/map-preprocess/requirements.txt
+npm.cmd run dev
 ```
 
-Build the deterministic whole-Earth overlap catalog from the Atlas land mask
-and regional-culture anchors:
+macOS/Linux:
 
-```powershell
-.cache\map-tools\Scripts\python.exe tools\map-preprocess\build_global_theater_catalog.py
+```sh
+python3 -m venv .cache/map-tools
+.cache/map-tools/bin/python -m pip install -r tools/map-preprocess/requirements.txt
+MAP_COMPILER_PYTHON="$PWD/.cache/map-tools/bin/python" npm run dev
 ```
 
-The catalog samples each 768 km footprint in its own metric projection, removes
-regions with 10% land or less, omits uninhabited Antarctica from the tribal
-picker, and assigns one broad gameplay culture. Hovering never runs this work:
-the browser queries a compact prebuilt spatial index. Committing to an uncached
-region asks the local development adapter to compile that one immutable Theater;
-subsequent visits reuse it from `public/maps/theaters`.
+`MAP_COMPILER_PYTHON` overrides the Windows-oriented default interpreter path. The compiler writes cached source data beneath `.cache/` and generated assets beneath `public/maps/theaters/`.
 
-The Regional Theater compiler downloads and caches only source elevation tiles
-intersecting the requested metric square, projects them onto a WGS84 ellipsoid,
-styles and quantizes the relief, and emits the visual pyramid plus chunked
-semantic elevation, terrain, vegetation density, land, and Available Moisture
-data, together with projected prominent-River geometry.
+Current compiler output covers a 768 km square with 250 m semantic cells and an 8,192-pixel visual tile pyramid. It uses the included base-terrain and vegetation rasters, Mapzen Terrain Tiles, Natural Earth physical geometry, and checksum-verified Geofabrik OpenStreetMap extracts pinned to 2026-08-01. Uncached generation requires network access and can involve substantial downloads, memory, disk space, and processing time. Availability of the dated external extracts is a prerequisite.
 
-Regional hydrography comes from checksum-verified, date-pinned Geofabrik
-OpenStreetMap PBF extracts. The compiler automatically selects the smallest
-leaf extracts covering a Theater, streams only the nodes needed by natural
-`river`, `stream`, and `tidal_channel` ways, clips the normalized network to the
-Theater, and records every source URL, checksum, snapshot date, and normalized
-content hash in the generated manifest. Canals, ditches, drains, engineered
-waterways, and features tagged `man_made` or `artificial` are rejected. Unnamed,
-seasonal, and intermittent natural waterways are retained as drainage inputs.
+The committed theater assets contain multiple format generations. For example, `world-r23-c33` and `world-r45-c38` have format-14 manifests with normalizer version 5, while older manifests are regenerated by the middleware. Their presence is not evidence that every catalog selection works offline.
 
-The compiler derives Horton-Strahler order from connected OSM topology. Order,
-physical width, permanence, and the river/stream tag determine presentation;
-small channels become moisture-only instead of blue map clutter. The browser
-receives baked relief tiles, one extra moisture byte per 250 m semantic cell,
-and a compact visible-centerline file with a 32 km spatial index. Keep the
-visible attribution link in the map scale panel when redistributing builds.
+The atlas catalog is already supplied. To rebuild it after changing its source inputs, use the configured Python environment:
 
-Elevation comes from the open [Mapzen Terrain Tiles AWS dataset](https://registry.opendata.aws/terrain-tiles/)
-in Terrarium format. Source and attribution details are preserved in every
-generated manifest. The planet-scale Natural Earth II atlas assets remain a
-separate overview derivative and are not used to invent local detail.
+```sh
+python tools/map-preprocess/build_global_theater_catalog.py
+```
+
+Here `python` must refer to that environment; on Windows the full interpreter path above can be used instead.
+
+## Build and checks
+
+```sh
+npm run build
+npm run preview
+npm test
+npm run test:watch
+```
+
+`build` type-checks with TypeScript and creates the Vite output. Both the development and preview servers install the theater-preparation middleware. Serving `dist/` from an ordinary static host does not provide that middleware; a static deployment needs an explicit solution for the theater-selection request and asset preparation.
+
+Python preprocessing tests use `unittest`:
+
+```sh
+python -m unittest discover -s tools/map-preprocess -p "test_*.py"
+```
+
+Run that command with the configured Python environment. Tests cover deterministic simulation, command validation, research and combat, information filtering, visibility, map calculations, and preprocessing. Some visibility tests enforce wall-clock budgets and therefore depend on the machine. No passing CI or local execution is claimed here.
+
+## Code layout
+
+| Path | Responsibility |
+| --- | --- |
+| `src/main.ts`, `src/map/` | UI orchestration, atlas, map rendering, camera, tiles, and semantic asset loading |
+| `src/core/` | Simulation, world grid, clock, visibility, player knowledge, and state hashing |
+| `src/worker/` | Local simulation clock, command queue, and filtered snapshots |
+| `src/combat/` | Military definitions and deterministic battle resolution |
+| `src/technology/`, `src/diplomacy/`, `src/events/`, `src/administration/` | Tribal-era gameplay systems |
+| `src/ai/` | Headless environment, legal actions, self-play scenario conversion, and rewards |
+| `src/config/`, `src/localization/`, `src/scenarios/` | Data-driven rules, translations, and starting scenarios |
+| `tools/map-preprocess/`, `public/maps/` | Offline geography compilation and generated map assets |
+| `docs/` | Architecture decisions, design notes, and research references |
+
+## RL scope and project status
+
+The RL interface is TypeScript infrastructure inspired by Gymnasium/PettingZoo conventions. It is not a Python package or a completed training pipeline. The repository does not supply trained policies or demonstrated learning results. A Python adapter and policy encoders are future work described in [the RL boundary document](docs/design/rl-training-boundary.md).
+
+Episode limits currently set `truncated`; `terminated` remains false because complete game-rule victory/defeat conditions are absent. Combat is implemented, although some earlier documentation still describes it as future work. The wider world-age progression and an authoritative multiplayer server remain beyond the current slice.
+
+## Attribution and licensing
+
+This repository contains project-specific simulation, UI, and preprocessing code alongside third-party libraries and geographic derivatives. See the repository history for contribution records.
+
+The client uses PixiJS and Proj4JS. Geographic sources include Mapzen Terrain Tiles, Natural Earth, and OpenStreetMap contributors through Geofabrik. Generated manifests retain source and license metadata, including OpenStreetMap's ODbL attribution. Preserve the map attribution UI and source notices when distributing derived builds.
+
+No repository-wide license file is supplied in this snapshot. Do not assume that third-party dependency or geographic-data licenses grant permission to reuse the project's own code.
