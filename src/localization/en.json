@@ -73,7 +73,7 @@
     ,"loadingGeography": "Loading geography and regional records"
     ,"mapInstructions": "Left click or drag selects · Right click moves · Ctrl-right-click queues · Middle drag pans"
     ,"paceNote": "Slope and vegetation adjust pace continuously · travels in daylight from {start}–{end}"
-    ,"hydrographyAttribution": "Hydrography © OpenStreetMap contributors"
+    ,"hydrographyAttribution": "© OpenStreetMap contributors · Natural Earth · Mapzen"
     ,"worldAtlasLabel": "World Atlas with interactive Regional Theaters"
     ,"mainMenu": "Main menu"
     ,"campaignSetupProgress": "Campaign setup progress"

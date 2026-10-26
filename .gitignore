@@ -3,3 +3,4 @@ dist/
 .cache/
 __pycache__/
 .vite*.log
+.codebase-memory/

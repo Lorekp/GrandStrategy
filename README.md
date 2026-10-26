@@ -18,7 +18,7 @@ NPC behavior is limited. Existing population growth, research, and diplomatic re
 
 ## Run locally
 
-The setup below follows the checked-in configuration. A fresh-checkout run has not yet been verified.
+The production build and TypeScript tests were verified from a fresh dependency install. Interactive play and uncached map generation have not been revalidated as part of publication cleanup.
 
 Use Node.js 22.12 or later in the 22.x line, or Node.js 24+, with npm. The lockfile records the dependencies; use a modern browser with WebGL support. Run commands from the repository root:
 
@@ -84,7 +84,9 @@ Python preprocessing tests use `unittest`:
 python -m unittest discover -s tools/map-preprocess -p "test_*.py"
 ```
 
-Run that command with the configured Python environment. Tests cover deterministic simulation, command validation, research and combat, information filtering, visibility, map calculations, and preprocessing. Some visibility tests enforce wall-clock budgets and therefore depend on the machine. No passing CI or local execution is claimed here.
+Run that command with the configured Python environment. Tests cover deterministic simulation, command validation, research and combat, information filtering, visibility, map calculations, and preprocessing. Some visibility tests enforce wall-clock budgets and therefore depend on the machine.
+
+Publication check (26 October 2026): `npm run build` passed and `npm test` passed all 169 tests across 46 files after updating Vite/Vitest to patched versions. The Python preprocessing suite and external map downloads were not run in this check.
 
 ## Code layout
 
@@ -110,6 +112,6 @@ Episode limits currently set `truncated`; `terminated` remains false because com
 
 This repository contains project-specific simulation, UI, and preprocessing code alongside third-party libraries and geographic derivatives. See the repository history for contribution records.
 
-The client uses PixiJS and Proj4JS. Geographic sources include Mapzen Terrain Tiles, Natural Earth, and OpenStreetMap contributors through Geofabrik. Generated manifests retain source and license metadata, including OpenStreetMap's ODbL attribution. Preserve the map attribution UI and source notices when distributing derived builds.
+The client uses PixiJS and Proj4JS. Geographic sources include Mapzen Terrain Tiles, Natural Earth, and OpenStreetMap contributors through Geofabrik. See [third-party notices](THIRD_PARTY_NOTICES.md) and [map credits](public/map-credits.html). Generated manifests retain source and license metadata, including OpenStreetMap's ODbL attribution. Preserve the map attribution UI and source notices when distributing derived builds.
 
 No repository-wide license file is supplied in this snapshot. Do not assume that third-party dependency or geographic-data licenses grant permission to reuse the project's own code.
